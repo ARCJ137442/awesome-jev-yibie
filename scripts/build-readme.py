@@ -16,13 +16,13 @@ CATEGORIES = [
     "evaluation-benchmarking.md",
     "calibration-research.md",
     "infra-sdks-integrations.md",
+    "game-simulation.md",
+    "compliance-legal.md",
     "related-practices-discussions.md",
 ]
 
 OPEN_TRACKING = [
     "content-moderation.md",
-    "compliance-legal.md",
-    "game-simulation.md",
     "scientific-pipelines.md",
 ]
 

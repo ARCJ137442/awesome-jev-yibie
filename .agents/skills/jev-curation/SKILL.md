@@ -178,12 +178,7 @@ When invoked for a recurring sweep:
 Count entries:
 
 ```bash
-python3 - <<'PY'
-from pathlib import Path
-for p in sorted(Path('categories').glob('*.md')):
-    cnt = sum(1 for line in p.read_text().splitlines() if line.startswith('- ['))
-    print(f'{p}:{cnt}')
-PY
+python3 scripts/build-readme.py && sed -n '/## Current coverage/,/Each entry lives/p' README.md
 ```
 
 Example searches:

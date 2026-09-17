@@ -38,29 +38,129 @@ We do **not** include:
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 0 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 0 entries
+- [Classification & Routing](categories/classification-routing.md) — 8 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 3 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 0 entries
-- [Agent Decisions](categories/agent-decisions.md) — 0 entries
+- [Agent Decisions](categories/agent-decisions.md) — 3 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 0 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 0 entries
-- [Calibration & Research](categories/calibration-research.md) — 0 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 0 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 0 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 3 entries
+- [Calibration & Research](categories/calibration-research.md) — 3 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 9 entries
+- [Game & Simulation](categories/game-simulation.md) — 3 entries
+- [Compliance & Legal](categories/compliance-legal.md) — 1 entry
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 13 entries
 
 ### Open categories still being seeded
 
 - [Content Moderation](categories/content-moderation.md) — 0 entries
-- [Compliance & Legal](categories/compliance-legal.md) — 0 entries
-- [Game & Simulation](categories/game-simulation.md) — 0 entries
 - [Scientific Pipelines](categories/scientific-pipelines.md) — 0 entries
 
 Each entry lives in exactly one category. When a project could fit multiple categories, we choose the one closest to its direct application domain.
 
 ## Browse by category
 
+- [Classification & Routing](#classification-routing) ([source](categories/classification-routing.md))
+- [Verification & Guardrails](#verification-guardrails) ([source](categories/verification-guardrails.md))
+- [Agent Decisions](#agent-decisions) ([source](categories/agent-decisions.md))
+- [Evaluation & Benchmarking](#evaluation-benchmarking) ([source](categories/evaluation-benchmarking.md))
+- [Calibration & Research](#calibration-research) ([source](categories/calibration-research.md))
+- [Infra / SDKs / Integrations](#infra-sdks-integrations) ([source](categories/infra-sdks-integrations.md))
+- [Game & Simulation](#game-simulation) ([source](categories/game-simulation.md))
+- [Compliance & Legal](#compliance-legal) ([source](categories/compliance-legal.md))
+- [Related Practices / Discussions](#related-practices-discussions) ([source](categories/related-practices-discussions.md))
 
 ## Full list
+
+### Classification & Routing
+
+Source file: [`categories/classification-routing.md`](categories/classification-routing.md)
+
+- [Notra](https://github.com/usenotra/notra) - Marketing analytics: production GEO platform whose `NOTRA_JEV_CLASSIFIERS` flag routes brand-visibility classifiers off an LLM and onto Jev `Boolean` decisions at a 0.5 threshold, targeting 300 ms p50.
+- [jev-router](https://github.com/gargpratyush/jev-router) - Developer tooling: routes Claude Code tasks to the cheapest capable model by asking Jev to choose among candidates.
+- [jev-router (prismhq)](https://github.com/prismhq/jev-router) - LLM infrastructure: open-source LiteLLM-based router where a Jev decision picks which model serves each request.
+- [pi-jev-router](https://github.com/mejiasd3v/pi-jev-router) - Coding agents: adds automatic per-request model routing to the Pi coding agent through Jev decisions on Vercel AI Gateway.
+- [jcm-router](https://github.com/adarshmishra07/jcm-router) - Coding agents: local proxy that picks the Claude model and reasoning effort per message with a Jev decision while leaving the cached main chat untouched.
+- [jev-agent-skill-router](https://github.com/GodsBoy/jev-agent-skill-router) - Agent infrastructure: routes agent skill selection through typed, confidence-aware Jev decisions so weak matches are declined instead of guessed.
+- [typesafe-jev CV screener](https://github.com/gtaras7/typesafe-jev) - Recruiting: screens a folder of CVs with Jev typed judgments against an editable policy, re-scoring candidates for free when the policy changes.
+- [Jev email intent workflow](https://github.com/GiesN/typesafe-jev-workflow) - Back-office automation: async LangGraph workflow gets a typed Jev `Choice` (`invoice` or `general`) and routes each inbound email to the matching handler.
+
+### Verification & Guardrails
+
+Source file: [`categories/verification-guardrails.md`](categories/verification-guardrails.md)
+
+- [jev-review](https://github.com/devagrawal09/jev-review) - Software engineering: staged code-review workflow and local dashboard where Jev gates each review stage before a change advances.
+- [pi-jev](https://github.com/y0usaf/pi-jev) - Agent safety: adds a measured tool-call gate to the Pi coding agent so risky calls are checked by Jev before execution.
+- [OpenWork](https://github.com/different-ai/openwork) - Engineering workflow: wires Jev into its eval testkit as a verification judge so agent-produced work is gated by typed verdicts rather than a text model.
+
+### Agent Decisions
+
+Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
+
+- [Jev Ultrafast](https://github.com/browser-use/jev-ultrafast) - Browser automation: browser-use's ultrafast agent where Jev decides each next action and element to click, calling a language model only when text must be typed.
+- [pi-typesafe-jev](https://github.com/legacybridge-tech/pi-typesafe-jev) - Coding agents: exposes System One judgments as five Pi tools so a model makes narrow semantic judgments while code and users keep control of thresholds, weights, and actions.
+- [jev-judgment](https://github.com/HyunjunJeon/jev-judgment) - Coding agents: agent skill that sends closed coding-agent judgments to Jev so verdicts stay typed, cheap, and comparable across runs.
+
+### Evaluation & Benchmarking
+
+Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-benchmarking.md)
+
+- [Jev Playground](https://github.com/hegargarcia/jev-playground) - Model evaluation: benchmarks Jev against Luna, Haiku, and Gemini at choosing validated legal moves in explicit-state games, scoring decision quality and consistency across a sequence of moves.
+- [Jev vs Mistral and Gemini for event validation](https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation) - Event discovery: head-to-head test of Jev against Mistral Small and Gemini Flash-Lite at validating local event listings.
+- [jev-research-eval](https://github.com/jgridifier/jev-research-eval) - Research automation: reproducible eval harness plus field note for Jev Ultrafast research-browser tasks, with QC'd cases, a suite runner, and a report generator.
+
+### Calibration & Research
+
+Source file: [`categories/calibration-research.md`](categories/calibration-research.md)
+
+- [decider](https://github.com/Mapika/decider) - Open models: reproduces the System One shape with a Qwen3.5-2B fine-tune that emits typed decisions with calibrated probabilities in one pass.
+- [openjev](https://github.com/zhihz/openjev) - Open research: independent local preview that answers bilingual probability questions from context, questions, and candidate answers, inspired by TypeSafe Jev.
+- [Parallel Constrained Decoding (Qwen2.5-1B-RLCD)](https://huggingface.co/spaces/drinkmoonshine/parallel-constrained-decoding) - Open research: RLCD-trained Qwen2.5-1B demo exploring open-source parallel constrained decoding as an alternative to Jev.
+
+### Infra / SDKs / Integrations
+
+Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-integrations.md)
+
+- [eve](https://github.com/vercel/eve) - Agent frameworks: Vercel's eve engine ships Jev as the default evaluation model (`typesafe-ai/jev`) in its experimental evaluate path.
+- [AI CLI](https://github.com/vercel-labs/ai-cli) - Developer tooling: Vercel Labs CLI that can run Jev as the evaluation model for its `evaluate` command.
+- [jev-mcp (jkudish)](https://github.com/jkudish/jev-mcp) - MCP ecosystem: proof-of-concept MCP server that puts Jev claim verification, content screening, and candidate ranking behind standard MCP tools.
+- [jev-mcp (blakestone-x)](https://github.com/blakestone-x/jev-mcp) - MCP ecosystem: MCP server exposing Jev classify, score, check, match, and screen as tools for any agent, with confidence on every answer.
+- [zio-typesafe-ai](https://github.com/jamesward/zio-typesafe-ai) - Scala ecosystem: ZIO client for TypeSafe AI with a typed DSL over Jev decisions.
+- [laravel-typesafe-jev](https://github.com/Butochnikov/laravel-typesafe-jev) - PHP ecosystem: unofficial Laravel integration for Jev with typed responses, async requests, scoped dependency injection, and testing fakes.
+- [advocaat](https://github.com/pithings/advocaat) - Data tooling: small type-safe client for asking Jev questions about a dataset.
+- [jevclient](https://pypi.org/project/jevclient/) - Python ecosystem: async client for Jev published on PyPI.
+- [typesafe-on-neon](https://github.com/andrelandgraf/typesafe-on-neon) - Cloud infrastructure: Neon Function proxy for the Neon AI Gateway that routes decisions with Jev.
+
+### Game & Simulation
+
+Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
+
+- [typesafe-mario](https://github.com/fhshaik/typesafe-mario) - Gaming: TypeSafe/Jev agent that plays Super Mario Bros. from structured emulator state, choosing each action from emulator-derived features.
+- [jev-drone](https://github.com/RomanSlack/jev-drone) - Robotics simulation: camera-only autonomous drone in MuJoCo that puts a Jev judgment model in the control loop at 2.5 Hz.
+- [tsai-sc](https://github.com/phyous/tsai-sc) - Gaming: drives original StarCraft shareware through keyboard and mouse with Jev action probabilities recorded per decision.
+
+### Compliance & Legal
+
+Source file: [`categories/compliance-legal.md`](categories/compliance-legal.md)
+
+- [LegalForecast-MTD](https://github.com/johnhughes3/LegalForecastBench) - Legal forecasting: benchmark that asks Jev to predict federal motion-to-dismiss rulings from the judge's written record and scores the calibrated probabilities with claim-defendant micro-Brier metrics.
+
+### Related Practices / Discussions
+
+Source file: [`categories/related-practices-discussions.md`](categories/related-practices-discussions.md)
+
+- [Introducing System One Models and Jev (Hacker News)](https://news.ycombinator.com/item?id=49717558) - Hacker News: 1,800-point launch thread whose ~480 comments debate whether typed decisions replace LLM calls for classification, routing, and verification.
+- [Launch thread by Diogo Almeida](https://x.com/CompleteSkeptic/status/2099925682726002904) - X: the 63k-like announcement from TypeSafe's founder arguing RLCD-trained decision models are a shorter path to economic value than chat models.
+- [Model router built with Jev](https://x.com/ephraimduncan/status/2100454070536351824) - X: 948-like demo where Jev decides which model should serve a request before it is forwarded.
+- [MLP on Qwen 4B mimicking Jev](https://x.com/justALEXWORTEGA/status/2100341039986798930) - X: builder reports that a small MLP trained on top of Qwen 4B already reproduces Jev-like decision behaviour.
+- [Running a local Typesafe Jev](https://x.com/wmoto_ai/status/2100454049359577516) - X (Japanese): attempt at running a Jev-style decision model locally, with speed noted as still improvable.
+- [Jev as an AI agent safety monitor](https://x.com/isNickMa/status/2100566407524344225) - X: test report using Jev to check each agent action first, reportedly catching most attacks with almost no false blocks and much lower latency.
+- [Rethinking security engineering with Jev](https://x.com/Kostastsale/status/2100362415187833048) - X: argues that purely engineering decisions in security work belong to Jev rather than a chat model.
+- [Ask Jev anything, it will judge](https://x.com/waynesutton/status/2100487878992388279) - X: public Convex-backed demo inviting one million judged questions instead of generated answers.
+- [First Jev use case in a Mac app](https://x.com/malekoo/status/2100439840575684910) - X: a shipped Mac app routes setup and troubleshooting questions to Jev when no language model is loaded.
+- [Jev 中文解读](https://x.com/dotey/status/2100109937237987823) - X (Chinese): explains the System One category to Chinese readers as a calibrated, typed decision layer for code.
+- [TypeSafe AI releases Jev (r/singularity)](https://reddit.com/r/singularity/comments/1whop6b/typesafe_ai_releases_ai_model_called_jev_rather/) - Reddit: launch thread framing Jev as a low-hallucination, low-cost decision model for software rather than chat.
+- [Testing Jev for Pi extensions (r/PiCodingAgent)](https://reddit.com/r/PiCodingAgent/comments/1whsav6/anyone_else_testing_out_typesafe_ais_new_system/) - Reddit: builders describe using Jev as an agent tool-use safety layer and planning a prompt-complexity model router.
+- [Jev "playing" Minecraft (r/accelerate)](https://reddit.com/r/accelerate/comments/1whk9oy/new_typesafe_ai_jev_model_playing_minecraft_wip/) - Reddit: work-in-progress demo of Jev driving Minecraft, including fleeing zombies at night, as a test of fast structured decisions.
 
 ## Submission format
 
