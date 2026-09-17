@@ -38,21 +38,21 @@ We do **not** include:
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 8 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 3 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 0 entries
-- [Agent Decisions](categories/agent-decisions.md) — 3 entries
-- [Data Labeling & Curation](categories/data-labeling-curation.md) — 0 entries
+- [Classification & Routing](categories/classification-routing.md) — 9 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 4 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 3 entries
+- [Agent Decisions](categories/agent-decisions.md) — 5 entries
+- [Data Labeling & Curation](categories/data-labeling-curation.md) — 1 entry
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 3 entries
 - [Calibration & Research](categories/calibration-research.md) — 3 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 9 entries
 - [Game & Simulation](categories/game-simulation.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
+- [Content Moderation](categories/content-moderation.md) — 2 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 13 entries
 
 ### Open categories still being seeded
 
-- [Content Moderation](categories/content-moderation.md) — 0 entries
 - [Scientific Pipelines](categories/scientific-pipelines.md) — 0 entries
 
 Each entry lives in exactly one category. When a project could fit multiple categories, we choose the one closest to its direct application domain.
@@ -61,12 +61,15 @@ Each entry lives in exactly one category. When a project could fit multiple cate
 
 - [Classification & Routing](#classification-routing) ([source](categories/classification-routing.md))
 - [Verification & Guardrails](#verification-guardrails) ([source](categories/verification-guardrails.md))
+- [Scoring & Ranking](#scoring-ranking) ([source](categories/scoring-ranking.md))
 - [Agent Decisions](#agent-decisions) ([source](categories/agent-decisions.md))
+- [Data Labeling & Curation](#data-labeling-curation) ([source](categories/data-labeling-curation.md))
 - [Evaluation & Benchmarking](#evaluation-benchmarking) ([source](categories/evaluation-benchmarking.md))
 - [Calibration & Research](#calibration-research) ([source](categories/calibration-research.md))
 - [Infra / SDKs / Integrations](#infra-sdks-integrations) ([source](categories/infra-sdks-integrations.md))
 - [Game & Simulation](#game-simulation) ([source](categories/game-simulation.md))
 - [Compliance & Legal](#compliance-legal) ([source](categories/compliance-legal.md))
+- [Content Moderation](#content-moderation) ([source](categories/content-moderation.md))
 - [Related Practices / Discussions](#related-practices-discussions) ([source](categories/related-practices-discussions.md))
 
 ## Full list
@@ -83,6 +86,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [jev-agent-skill-router](https://github.com/GodsBoy/jev-agent-skill-router) - Agent infrastructure: routes agent skill selection through typed, confidence-aware Jev decisions so weak matches are declined instead of guessed.
 - [typesafe-jev CV screener](https://github.com/gtaras7/typesafe-jev) - Recruiting: screens a folder of CVs with Jev typed judgments against an editable policy, re-scoring candidates for free when the policy changes.
 - [Jev email intent workflow](https://github.com/GiesN/typesafe-jev-workflow) - Back-office automation: async LangGraph workflow gets a typed Jev `Choice` (`invoice` or `general`) and routes each inbound email to the matching handler.
+- [unclutter](https://github.com/kitze/unclutter) - Browser tooling: WXT extension where Jev decides per page element whether it is clutter, removing it under reusable template rules.
 
 ### Verification & Guardrails
 
@@ -91,6 +95,15 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [jev-review](https://github.com/devagrawal09/jev-review) - Software engineering: staged code-review workflow and local dashboard where Jev gates each review stage before a change advances.
 - [pi-jev](https://github.com/y0usaf/pi-jev) - Agent safety: adds a measured tool-call gate to the Pi coding agent so risky calls are checked by Jev before execution.
 - [OpenWork](https://github.com/different-ai/openwork) - Engineering workflow: wires Jev into its eval testkit as a verification judge so agent-produced work is gated by typed verdicts rather than a text model.
+- [jev-guard](https://github.com/leepokai/jev-guard) - Agent security: prompt-injection and dangerous-action guard for Claude Code, Codex, Pi, and ACP agents, with Jev deciding what to block.
+
+### Scoring & Ranking
+
+Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
+
+- [Clean Code Judge](https://github.com/frostney/clean-code-review) - Code quality: scores every file of a pull request on 31 boolean Clean Code smells plus function size and nesting, then hands the verdicts to a writing model for the review prose.
+- [citation-verifier](https://github.com/MarissaFamularo/citation-verifier) - Academic publishing: checks whether each cited paper actually supports the sentence citing it, with Claude locating the quote, Jev scoring the support, and a human making the final call.
+- [jev-bfs](https://github.com/komikat/jev-bfs) - Search tooling: finds link paths between English Wikipedia articles by having Jev rank each page's outgoing links while Python controls the search.
 
 ### Agent Decisions
 
@@ -99,6 +112,14 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [Jev Ultrafast](https://github.com/browser-use/jev-ultrafast) - Browser automation: browser-use's ultrafast agent where Jev decides each next action and element to click, calling a language model only when text must be typed.
 - [pi-typesafe-jev](https://github.com/legacybridge-tech/pi-typesafe-jev) - Coding agents: exposes System One judgments as five Pi tools so a model makes narrow semantic judgments while code and users keep control of thresholds, weights, and actions.
 - [jev-judgment](https://github.com/HyunjunJeon/jev-judgment) - Coding agents: agent skill that sends closed coding-agent judgments to Jev so verdicts stay typed, cheap, and comparable across runs.
+- [limpet](https://github.com/noplan-inc/limpet) - Coding agents: Stop hook that keeps an agent from finishing too early by judging plain-language completion rules with Jev.
+- [robo-harness](https://github.com/grmkris/robo-harness) - Robotics: SO-101 arm workbench where a Jev decision runner picks bounded joint steps from typed candidate actions under a spend budget.
+
+### Data Labeling & Curation
+
+Source file: [`categories/data-labeling-curation.md`](categories/data-labeling-curation.md)
+
+- [typeful-triage](https://github.com/cephalization/jev-triage) - Open-source maintenance: multiplayer triage dashboard where Jev answers a fixed set of typed questions per issue — kind, severity, urgency, duplicate, and next step — and every human correction is kept and shown back to the model on later runs.
 
 ### Evaluation & Benchmarking
 
@@ -143,6 +164,13 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 Source file: [`categories/compliance-legal.md`](categories/compliance-legal.md)
 
 - [LegalForecast-MTD](https://github.com/johnhughes3/LegalForecastBench) - Legal forecasting: benchmark that asks Jev to predict federal motion-to-dismiss rulings from the judge's written record and scores the calibrated probabilities with claim-defendant micro-Brier metrics.
+
+### Content Moderation
+
+Source file: [`categories/content-moderation.md`](categories/content-moderation.md)
+
+- [Jev Moderation Bot](https://github.com/brainstormity/Jev-Moderation-Bot) - Community moderation: Discord bot that scores incoming messages for phishing, spam, and social engineering with Jev and drives a four-stage escalation ladder, injecting pardoned messages back into context as verified-safe precedent.
+- [jev-spam-eval](https://github.com/bitnovus/jev-spam-eval) - Spam filtering: zero-shot spam classification with Jev `Boolean` questions, benchmarked against TF-IDF baselines.
 
 ### Related Practices / Discussions
 

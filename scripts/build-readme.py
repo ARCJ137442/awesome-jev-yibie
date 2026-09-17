@@ -18,11 +18,11 @@ CATEGORIES = [
     "infra-sdks-integrations.md",
     "game-simulation.md",
     "compliance-legal.md",
+    "content-moderation.md",
     "related-practices-discussions.md",
 ]
 
 OPEN_TRACKING = [
-    "content-moderation.md",
     "scientific-pipelines.md",
 ]
 
