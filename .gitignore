@@ -1,0 +1,10 @@
+.DS_Store
+.logs/
+.pi/git/
+.pi/npm/
+.pi/schedule-prompts.json
+node_modules/
+__pycache__/
+*.pyc
+scripts/update-awesome-jev.env
+AUTOMATION.local.md
