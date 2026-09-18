@@ -41,7 +41,7 @@ We do **not** include:
 - [Classification & Routing](categories/classification-routing.md) — 9 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 4 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 3 entries
-- [Agent Decisions](categories/agent-decisions.md) — 6 entries
+- [Agent Decisions](categories/agent-decisions.md) — 7 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 1 entry
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 4 entries
 - [Calibration & Research](categories/calibration-research.md) — 3 entries
@@ -115,6 +115,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [limpet](https://github.com/noplan-inc/limpet) - Coding agents: Stop hook that keeps an agent from finishing too early by judging plain-language completion rules with Jev.
 - [robo-harness](https://github.com/grmkris/robo-harness) - Robotics: SO-101 arm workbench where a Jev decision runner picks bounded joint steps from typed candidate actions under a spend budget.
 - [dsh-auto-mode](https://git.allen-software.com/allenh1/dsh-auto-mode) - Coding agents: DeepSeek Harness permission preset whose end-prompt step has Jev answer the open questions an agent leaves in its final message, steering them back only when a choice clears 0.6 confidence and an autonomy-safety Noul clears 0.5, and returning the turn to the human otherwise.
+- [augustus](https://github.com/24601/Augustus) - Coding agents: agent skill that maps Choice, Score, and Noul onto classical methods so an agent can place typed judgment in software, with a composition algebra, question-design diagnosis, and a validation gate that requires a falsifying experiment.
 
 ### Data Labeling & Curation
 
