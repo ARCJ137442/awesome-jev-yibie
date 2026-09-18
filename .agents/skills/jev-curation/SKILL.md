@@ -207,6 +207,16 @@ Before adding a repository, check depth (see CONTRIBUTING.md, "AI-assisted work,
 - Does a batch of same-day repositories share one scaffold? That is a risk signal, not momentum — review each on its own merits, and cap a single author at three entries per rolling seven days.
 - Are the numbers in the entry traceable to the linked page? Strip what you cannot verify.
 
+## Handling pull requests
+
+When a contributor opens a PR:
+
+1. Verify the repository, do not just read the PR body — file tree, source, tests, CI, commit history, and whether the code really calls the Jev API.
+2. If the repository is thinner than the entry implies (README-only claims, no runnable check, docs outweighing code), say so in a review comment and ask for the missing evidence rather than merging or silently rejecting it.
+3. When an author already has three entries accepted in a rolling seven-day window, state the rule in the PR comment *before* acting, and queue the extra entries to a later cycle instead of rejecting them. Link the CONTRIBUTING section so the contributor knows it is policy, not a judgement about them.
+4. Never edit a contributor's wording purely for style; do fix inaccurate claims.
+5. README.md is generated — when a PR conflicts there, rebase the branch and regenerate it (`python3 scripts/build-readme.py`) rather than hand-resolving. For conflicts in a category file, keep main's version and append the PR's new line.
+
 ## Deliverable checklist
 
 Before finishing, verify:
