@@ -39,7 +39,7 @@ We do **not** include:
 ## Current coverage
 
 - [Classification & Routing](categories/classification-routing.md) — 14 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 8 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 9 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 7 entries
 - [Agent Decisions](categories/agent-decisions.md) — 13 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
@@ -97,6 +97,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 
 Source file: [`categories/verification-guardrails.md`](categories/verification-guardrails.md)
 
+- [is-malicious](https://github.com/luantak/is-malicious) - Software supply-chain security: asks Jev `Noul` checks about source and build files, escalates suspicious chunks for a second pass, and returns implicated files and lines before execution.
 - [jev-review](https://github.com/devagrawal09/jev-review) - Software engineering: staged code-review workflow and local dashboard where Jev gates each review stage before a change advances.
 - [pi-jev](https://github.com/y0usaf/pi-jev) - Agent safety: adds a measured tool-call gate to the Pi coding agent so risky calls are checked by Jev before execution.
 - [OpenWork](https://github.com/different-ai/openwork) - Engineering workflow: wires Jev into its eval testkit as a verification judge so agent-produced work is gated by typed verdicts rather than a text model.
