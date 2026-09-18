@@ -42,7 +42,7 @@ We do **not** include:
 - [Verification & Guardrails](categories/verification-guardrails.md) — 4 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 4 entries
 - [Agent Decisions](categories/agent-decisions.md) — 7 entries
-- [Data Labeling & Curation](categories/data-labeling-curation.md) — 1 entry
+- [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 4 entries
 - [Calibration & Research](categories/calibration-research.md) — 3 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 9 entries
@@ -122,6 +122,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 
 Source file: [`categories/data-labeling-curation.md`](categories/data-labeling-curation.md)
 
+- [jev-curate](https://github.com/AkashPriyadarshii/jev-curate) - Dataset engineering: sifts synthetic JSONL and Parquet rows using Jev Noul checks and calibrated confidence scores, streaming passed records and rejections straight to disk.
 - [typeful-triage](https://github.com/cephalization/jev-triage) - Open-source maintenance: multiplayer triage dashboard where Jev answers a fixed set of typed questions per issue — kind, severity, urgency, duplicate, and next step — and every human correction is kept and shown back to the model on later runs.
 
 ### Evaluation & Benchmarking
