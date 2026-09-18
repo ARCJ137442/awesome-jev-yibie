@@ -39,7 +39,7 @@ We do **not** include:
 ## Current coverage
 
 - [Classification & Routing](categories/classification-routing.md) — 14 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 7 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 8 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 5 entries
 - [Agent Decisions](categories/agent-decisions.md) — 12 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
@@ -104,6 +104,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [Foreman](https://github.com/thruwire/foreman) - Software factory: sits above Codex workers and has Jev independently judge whether an implementation is complete, its tests sufficient, or a human is needed.
 - [jev-code](https://github.com/devagrawal09/jev-code) - Coding agents: bounded Jev workflows that keep agent judgments typed instead of free-form.
 - [opencompany](https://github.com/useopencompany/opencompany) - Agent workspace: runs its approval review through Jev so workspace actions are gated by a typed decision.
+- [jev-git](https://github.com/AkashPriyadarshii/jev-git) - Developer tooling: sub-second Git pre-commit & pre-push reflex gate that screens staged diffs for secrets and destructive commands using Jev.
 
 ### Scoring & Ranking
 
