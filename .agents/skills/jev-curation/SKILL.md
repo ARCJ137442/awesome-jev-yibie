@@ -171,7 +171,8 @@ When invoked for a recurring sweep:
 6. Remove duplicates.
 7. Recount category totals.
 8. Refresh `README.md` so the homepage aggregate matches the current category files and counts.
-9. Publish one short X post covering the round, then summarize what was added, promoted, and rejected.
+9. Publish one short X post covering the round, following the 统一格式 in `/skill:tweet-posting-cdp` (same layout for both awesome lists), then summarize what was added, promoted, and rejected.
+   - Verify with `DRY_RUN=1` first; the script prints `内容校验通过：N 字符 / M 段落` and must match before actually posting.
 
 ## Suggested commands
 
