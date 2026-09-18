@@ -17,3 +17,5 @@ Use this category for programs where Jev produces rubric scores, quality grades,
 - [pagegrade](https://github.com/kitze/pagegrade) - Content quality: grades page sections for clarity, writing, and on-page SEO with Jev and returns per-section scores.
 - [jev-scout](https://github.com/AkashPriyadarshii/jev-scout) - Developer tooling: sub-second zero-hallucination open-source repo and crate scout using TypeSafe Jev speculative fan-out scoring.
 - [jev-seo](https://github.com/AkashPriyadarshii/jev-seo) - Zero-cost, agent-first SEO & Generative Engine Optimization (GEO) search radar CLI suite and MCP server powered by DuckDuckGo and TypeSafe Jev System One.
+- [JevSlop](https://github.com/TKY-27/JevSlop) - Writing quality: scores public note.com articles on eight Jev `Score` axes inside a single `systemOne` request and turns them into a 0-100 Slop Score in ordinary TypeScript.
+- [SemanticSpace](https://semanticspace.dev/) - Semantic mapping: places phrases in 2D by asking Jev how strongly each one relates to two chosen axis concepts and using those scores as coordinates.

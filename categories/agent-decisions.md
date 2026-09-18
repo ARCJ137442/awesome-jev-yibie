@@ -23,3 +23,6 @@ Use this category for programs where Jev supplies the decision step inside an ag
 - [fastbrowse](https://github.com/agent-labs-dev/fastbrowse) - Browser agents: Jev picks each action from what is on the page while an LLM reads and plans.
 - [super-jev](https://github.com/Kevthetech143/super-jev) - Decision harness: turns a Jev answer into a bounded action instead of leaving the caller to interpret it.
 - [jev-superpowers](https://github.com/AkashPriyadarshii/jev-superpowers) - Systematic software development framework for AI coding agents upgraded with TypeSafe Jev System One typed decisions, zero-hallucination package vetting, and completion gates.
+- [Jev Browser](https://github.com/jkudish/jev-browser) - Browser automation: drives a browser with Jev deciding each step, pitched as fast and very cheap next to LLM-driven browsing.
+- [pi-fast-jev-compaction](https://github.com/joelhooks/pi-fast-jev-compaction) - Context management: Pi extension that keeps conversation text verbatim while pruning stale tool history with Jev, falling back to Pi's own summarization only when pruning cannot free enough room.
+- [Atomic](https://github.com/bastani-inc/atomic) - Coding agent runtime: ships a first-class Jev structured-output provider so an agent's decisions come back typed, through the same decision resolver as its other providers.

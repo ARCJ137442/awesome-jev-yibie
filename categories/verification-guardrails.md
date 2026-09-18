@@ -19,3 +19,6 @@ Use this category for programs where Jev gates output — verifying claims, revi
 - [jev-code](https://github.com/devagrawal09/jev-code) - Coding agents: bounded Jev workflows that keep agent judgments typed instead of free-form.
 - [opencompany](https://github.com/useopencompany/opencompany) - Agent workspace: runs its approval review through Jev so workspace actions are gated by a typed decision.
 - [jev-git](https://github.com/AkashPriyadarshii/jev-git) - Developer tooling: sub-second Git pre-commit & pre-push reflex gate that screens staged diffs for secrets and destructive commands using Jev.
+- [pi-heed](https://github.com/Nyarlathoteppppp/pi-heed) - Runtime constraints: checks every side-effecting tool call from the Pi agent against what the user actually asked for.
+- [Hunch](https://github.com/Kelbie/hunch) - Code review: plain-English rules that Jev checks code against, locally or on every pull request, with Jev picking one label per finding.
+- [Abide](https://github.com/coldteadotai/abide) - Agent supervision: reads every edit a coding agent makes and has Jev flag rule violations, with the project reporting that an independent reviewer confirmed 10 of the 39 flagged edits and 11 of the 15 flagged turns.

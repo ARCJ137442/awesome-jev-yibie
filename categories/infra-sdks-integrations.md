@@ -19,7 +19,7 @@ Use this category for ecosystem tooling built around Jev — SDKs, wrappers, gat
 - [laravel-typesafe-jev](https://github.com/Butochnikov/laravel-typesafe-jev) - PHP ecosystem: unofficial Laravel integration for Jev with typed responses, async requests, scoped dependency injection, and testing fakes.
 - [advocaat](https://github.com/pithings/advocaat) - Data tooling: small type-safe client for asking Jev questions about a dataset.
 - [jevclient](https://pypi.org/project/jevclient/) - Python ecosystem: async client for Jev published on PyPI.
-- [typesafe-on-neon](https://github.com/andrelandgraf/typesafe-on-neon) - Cloud infrastructure: Neon Function proxy for the Neon AI Gateway that routes decisions with Jev.
+- [safer-with-jev](https://github.com/andrelandgraf/safer-with-jev) - Cloud infrastructure: Neon Function proxy for the Neon AI Gateway that routes decisions with Jev.
 - [typesafe-ai/skills](https://github.com/typesafe-ai/skills) - Official tooling: installable agent skills package (`npx skills add typesafe-ai/skills`) that teaches agents the Jev workflow.
 - [Smithers](https://github.com/smithersai/smithers) - Agent frameworks: TypeScript workflow framework with a Jev session checker wired into its workflows.
 - [skillbox](https://github.com/kitze/skillbox) - Skills infrastructure: self-hosted versioned skills library that adds optional Jev recommendations using your own TypeSafe or Gateway key.
@@ -28,3 +28,4 @@ Use this category for ecosystem tooling built around Jev — SDKs, wrappers, gat
 - [jev-go](https://github.com/Stumble/jev-go) - Go ecosystem: community Go SDK for Jev.
 - [jev-cli](https://github.com/tumf/jev-cli) - Developer tooling: small dependency-free CLI for Jev.
 - [decide-mcp](https://github.com/dakdevs/decide-mcp) - MCP ecosystem: configurable decision server with percentage scores and bias-profile routing on top of Jev.
+- [typesafe-jev-examples](https://github.com/rajivkuriakose/typesafe-jev-examples) - Starter examples: worked ticket-triage and reranking examples runnable through OpenRouter without an early-access key, shipped with their own sample data and Makefile.

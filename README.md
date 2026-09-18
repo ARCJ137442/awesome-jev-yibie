@@ -61,18 +61,19 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 14 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 9 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 7 entries
-- [Agent Decisions](categories/agent-decisions.md) — 13 entries
+- [Classification & Routing](categories/classification-routing.md) — 15 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 12 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 9 entries
+- [Agent Decisions](categories/agent-decisions.md) — 16 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 8 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 10 entries
 - [Calibration & Research](categories/calibration-research.md) — 7 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 18 entries
-- [Game & Simulation](categories/game-simulation.md) — 5 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 19 entries
+- [Game & Simulation](categories/game-simulation.md) — 6 entries
+- [Finance & Trading](categories/finance-trading.md) — 2 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 3 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 21 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 28 entries
 
 ### Open categories still being seeded
 
@@ -91,6 +92,7 @@ Each entry lives in exactly one category. When a project could fit multiple cate
 - [Calibration & Research](#calibration-research) ([source](categories/calibration-research.md))
 - [Infra / SDKs / Integrations](#infra-sdks-integrations) ([source](categories/infra-sdks-integrations.md))
 - [Game & Simulation](#game-simulation) ([source](categories/game-simulation.md))
+- [Finance & Trading](#finance-trading) ([source](categories/finance-trading.md))
 - [Compliance & Legal](#compliance-legal) ([source](categories/compliance-legal.md))
 - [Content Moderation](#content-moderation) ([source](categories/content-moderation.md))
 - [Related Practices / Discussions](#related-practices-discussions) ([source](categories/related-practices-discussions.md))
@@ -115,6 +117,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [HA-Jev](https://github.com/AboveColin/HA-Jev) - Smart home: Home Assistant integration that answers questions about the house as a probability, a choice, or a score.
 - [secondlayer](https://github.com/ryanwaits/secondlayer) - Fault triage: self-hosted Stacks data service whose Slack gate and fault-triage paths both run on Jev decisions.
 - [new-api-typesafe-plugin](https://github.com/FFatTiger/new-api-plugin-typesafe) - LLM gateway: adds a native `/v1/systemone` endpoint to new-api so typed decisions sit behind the same gateway as chat models.
+- [duet-agent](https://github.com/dzhng/duet-agent) - Agent harness: keeps a Jev-backed routing table for deciding which model should serve a request.
 
 ### Verification & Guardrails
 
@@ -129,6 +132,9 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [jev-code](https://github.com/devagrawal09/jev-code) - Coding agents: bounded Jev workflows that keep agent judgments typed instead of free-form.
 - [opencompany](https://github.com/useopencompany/opencompany) - Agent workspace: runs its approval review through Jev so workspace actions are gated by a typed decision.
 - [jev-git](https://github.com/AkashPriyadarshii/jev-git) - Developer tooling: sub-second Git pre-commit & pre-push reflex gate that screens staged diffs for secrets and destructive commands using Jev.
+- [pi-heed](https://github.com/Nyarlathoteppppp/pi-heed) - Runtime constraints: checks every side-effecting tool call from the Pi agent against what the user actually asked for.
+- [Hunch](https://github.com/Kelbie/hunch) - Code review: plain-English rules that Jev checks code against, locally or on every pull request, with Jev picking one label per finding.
+- [Abide](https://github.com/coldteadotai/abide) - Agent supervision: reads every edit a coding agent makes and has Jev flag rule violations, with the project reporting that an independent reviewer confirmed 10 of the 39 flagged edits and 11 of the 15 flagged turns.
 
 ### Scoring & Ranking
 
@@ -141,6 +147,8 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [pagegrade](https://github.com/kitze/pagegrade) - Content quality: grades page sections for clarity, writing, and on-page SEO with Jev and returns per-section scores.
 - [jev-scout](https://github.com/AkashPriyadarshii/jev-scout) - Developer tooling: sub-second zero-hallucination open-source repo and crate scout using TypeSafe Jev speculative fan-out scoring.
 - [jev-seo](https://github.com/AkashPriyadarshii/jev-seo) - Zero-cost, agent-first SEO & Generative Engine Optimization (GEO) search radar CLI suite and MCP server powered by DuckDuckGo and TypeSafe Jev System One.
+- [JevSlop](https://github.com/TKY-27/JevSlop) - Writing quality: scores public note.com articles on eight Jev `Score` axes inside a single `systemOne` request and turns them into a 0-100 Slop Score in ordinary TypeScript.
+- [SemanticSpace](https://semanticspace.dev/) - Semantic mapping: places phrases in 2D by asking Jev how strongly each one relates to two chosen axis concepts and using those scores as coordinates.
 
 ### Agent Decisions
 
@@ -159,6 +167,9 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [fastbrowse](https://github.com/agent-labs-dev/fastbrowse) - Browser agents: Jev picks each action from what is on the page while an LLM reads and plans.
 - [super-jev](https://github.com/Kevthetech143/super-jev) - Decision harness: turns a Jev answer into a bounded action instead of leaving the caller to interpret it.
 - [jev-superpowers](https://github.com/AkashPriyadarshii/jev-superpowers) - Systematic software development framework for AI coding agents upgraded with TypeSafe Jev System One typed decisions, zero-hallucination package vetting, and completion gates.
+- [Jev Browser](https://github.com/jkudish/jev-browser) - Browser automation: drives a browser with Jev deciding each step, pitched as fast and very cheap next to LLM-driven browsing.
+- [pi-fast-jev-compaction](https://github.com/joelhooks/pi-fast-jev-compaction) - Context management: Pi extension that keeps conversation text verbatim while pruning stale tool history with Jev, falling back to Pi's own summarization only when pruning cannot free enough room.
+- [Atomic](https://github.com/bastani-inc/atomic) - Coding agent runtime: ships a first-class Jev structured-output provider so an agent's decisions come back typed, through the same decision resolver as its other providers.
 
 ### Data Labeling & Curation
 
@@ -179,6 +190,8 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [Jev reranking is not a free win](https://x.com/GoSailGlobal/status/2100877682972258619) - Search reranking: a measured run over 33,047 catalog entries, 164 real queries, and 9,831 graded pairs reports that Jev reranking alone did not beat vector retrieval.
 - [An early-access test of TypeSafe's Jev](https://lindfors.no/blog/a-first-look-at-typesafes-jev/) - Independent trial: measures calibrated judgments on early-access Jev and reports the resulting cost per decision.
 - [jevcal](https://github.com/abhixhek/jevcal) - Model evaluation: fits a per-question confidence threshold to a target accuracy on your own labeled data, verifies it on a held-out split, reports how much traffic still has to escalate to an LLM, and fails CI when a model update breaks the locked thresholds.
+- [WindTunnel](https://github.com/nekuda-ai/WindTunnel) - Browser-agent benchmark: measures WebMCP against other browser-agent interfaces, with Jev appearing as one of the compared configurations.
+- [jev-eval](https://github.com/Shogo-nfrealmusic/jev-eval) - Third-party check: compares Jev against GPT-4o-mini and Claude Sonnet 4.5 under identical conditions on the same judgment task.
 
 ### Calibration & Research
 
@@ -205,7 +218,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [laravel-typesafe-jev](https://github.com/Butochnikov/laravel-typesafe-jev) - PHP ecosystem: unofficial Laravel integration for Jev with typed responses, async requests, scoped dependency injection, and testing fakes.
 - [advocaat](https://github.com/pithings/advocaat) - Data tooling: small type-safe client for asking Jev questions about a dataset.
 - [jevclient](https://pypi.org/project/jevclient/) - Python ecosystem: async client for Jev published on PyPI.
-- [typesafe-on-neon](https://github.com/andrelandgraf/typesafe-on-neon) - Cloud infrastructure: Neon Function proxy for the Neon AI Gateway that routes decisions with Jev.
+- [safer-with-jev](https://github.com/andrelandgraf/safer-with-jev) - Cloud infrastructure: Neon Function proxy for the Neon AI Gateway that routes decisions with Jev.
 - [typesafe-ai/skills](https://github.com/typesafe-ai/skills) - Official tooling: installable agent skills package (`npx skills add typesafe-ai/skills`) that teaches agents the Jev workflow.
 - [Smithers](https://github.com/smithersai/smithers) - Agent frameworks: TypeScript workflow framework with a Jev session checker wired into its workflows.
 - [skillbox](https://github.com/kitze/skillbox) - Skills infrastructure: self-hosted versioned skills library that adds optional Jev recommendations using your own TypeSafe or Gateway key.
@@ -214,6 +227,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [jev-go](https://github.com/Stumble/jev-go) - Go ecosystem: community Go SDK for Jev.
 - [jev-cli](https://github.com/tumf/jev-cli) - Developer tooling: small dependency-free CLI for Jev.
 - [decide-mcp](https://github.com/dakdevs/decide-mcp) - MCP ecosystem: configurable decision server with percentage scores and bias-profile routing on top of Jev.
+- [typesafe-jev-examples](https://github.com/rajivkuriakose/typesafe-jev-examples) - Starter examples: worked ticket-triage and reranking examples runnable through OpenRouter without an early-access key, shipped with their own sample data and Makefile.
 
 ### Game & Simulation
 
@@ -224,6 +238,14 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [tsai-sc](https://github.com/phyous/tsai-sc) - Gaming: drives original StarCraft shareware through keyboard and mouse with Jev action probabilities recorded per decision.
 - [jev-plays-pokemon](https://github.com/milanboers/jev-plays-pokemon) - Gaming: reads Pokémon Red game state as text, answers typed questions each turn, and lets deterministic code turn the answers into moves.
 - [typesafe-jev-drone-demo](https://github.com/kxzk/typesafe-jev-drone-demo) - Simulation: Three.js drone simulator with a Python backend where Jev drives the navigation decisions.
+- [typesafe-playground](https://github.com/kavehmz/typesafe-playground) - Interactive playground: small Jev experiments that put the decision on screen, from routing a support message to steering a car in a 3D world.
+
+### Finance & Trading
+
+Source file: [`categories/finance-trading.md`](categories/finance-trading.md)
+
+- [Jevinik](https://github.com/unicodeveloper/jevocks) - Stock decisions: terminal that gathers live market evidence through Valyu and asks Jev whether a stock is likely to trade higher over the next 30 days.
+- [jev_stock](https://github.com/sosopop/jev_stock) - Short-term forecasting: experimental Hong Kong stock framework that turns structured market state into a Jev decision on price direction, with a backtest script for the first trading day.
 
 ### Compliance & Legal
 
@@ -264,6 +286,13 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [19 open-source Jev projects](https://x.com/GoSailGlobal/status/2100859307671855113) - X (Chinese): tallies 19 open-source Jev projects totalling more than 6,800 stars.
 - [Jev is the fish at the poker table](https://backnotprop.com/blog/jev-poker/) - Blog: plays poker with Jev and uses the table to probe where a fast decision model helps and where it does not.
 - [Jev is about to change the AI economy](https://thefinancialengineer.substack.com/p/typesafes-jev-is-about-to-change) - Substack: argues that cheap calibrated decisions move where inference spend goes.
+- [Awesome Jev by 0xLogicrw](https://x.com/0xLogicrw/status/2100478725393686556) - X (Chinese): a hand-checked list of Jev projects published one day after launch, one of several community indexes that appeared within 48 hours.
+- [Jev repository roundup (Japanese)](https://x.com/studio_yebisu/status/2100686990090047569) - X (Japanese): rounds up the Jev repositories with the most practical promise, observing that computer use and automated trading dominate the early use cases.
+- [Six things I'll still use Jev for](https://x.com/isaac_flath/status/2100623016644223175) - X: a practitioner lists the six Jev uses he still expects to rely on after 60 days, an early usefulness review rather than a launch reaction.
+- [WTF is Jev, ELI5](https://x.com/mvanhorn/status/2100761338918363550) - X: frames Jev as "AI multiple choice, not AI essay writing", one of the clearer plain-language explanations of the System One shape.
+- [深入解读 Jev 模型：毫秒级判定与工程边界](https://github.com/kuhung/understanding-jev) - Chinese deep-dive: examines Jev's millisecond judgments and, more usefully, where its engineering boundaries lie.
+- [Has anyone tried Jev as a relevance filter for RAG?](https://reddit.com/r/AI_Agents/comments/1wjpgbx/has_anyone_tried_jev_as_a_relevance/) - Reddit: builders ask whether Jev works as a retrieval relevance filter and reranker, probing the boundary the reported negative reranking result already hinted at.
+- [Can we have Jev in Devin?](https://reddit.com/r/DevinAI/comments/1wjtmwi/can_we_have_jev_in_devin/) - Reddit: users of another coding agent ask for a Jev decision layer inside their tool, a signal that typed decisions are becoming an expected feature.
 
 ## Submission format
 
