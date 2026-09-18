@@ -199,6 +199,14 @@ opencli gh api repos/typesafe-ai/jev/readme
 If evidence is good but not strong enough for a main case, keep it in discussions.
 Precision beats coverage. This model shipped in September 2026, so the corpus is small — resist padding it.
 
+Before adding a repository, check depth (see CONTRIBUTING.md, "AI-assisted work, and bulk submissions"):
+
+- Does the code actually call the Jev API, or is the claim README-only?
+- Is there a runnable check (test, example with expected output, public demo)?
+- Is the repository mostly prompt documents? Then describe it as such, or skip it.
+- Does a batch of same-day repositories share one scaffold? That is a risk signal, not momentum — review each on its own merits, and cap a single author at three entries per rolling seven days.
+- Are the numbers in the entry traceable to the linked page? Strip what you cannot verify.
+
 ## Deliverable checklist
 
 Before finishing, verify:

@@ -50,6 +50,10 @@ Please do not submit:
 - Vendor marketing copy with no concrete usage
 - Private, dead, or inaccessible sources
 - Multi-paragraph explanations inside category files
+- Repositories that only *describe* a Jev integration without implementing one
+- Repositories whose documentation outweighs their code while claiming to be tools
+
+For AI-assisted work, project depth, and submission-rate rules, see [AI-assisted work, and bulk submissions](#ai-assisted-work-and-bulk-submissions).
 
 ## Core rules
 
@@ -74,6 +78,41 @@ If a reader cannot understand the use case in one quick pass, rewrite it.
 ### 5. Prefer fewer, stronger entries
 
 High-signal curation is more important than volume. A list of forty vague prototypes is worth less than five entries with numbers in them.
+
+### 6. Depth over surface area
+
+An entry has to describe something that **runs**, not something that is described. Before submitting, make sure:
+
+- the repository performs the typed decision it claims — a real Jev request carrying typed questions, and a parsed answer coming back;
+- there is at least one runnable check that would fail if the logic broke — a test, an example with expected output, or a public demo;
+- any number in your entry (accuracy, latency, cost, volume) is traceable to the linked page.
+
+If a project is mostly prompt documents, skills, or templates, that is fine — but submit and describe it as such. Do not present a prompt pack as a tool.
+
+## AI-assisted work, and bulk submissions
+
+AI-assisted development is welcome here. Plenty of listed projects were built with coding agents, and that is not a reason to exclude them. It does change what the reviewer needs from you.
+
+### Disclose AI generation
+
+If a project was generated or substantially written by an AI system, say so in the pull request, and preferably in the repository. Disclosure is not a penalty — it sets the review bar honestly, and it tells maintainers to check depth rather than authorship.
+
+Undisclosed generation usually becomes obvious anyway: a shared scaffold, a single bulk commit, documents far outweighing code. Being caught that way costs more trust than the disclosure would have.
+
+### Do not ship a scaffold as evidence
+
+One `AGENTS.md` / `CLAUDE.md` / `STATE.md` / `CHANGELOG.md` template reused across several repositories does not make any of them more complete. Neither does a README that documents features the code does not implement.
+
+### Submission rate
+
+Bulk submission is the most common way this list loses signal.
+
+- **One entry per pull request.** Do not bundle unrelated projects.
+- **At most three entries per author per rolling seven days.** This is a review-priority rule, not a ban: entries beyond it are queued to a later cycle, not rejected on sight.
+- **Projects released together are reviewed individually.** Being in the same batch grants no shared credibility, and a weak member can hold up a strong one.
+- **A shared release date is treated as a risk signal**, not as momentum.
+
+Maintainers may accept a project with a caveat when the code is real but depth is unproven, and may decline one member of a batch while accepting its siblings.
 
 ## Entry format
 
@@ -173,3 +212,8 @@ Before submitting, confirm:
 - [ ] The category reflects the direct Jev application domain.
 - [ ] The entry was added to a category file, not to `README.md`.
 - [ ] The wording is concise and easy to scan.
+- [ ] The repository actually performs the decision (not a README-only claim).
+- [ ] There is at least one runnable check, or the entry says plainly that there is not.
+- [ ] Any number in the entry traces back to the linked page.
+- [ ] AI generation is disclosed, if it applies.
+- [ ] This is not more than my third entry in a rolling seven-day window.
