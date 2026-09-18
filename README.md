@@ -45,7 +45,7 @@ We do **not** include:
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 8 entries
 - [Calibration & Research](categories/calibration-research.md) — 7 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 17 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 18 entries
 - [Game & Simulation](categories/game-simulation.md) — 5 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 3 entries
@@ -177,6 +177,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [jev-mcp (jkudish)](https://github.com/jkudish/jev-mcp) - MCP ecosystem: proof-of-concept MCP server that puts Jev claim verification, content screening, and candidate ranking behind standard MCP tools.
 - [jev-mcp (blakestone-x)](https://github.com/blakestone-x/jev-mcp) - MCP ecosystem: MCP server exposing Jev classify, score, check, match, and screen as tools for any agent, with confidence on every answer.
 - [zio-typesafe-ai](https://github.com/jamesward/zio-typesafe-ai) - Scala ecosystem: ZIO client for TypeSafe AI with a typed DSL over Jev decisions.
+- [TypeSafe AI Swift SDK](https://github.com/alterhq/typesafe-sdk-swift) - Swift ecosystem: dependency-free Swift 6 client for Jev Choice, Score, and Noul questions with strict concurrency, configurable authentication and retries, and offline transport tests.
 - [laravel-typesafe-jev](https://github.com/Butochnikov/laravel-typesafe-jev) - PHP ecosystem: unofficial Laravel integration for Jev with typed responses, async requests, scoped dependency injection, and testing fakes.
 - [advocaat](https://github.com/pithings/advocaat) - Data tooling: small type-safe client for asking Jev questions about a dataset.
 - [jevclient](https://pypi.org/project/jevclient/) - Python ecosystem: async client for Jev published on PyPI.
