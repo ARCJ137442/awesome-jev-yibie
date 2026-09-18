@@ -62,7 +62,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 ## Current coverage
 
 - [Classification & Routing](categories/classification-routing.md) — 16 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 14 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 15 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 9 entries
 - [Agent Decisions](categories/agent-decisions.md) — 20 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
@@ -138,6 +138,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [Abide](https://github.com/coldteadotai/abide) - Agent supervision: reads every edit a coding agent makes and has Jev flag rule violations, with the project reporting that an independent reviewer confirmed 10 of the 39 flagged edits and 11 of the 15 flagged turns.
 - [fx](https://github.com/vercel-labs/fx) - Coding agent: ships a `typesafe_permission_reviewer` builtin so the agent's permission decisions run through Jev rather than an LLM call.
 - [Sniff Test](https://github.com/DanRWilloughby/snifftest) - Writing: prose linter that asks Jev ten `Boolean` questions per paragraph (stacked hedges, restating closers, not-X-but-Y turns, naked cost figures) at a 0.7 threshold; CLI, pre-commit hook, GitHub Action and Claude Code skill; measured 182 ms median and 1 of 54 clean paragraphs flagged against 37 for Haiku 4.5.
+- [jev-pref](https://github.com/doeixd/jev-pref) - Code review: turns the preferences in a project's AGENTS.md into `jev-pref.json` rules that Jev checks against each diff hunk, staged file set, or pull request, returning `fix_now` or advisory findings to the coding agent and a nonzero exit code on blocking ones.
 
 ### Scoring & Ranking
 
