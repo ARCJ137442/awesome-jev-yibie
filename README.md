@@ -43,7 +43,7 @@ We do **not** include:
 - [Scoring & Ranking](categories/scoring-ranking.md) — 6 entries
 - [Agent Decisions](categories/agent-decisions.md) — 12 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 7 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 8 entries
 - [Calibration & Research](categories/calibration-research.md) — 7 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 17 entries
 - [Game & Simulation](categories/game-simulation.md) — 5 entries
@@ -152,6 +152,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [Jev Pong](https://github.com/ably-labs/jev-pong) - Model comparison: Pong where the ball advances one step per model decision, putting Jev head-to-head with LLMs through Vercel AI Gateway.
 - [Jev reranking is not a free win](https://x.com/GoSailGlobal/status/2100877682972258619) - Search reranking: a measured run over 33,047 catalog entries, 164 real queries, and 9,831 graded pairs reports that Jev reranking alone did not beat vector retrieval.
 - [An early-access test of TypeSafe's Jev](https://lindfors.no/blog/a-first-look-at-typesafes-jev/) - Independent trial: measures calibrated judgments on early-access Jev and reports the resulting cost per decision.
+- [jevcal](https://github.com/abhixhek/jevcal) - Model evaluation: fits a per-question confidence threshold to a target accuracy on your own labeled data, verifies it on a held-out split, reports how much traffic still has to escalate to an LLM, and fails CI when a model update breaks the locked thresholds.
 
 ### Calibration & Research
 
