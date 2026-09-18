@@ -13,3 +13,5 @@ Use this category for decisions inside games, simulations, or interactive enviro
 - [typesafe-mario](https://github.com/fhshaik/typesafe-mario) - Gaming: TypeSafe/Jev agent that plays Super Mario Bros. from structured emulator state, choosing each action from emulator-derived features.
 - [jev-drone](https://github.com/RomanSlack/jev-drone) - Robotics simulation: camera-only autonomous drone in MuJoCo that puts a Jev judgment model in the control loop at 2.5 Hz.
 - [tsai-sc](https://github.com/phyous/tsai-sc) - Gaming: drives original StarCraft shareware through keyboard and mouse with Jev action probabilities recorded per decision.
+- [jev-plays-pokemon](https://github.com/milanboers/jev-plays-pokemon) - Gaming: reads Pokémon Red game state as text, answers typed questions each turn, and lets deterministic code turn the answers into moves.
+- [typesafe-jev-drone-demo](https://github.com/kxzk/typesafe-jev-drone-demo) - Simulation: Three.js drone simulator with a Python backend where Jev drives the navigation decisions.
