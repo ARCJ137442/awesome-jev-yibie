@@ -61,19 +61,19 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 15 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 12 entries
+- [Classification & Routing](categories/classification-routing.md) — 16 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 13 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 9 entries
-- [Agent Decisions](categories/agent-decisions.md) — 16 entries
+- [Agent Decisions](categories/agent-decisions.md) — 20 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 10 entries
-- [Calibration & Research](categories/calibration-research.md) — 7 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 19 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 11 entries
+- [Calibration & Research](categories/calibration-research.md) — 9 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 23 entries
 - [Game & Simulation](categories/game-simulation.md) — 6 entries
 - [Finance & Trading](categories/finance-trading.md) — 2 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 3 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 28 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 45 entries
 
 ### Open categories still being seeded
 
@@ -118,6 +118,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [secondlayer](https://github.com/ryanwaits/secondlayer) - Fault triage: self-hosted Stacks data service whose Slack gate and fault-triage paths both run on Jev decisions.
 - [new-api-typesafe-plugin](https://github.com/FFatTiger/new-api-plugin-typesafe) - LLM gateway: adds a native `/v1/systemone` endpoint to new-api so typed decisions sit behind the same gateway as chat models.
 - [duet-agent](https://github.com/dzhng/duet-agent) - Agent harness: keeps a Jev-backed routing table for deciding which model should serve a request.
+- [json-render](https://github.com/vercel-labs/json-render) - Generative UI: Vercel Labs' UI framework uses Jev in its compose path to pick which components and actions a rendered interface should contain.
 
 ### Verification & Guardrails
 
@@ -135,6 +136,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [pi-heed](https://github.com/Nyarlathoteppppp/pi-heed) - Runtime constraints: checks every side-effecting tool call from the Pi agent against what the user actually asked for.
 - [Hunch](https://github.com/Kelbie/hunch) - Code review: plain-English rules that Jev checks code against, locally or on every pull request, with Jev picking one label per finding.
 - [Abide](https://github.com/coldteadotai/abide) - Agent supervision: reads every edit a coding agent makes and has Jev flag rule violations, with the project reporting that an independent reviewer confirmed 10 of the 39 flagged edits and 11 of the 15 flagged turns.
+- [fx](https://github.com/vercel-labs/fx) - Coding agent: ships a `typesafe_permission_reviewer` builtin so the agent's permission decisions run through Jev rather than an LLM call.
 
 ### Scoring & Ranking
 
@@ -170,6 +172,10 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [Jev Browser](https://github.com/jkudish/jev-browser) - Browser automation: drives a browser with Jev deciding each step, pitched as fast and very cheap next to LLM-driven browsing.
 - [pi-fast-jev-compaction](https://github.com/joelhooks/pi-fast-jev-compaction) - Context management: Pi extension that keeps conversation text verbatim while pruning stale tool history with Jev, falling back to Pi's own summarization only when pruning cannot free enough room.
 - [Atomic](https://github.com/bastani-inc/atomic) - Coding agent runtime: ships a first-class Jev structured-output provider so an agent's decisions come back typed, through the same decision resolver as its other providers.
+- [fast-jev-compaction](https://github.com/tamaratran/fast-jev-compaction) - Context management: Claude Code plugin that replaces the compaction summary with Jev decisions, scoring every tool call and result for whether it is still needed instead of summarizing the session.
+- [fast-dev-compaction](https://github.com/leonaaardob/fast-dev-compaction) - Context management: Codex port of the Jev-guided compaction idea, restoring context verbatim around a session compaction rather than summarizing it.
+- [public-browser](https://github.com/Silbercue/public-browser) - Browser control: lets Claude Code and Cursor drive a real Chrome profile, with a Jev loop deciding the actions, reporting roughly 30% fewer tokens and 25% lower cost.
+- [pi-typesafe-router](https://github.com/jekozyra/pi-typesafe-router) - Coding agents: routes Pi's work through typed Jev decisions.
 
 ### Data Labeling & Curation
 
@@ -192,6 +198,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [jevcal](https://github.com/abhixhek/jevcal) - Model evaluation: fits a per-question confidence threshold to a target accuracy on your own labeled data, verifies it on a held-out split, reports how much traffic still has to escalate to an LLM, and fails CI when a model update breaks the locked thresholds.
 - [WindTunnel](https://github.com/nekuda-ai/WindTunnel) - Browser-agent benchmark: measures WebMCP against other browser-agent interfaces, with Jev appearing as one of the compared configurations.
 - [jev-eval](https://github.com/Shogo-nfrealmusic/jev-eval) - Third-party check: compares Jev against GPT-4o-mini and Claude Sonnet 4.5 under identical conditions on the same judgment task.
+- [minutes](https://github.com/silverstein/minutes) - Meeting notes: local-first transcription app whose live voice path runs its evaluations through Jev.
 
 ### Calibration & Research
 
@@ -204,6 +211,8 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [open-alternative-jev](https://github.com/ikermoel/open-alternative-jev) - Open alternative: runs a Jev-shaped decision model locally on your own GPU.
 - [mini-jev](https://github.com/r-ms/mini-jev) - Local reproduction: implements Jev's typed-decision interface on top of a local LLM.
 - [Jev-compatible public API](https://x.com/ekzhang1/status/2100651678110515383) - Open research: a public Jev-shaped API backed by an open Qwen3.6-35B-A3B model so anyone can try the typed-decision interface.
+- [kev](https://github.com/jaredpalmer/kev) - Trainable replica: a tiny Jev-like model on top of Qwen2.5-0.5B that trains and runs on a MacBook, shipped with its own research runs and evaluation scripts.
+- [jevinci](https://github.com/achimala/jevinci) - Creative experiment: paints images by having Jev predict every pixel's colour in parallel, with predicted confidence deciding how wide each stroke is drawn.
 
 ### Infra / SDKs / Integrations
 
@@ -228,6 +237,10 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [jev-cli](https://github.com/tumf/jev-cli) - Developer tooling: small dependency-free CLI for Jev.
 - [decide-mcp](https://github.com/dakdevs/decide-mcp) - MCP ecosystem: configurable decision server with percentage scores and bias-profile routing on top of Jev.
 - [typesafe-jev-examples](https://github.com/rajivkuriakose/typesafe-jev-examples) - Starter examples: worked ticket-triage and reranking examples runnable through OpenRouter without an early-access key, shipped with their own sample data and Makefile.
+- [ai-python](https://github.com/vercel-labs/ai-python) - Python ecosystem: the official Vercel AI SDK for Python carries Jev through its evaluation operation and Gateway examples.
+- [Cline plugins](https://github.com/cline/plugins) - Coding agents: Cline's official plugin collection includes a Jev-driven browser plugin (`jev-browser`), so Jev arrives as a first-class Cline capability.
+- [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - Web frameworks: Hono middleware that routes HTTP requests by meaning rather than by method and path, deciding with Jev.
+- [rotom](https://github.com/RyanKung/rotom) - Local gateways: OpenAI- and Anthropic-compatible API gateway that carries Jev through its model catalog and evaluation path.
 
 ### Game & Simulation
 
@@ -293,6 +306,23 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [深入解读 Jev 模型：毫秒级判定与工程边界](https://github.com/kuhung/understanding-jev) - Chinese deep-dive: examines Jev's millisecond judgments and, more usefully, where its engineering boundaries lie.
 - [Has anyone tried Jev as a relevance filter for RAG?](https://reddit.com/r/AI_Agents/comments/1wjpgbx/has_anyone_tried_jev_as_a_relevance/) - Reddit: builders ask whether Jev works as a retrieval relevance filter and reranker, probing the boundary the reported negative reranking result already hinted at.
 - [Can we have Jev in Devin?](https://reddit.com/r/DevinAI/comments/1wjtmwi/can_we_have_jev_in_devin/) - Reddit: users of another coding agent ask for a Jev decision layer inside their tool, a signal that typed decisions are becoming an expected feature.
+- [All the coolest Jev projects on X](https://x.com/moritzkremb/status/2100895894287839255) - X: a curated thread of the strongest Jev projects posted within 72 hours of launch, by a builder who also produced the most-watched Jev tutorial.
+- [Full Jev tutorial](https://x.com/moritzkremb/status/2100715237267660873) - X: a walkthrough covering the API, then three demos — voice-controlled browsing, AI memory, and YouTube preprocessing.
+- [WTF is Jev, and the 9 things people are building with it](https://x.com/mvanhorn/status/2100788572316139655) - X: the most widely shared explainer of the launch window, framing Jev as "AI multiple choice, not AI essay writing" and cataloguing nine use patterns.
+- [Jev is a really smart switch statement](https://x.com/NathanFlurry/status/2100036101809619314) - X: the hype-free framing from an infrastructure founder — Jev does not replace GPT or Claude, it is a very good switch statement with 2026 intelligence.
+- [Arbitrary classification as a type-safe primitive](https://x.com/cocktailpeanut/status/2100277062309179521) - X: argues the real novelty is not classification but that Jev makes arbitrary classification a runtime-defined, type-safe programmable primitive.
+- [This is a terrible compaction strategy](https://x.com/theo/status/2100762304862384257) - X: the strongest public pushback on the popular compaction idea, arguing compaction is reconstruction rather than filtering and that the plugin misunderstands context management.
+- [It is the inference technique, not the training](https://x.com/anderslie/status/2100388704644919662) - X: argues Jev's speed comes from parallel decoding rather than model training, and that an inference engine can expose a Jev-like API over any open-weight model.
+- [Jev's Architecture Unmasked](https://x.com/iwashi86/status/2100713337436930288) - X (Japanese): notes from a technical analysis that inferred Jev's internals from roughly 10,000 API calls, concluding it keeps LLM knowledge but removes token generation entirely.
+- [An internal Jev study session with 50+ engineers](https://x.com/LayerX_tech/status/2100887864594895154) - X (Japanese): a company ran an emergency internal study session on Jev and published the material — an early example of organisational adoption rather than individual experimentation.
+- [X is all over it, Reddit is not](https://x.com/0xBOYD/status/2100619702003208701) - X: observes a sharp platform divide, finding only three Jev posts on Reddit while X filled with working prototypes — a useful reminder that channel coverage changes the picture.
+- [Five open Jev replicas worth trying](https://x.com/xiaomovps/status/2100923960493818177) - X (Chinese): rounds up Laya 421M, Decider-2B, NanoJev 0.6B, Reflex, and System-One 4B as the most promising open decision models, two of which are Mac-friendly.
+- [jev(): a PostgreSQL extension for natural-language queries](https://x.com/iam_zachi/status/2100679300756435135) - X: a single SQL function that searches a whole database in natural language with no index and no embeddings, e.g. `WHERE jev(people, 'could work from home')`.
+- [A DuckDB extension for row classification](https://x.com/hamiltonulmer/status/2100370557405667768) - X: classifies rows in any CSV, Parquet, or DuckDB table with Jev, reporting about ten seconds for a thousand rows and better ergonomics than a bespoke classifier.
+- [An on-chain trading bot where Jev decides](https://x.com/jarrodwatts/status/2100356151468585346) - X: Jev decides buy or sell from a live price feed and the bot places real orders on Monad every 300 ms block — the clearest sign that the finance experiments are not all paper.
+- [Jev broke our WebMCP benchmark](https://x.com/0xidanlevin/status/2100937437325205568) - X: the benchmark's own author reports that Jev plus a fast small LLM solved 100% of WebMCP tasks at roughly 112x lower model cost than a frontier model with computer use.
+- [Chinese notes after a day with Jev](https://x.com/jiayuan_jy/status/2100876273061102006) - X (Chinese): a sceptical read — Jev looks like a faster general classifier an LLM could already do, and on complex scenarios its world knowledge is the open question.
+- [Stagehand plus Jev browser control](https://x.com/kylejeong/status/2100622054945095934) - X: sends the accessibility tree as state and candidate actions as questions so Jev decides each step, reporting about $0.001 and near-instant execution for one task.
 
 ## Submission format
 
