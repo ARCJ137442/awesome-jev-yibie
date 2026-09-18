@@ -34,3 +34,4 @@ Use this category for ecosystem tooling built around Jev — SDKs, wrappers, gat
 - [Cline plugins](https://github.com/cline/plugins) - Coding agents: Cline's official plugin collection includes a Jev-driven browser plugin (`jev-browser`), so Jev arrives as a first-class Cline capability.
 - [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - Web frameworks: Hono middleware that routes HTTP requests by meaning rather than by method and path, deciding with Jev.
 - [rotom](https://github.com/RyanKung/rotom) - Local gateways: OpenAI- and Anthropic-compatible API gateway that carries Jev through its model catalog and evaluation path.
+- [Jev AI](https://jev-ai.pro) - Developer tooling: public Jev playground and API that puts typed `Choice`, `Score` and Yes/No questions to the model about pasted text - ticket triage, moderation, review scoring - and returns a parsed answer with a confidence value in about 0.5 s per decision.
