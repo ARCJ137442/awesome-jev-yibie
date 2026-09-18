@@ -16,3 +16,4 @@ Use this category for programs where Jev produces rubric scores, quality grades,
 - [Jev Search](https://github.com/superagents-lab/jev-search) - Web search: uses Jev Noul judgments on result titles and snippets to rank Search1API results by relevance, with application code merging duplicate URLs and grouping lower-scoring matches separately.
 - [pagegrade](https://github.com/kitze/pagegrade) - Content quality: grades page sections for clarity, writing, and on-page SEO with Jev and returns per-section scores.
 - [jev-scout](https://github.com/AkashPriyadarshii/jev-scout) - Developer tooling: sub-second zero-hallucination open-source repo and crate scout using TypeSafe Jev speculative fan-out scoring.
+- [jev-seo](https://github.com/AkashPriyadarshii/jev-seo) - Zero-cost, agent-first SEO & Generative Engine Optimization (GEO) search radar CLI suite and MCP server powered by DuckDuckGo and TypeSafe Jev System One.
