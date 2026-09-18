@@ -40,7 +40,7 @@ We do **not** include:
 
 - [Classification & Routing](categories/classification-routing.md) — 14 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 8 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 5 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 6 entries
 - [Agent Decisions](categories/agent-decisions.md) — 12 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 7 entries
@@ -115,6 +115,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jev-bfs](https://github.com/komikat/jev-bfs) - Search tooling: finds link paths between English Wikipedia articles by having Jev rank each page's outgoing links while Python controls the search.
 - [Jev Search](https://github.com/superagents-lab/jev-search) - Web search: uses Jev Noul judgments on result titles and snippets to rank Search1API results by relevance, with application code merging duplicate URLs and grouping lower-scoring matches separately.
 - [pagegrade](https://github.com/kitze/pagegrade) - Content quality: grades page sections for clarity, writing, and on-page SEO with Jev and returns per-section scores.
+- [jev-scout](https://github.com/AkashPriyadarshii/jev-scout) - Developer tooling: sub-second zero-hallucination open-source repo and crate scout using TypeSafe Jev speculative fan-out scoring.
 
 ### Agent Decisions
 
