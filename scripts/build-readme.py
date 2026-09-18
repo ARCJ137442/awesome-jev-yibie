@@ -110,15 +110,17 @@ def full_section(category: Category) -> list[str]:
 
 
 def check_duplicates(categories: dict[str, Category]) -> list[tuple[str, list[str]]]:
-    """Find entries that appear in more than one category. Returns [(repo_name, [category_files])]."""
-    repo_map: dict[str, list[str]] = {}
+    """Find entries whose primary source URL appears in more than one category."""
+    url_map: dict[str, list[str]] = {}
     for category in categories.values():
         for line in category.lines:
-            m = re.search(r"\(https://github\.com/([^/]+/[^/)\s]+)\)", line)
+            if not line.startswith("- ["):
+                continue
+            m = re.search(r"\((https?://[^)\s]+)\)", line)
             if m:
-                repo = m.group(1).lower()
-                repo_map.setdefault(repo, []).append(category.filename)
-    return [(repo, files) for repo, files in repo_map.items() if len(files) > 1]
+                key = m.group(1).lower().rstrip("/")
+                url_map.setdefault(key, []).append(category.filename)
+    return [(url, files) for url, files in url_map.items() if len(files) > 1]
 
 
 def build_readme() -> str:
@@ -129,9 +131,9 @@ def build_readme() -> str:
     # ---------- duplicate detection ----------
     duplicates = check_duplicates(categories)
     if duplicates:
-        print("⚠️  WARNING: cross-category duplicates detected:")
-        for repo, files in duplicates:
-            print(f"    {repo} appears in {', '.join(files)}")
+        print("⚠️  WARNING: duplicate sources detected:")
+        for url, files in duplicates:
+            print(f"    {url} appears in {', '.join(files)}")
         print()
 
     # ---------- build ----------
