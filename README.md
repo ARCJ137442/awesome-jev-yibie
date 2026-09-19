@@ -66,7 +66,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Scoring & Ranking](categories/scoring-ranking.md) — 10 entries
 - [Agent Decisions](categories/agent-decisions.md) — 22 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 12 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 13 entries
 - [Calibration & Research](categories/calibration-research.md) — 16 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 28 entries
 - [Game & Simulation](categories/game-simulation.md) — 6 entries
@@ -207,6 +207,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [jev-eval](https://github.com/Shogo-nfrealmusic/jev-eval) - Third-party check: compares Jev against GPT-4o-mini and Claude Sonnet 4.5 under identical conditions on the same judgment task.
 - [minutes](https://github.com/silverstein/minutes) - Meeting notes: local-first transcription app whose live voice path runs its evaluations through Jev.
 - [jev-orderby-bench](https://github.com/yodablocks/jev-orderby-bench) - Model evaluation: measures whether a SQL ORDER BY over a Jev probability is defensible (pairwise inversion, Score ordinality against a human grade, calibration, wording invariants, sort-key ties) under a pre-registered gate that jev-1.13.0 passes on 20 Newsgroups topics and fails four of six conditions on Amazon ESCI product relevance, and shows a DuckDB extension's default 40-row batching fails the ranking gate that one row per request passes.
+- [jev-ood-calibration](https://github.com/scienthoon/jev-ood-calibration) - Model evaluation: independent calibration test of Jev on 900 rule-generated support tickets it cannot have seen plus three public benchmarks, publishing every raw response, ECE against a simulated noise floor, temperature refit, and the per-type sign of miscalibration (Choice and Score overconfident, Boolean underconfident).
 
 ### Calibration & Research
 
