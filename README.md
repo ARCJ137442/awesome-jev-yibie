@@ -63,7 +63,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 18 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 19 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 12 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 13 entries
 - [Agent Decisions](categories/agent-decisions.md) — 27 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 13 entries
@@ -162,6 +162,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [Supercov](https://github.com/supercorp-ai/supercov) - Code quality for coding agents: Jev answers twelve `Noul` properties per source file so the agent knows what to fix first.
 - [jev.nvim](https://github.com/valentynkit/jev.nvim) - Developer tooling: Neovim plugin that splits the buffer into functions with Treesitter, scores each against a plain-language question with Jev, and ranks answers by probability in quickfix.
 - [jev-reranker](https://github.com/hotchpotch/jev-reranker) - Retrieval and RAG: uses Jev Noul judgments to assess retrieved documents for relevance and usefulness as answer evidence, then sorts results and optionally filters them using a configurable threshold.
+- [jev-skip](https://github.com/valentynkit/jev-skip) - Media: browser extension that reads the YouTube caption track and scores each segment's sponsor probability on the seek bar before the intro ends, reporting 77% of SponsorBlock's sponsor seconds caught over 23 videos at $0.0008 a video.
 
 ### Agent Decisions
 
