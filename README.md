@@ -66,9 +66,9 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Scoring & Ranking](categories/scoring-ranking.md) — 10 entries
 - [Agent Decisions](categories/agent-decisions.md) — 21 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 11 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 12 entries
 - [Calibration & Research](categories/calibration-research.md) — 16 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 27 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 28 entries
 - [Game & Simulation](categories/game-simulation.md) — 6 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -205,6 +205,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [WindTunnel](https://github.com/nekuda-ai/WindTunnel) - Browser-agent benchmark: measures WebMCP against other browser-agent interfaces, with Jev appearing as one of the compared configurations.
 - [jev-eval](https://github.com/Shogo-nfrealmusic/jev-eval) - Third-party check: compares Jev against GPT-4o-mini and Claude Sonnet 4.5 under identical conditions on the same judgment task.
 - [minutes](https://github.com/silverstein/minutes) - Meeting notes: local-first transcription app whose live voice path runs its evaluations through Jev.
+- [jev-orderby-bench](https://github.com/yodablocks/jev-orderby-bench) - Model evaluation: measures whether a SQL ORDER BY over a Jev probability is defensible (pairwise inversion, Score ordinality against a human grade, calibration, wording invariants, sort-key ties) under a pre-registered gate that jev-1.13.0 passes on 20 Newsgroups topics and fails four of six conditions on Amazon ESCI product relevance, and shows a DuckDB extension's default 40-row batching fails the ranking gate that one row per request passes.
 
 ### Calibration & Research
 
@@ -258,6 +259,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [Jev AI](https://jev-ai.pro) - Developer tooling: public Jev playground and API that puts typed `Choice`, `Score` and Yes/No questions to the model about pasted text - ticket triage, moderation, review scoring - and returns a parsed answer with a confidence value in about 0.5 s per decision.
 - [jevql](https://github.com/kylemclaren/jevql) - Data tooling: psql-shaped CLI and Go/TypeScript/Python SDKs that run plain SQL on a vanilla Postgres (no extension) and then ask Jev Noul, Choice, or Score questions about each surviving row so the client can apply `jev()` filters, `jev_prob` sorts, and `jev_choice` groups.
 - [sqlite-jev](https://github.com/mgaitan/sqlite-jev) - SQLite ecosystem: loadable C extension and Python package that expose Jev Noul, Choice, and Score judgments as SQL functions and batched virtual-table queries with confidence results.
+- [jevkit](https://github.com/ariel-frischer/jevkit) - Developer tooling: Rust CLI that validates `Choice`/`Score`/`Noul` question sets with 13 offline lint rules before any Jev call, then sends the canonical wire payload and prints parsed, confidence-bearing JSON answers to stdout using exit code 2 to reject a billed-but-useless request.
 
 ### Game & Simulation
 
