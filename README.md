@@ -61,19 +61,19 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 16 entries
+- [Classification & Routing](categories/classification-routing.md) — 17 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 16 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 10 entries
 - [Agent Decisions](categories/agent-decisions.md) — 21 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 11 entries
-- [Calibration & Research](categories/calibration-research.md) — 12 entries
+- [Calibration & Research](categories/calibration-research.md) — 16 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 27 entries
 - [Game & Simulation](categories/game-simulation.md) — 6 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 3 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 45 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 47 entries
 
 ### Open categories still being seeded
 
@@ -119,6 +119,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [new-api-typesafe-plugin](https://github.com/FFatTiger/new-api-plugin-typesafe) - LLM gateway: adds a native `/v1/systemone` endpoint to new-api so typed decisions sit behind the same gateway as chat models.
 - [duet-agent](https://github.com/dzhng/duet-agent) - Agent harness: keeps a Jev-backed routing table for deciding which model should serve a request.
 - [json-render](https://github.com/vercel-labs/json-render) - Generative UI: Vercel Labs' UI framework uses Jev in its compose path to pick which components and actions a rendered interface should contain.
+- [omo-jevlike-router](https://github.com/islee23520/omo-jevlike-router) - Skill routing: shrinks the skill catalog in a system prompt with one forward pass over a frozen Qwen, routing each request Jev-style.
 
 ### Verification & Guardrails
 
@@ -221,6 +222,10 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [jevinci](https://github.com/achimala/jevinci) - Creative experiment: paints images by having Jev predict every pixel's colour in parallel, with predicted confidence deciding how wide each stroke is drawn.
 - [jev-local](https://github.com/us/jev-local) - Local reproduction: Jev-compatible `POST /v1/systemone` server answering typed `Choice`/`Score`/`Noul` questions with confidence from open weights, verified as an official-SDK drop-in with temperature-fit calibration (set3 n=1316, 0.83 overall).
 - [LitJev](https://github.com/zhengxuyu/litjev) - Local reproduction: a reproduction of Jev that turns any Qwen model into a fast decision model, serving the same `/v1/systemone` schema (Choice, Score, Noul) with no training and no generated answer text.
+- [CUA-S1-FORMS](https://huggingface.co/cua-ai/cua-s1-forms) - Specialist decision model: a 706,048-parameter, 2.8 MB jev-like option scorer that rates FILL / CHECK / CLICK / SKIP for each form field in one parallel pass, reporting 99.7% on its own form-filling eval against Jev's 83.6% - a specialist on home turf rather than a general win.
+- [jevlike](https://github.com/vinnylarouge/jevlike) - Training library: build a small model that chooses among a changing list of text options and returns one probability per option in a single pass - the base CUA-S1-FORMS was built on.
+- [jevbetter](https://github.com/olanotolu/jevbetter) - Improved scorer: a stronger one-pass scorer over a variable list of text options, using a hashed n-gram encoder, rival-aware attention, and gated heads.
+- [jevlike-esp32](https://github.com/david-cermak/jevlike-esp32) - Edge deployment: exports a jevlike scorer as ESP32 firmware with a C scorer and a host-side check, putting one-pass decisions on a microcontroller.
 
 ### Infra / SDKs / Integrations
 
@@ -336,6 +341,8 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Jev broke our WebMCP benchmark](https://x.com/0xidanlevin/status/2100937437325205568) - X: the benchmark's own author reports that Jev plus a fast small LLM solved 100% of WebMCP tasks at roughly 112x lower model cost than a frontier model with computer use.
 - [Chinese notes after a day with Jev](https://x.com/jiayuan_jy/status/2100876273061102006) - X (Chinese): a sceptical read — Jev looks like a faster general classifier an LLM could already do, and on complex scenarios its world knowledge is the open question.
 - [Stagehand plus Jev browser control](https://x.com/kylejeong/status/2100622054945095934) - X: sends the accessibility tree as state and candidate actions as questions so Jev decides each step, reporting about $0.001 and near-instant execution for one task.
+- [Introducing CUA-S1](https://x.com/trycua/status/2101014004927729737) - X: Cua open-sources a family of small, specialised System One models for computer use, starting with form filling and asking what the next specialist should learn.
+- [One 50 ms pass versus 23 turns](https://x.com/be_arsh/status/2101026864341164110) - X: the sharpest framing of the specialist case - a 706K-parameter model fills a whole form in one 50 ms pass, while an LLM agent needs 23 turns and 39.6 seconds for the same form.
 
 ## Submission format
 
