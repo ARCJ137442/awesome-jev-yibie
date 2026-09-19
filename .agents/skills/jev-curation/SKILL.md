@@ -216,6 +216,8 @@ When a contributor opens a PR:
 3. When an author already has three entries accepted in a rolling seven-day window, state the rule in the PR comment *before* acting, and queue the extra entries to a later cycle instead of rejecting them. Link the CONTRIBUTING section so the contributor knows it is policy, not a judgement about them.
 4. Never edit a contributor's wording purely for style; do fix inaccurate claims.
 5. README.md is generated — when a PR conflicts there, rebase the branch and regenerate it (`python3 scripts/build-readme.py`) rather than hand-resolving. For conflicts in a category file, keep main's version and append the PR's new line.
+6. Use `scripts/maintainer/merge-prs.sh` to process PRs in bulk. It handles the four traps that make manual merging tedious: fork repository names vary (`awesome-jev`, `awesome-jev-yibie`, `yibie_awesome-jev`, `awesome-jev-1`), so it resolves them via `headRepository.nameWithOwner`; it fast-forwards local `main` before rebasing, because rebasing onto a stale base leaves the PR conflicting after the push; it loops over conflict rounds, because a PR with two commits (add the entry, then reword it) conflicts twice; and it appends the PR's entry with `grep -qF --` so an entry starting with `- [` is not parsed as a grep option.
+7. Every PR touches the adjacent count lines in README.md, so from the second PR onward conflicts are normal, not a sign of a bad contribution. Expect to rebase and force-push to the contributor's branch (most forks have `maintainerCanModify: true`) rather than asking them to resolve it.
 
 ## Deliverable checklist
 
