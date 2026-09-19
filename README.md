@@ -64,7 +64,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Classification & Routing](categories/classification-routing.md) — 17 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 18 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 11 entries
-- [Agent Decisions](categories/agent-decisions.md) — 26 entries
+- [Agent Decisions](categories/agent-decisions.md) — 27 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 13 entries
 - [Calibration & Research](categories/calibration-research.md) — 16 entries
@@ -191,6 +191,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [BrowserClaw](https://github.com/GoldenLoaf24h/browserclaw) - Browser automation: Zero-lock, session-preserving Chrome MCP server that couples a local Jev System One semantic micro-loop (`chrome_act_toward_goal`) with an 85%+ pruned DOM tree (Shadow DOM & iframe pierced), dispatching native CDP events (`isTrusted: true`) on active logged-in sessions without focus theft.
 - [jev-canvas](https://github.com/gaborishka/jev-canvas) - Multimodal UI: draw on a tldraw canvas by voice while pointing a webcam-tracked finger; on every partial transcript Jev answers eight typed questions (is it a command, is the sentence complete, action, shape, colour, target, place, size) and plain code gates them with thresholds, in English and Ukrainian, 300–550 ms per decision.
 - [jev-belay](https://github.com/valentynkit/jev-belay) - Coding agents: Claude Code Stop hook that reads the transcript for evidence and spends one four-question Jev call only when files changed with no passing check since, failing open on any error.
+- [Jev for Chrome](https://github.com/chy4pro/jev-for-chrome) - Browser automation: unofficial Chrome extension port of Jev Ultrafast where a Jev `Choice` picks the operation and DOM element each step and two `Noul` checks (goal reached, stuck) veto a premature DONE or BLOCKED, with a small text model used only when text must be typed.
 
 ### Data Labeling & Curation
 
