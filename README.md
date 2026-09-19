@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 13 entries
 - [Calibration & Research](categories/calibration-research.md) — 16 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 30 entries
-- [Game & Simulation](categories/game-simulation.md) — 7 entries
+- [Game & Simulation](categories/game-simulation.md) — 8 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 3 entries
@@ -289,6 +289,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [typesafe-jev-drone-demo](https://github.com/kxzk/typesafe-jev-drone-demo) - Simulation: Three.js drone simulator with a Python backend where Jev drives the navigation decisions.
 - [typesafe-playground](https://github.com/kavehmz/typesafe-playground) - Interactive playground: small Jev experiments that put the decision on screen, from routing a support message to steering a car in a 3D world.
 - [PlayJev](https://github.com/OmniJev/PlayJev) - Gaming: open 0.8B vision-language model that reads one 448 px game frame, returns a probability over the moves the game lists in a single forward pass with no generated text, and hands its low-confidence steps to a search program, across ten browser games.
+- [jev-plays-pokemon-red](https://github.com/valentynkit/jev-plays-pokemon-red) - Gaming: Pokemon Red on PyBoy where deterministic code owns the route and arithmetic, Jev picks only at branches, and every battle turn's faint prediction is scored by Brier against RAM state.
 
 ### Finance & Trading
 
