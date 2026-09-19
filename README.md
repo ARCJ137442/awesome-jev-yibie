@@ -67,7 +67,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Agent Decisions](categories/agent-decisions.md) — 21 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 11 entries
-- [Calibration & Research](categories/calibration-research.md) — 11 entries
+- [Calibration & Research](categories/calibration-research.md) — 12 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 27 entries
 - [Game & Simulation](categories/game-simulation.md) — 6 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
@@ -220,6 +220,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [kev](https://github.com/jaredpalmer/kev) - Trainable replica: a tiny Jev-like model on top of Qwen2.5-0.5B that trains and runs on a MacBook, shipped with its own research runs and evaluation scripts.
 - [jevinci](https://github.com/achimala/jevinci) - Creative experiment: paints images by having Jev predict every pixel's colour in parallel, with predicted confidence deciding how wide each stroke is drawn.
 - [jev-local](https://github.com/us/jev-local) - Local reproduction: Jev-compatible `POST /v1/systemone` server answering typed `Choice`/`Score`/`Noul` questions with confidence from open weights, verified as an official-SDK drop-in with temperature-fit calibration (set3 n=1316, 0.83 overall).
+- [LitJev](https://github.com/zhengxuyu/litjev) - Local reproduction: a reproduction of Jev that turns any Qwen model into a fast decision model, serving the same `/v1/systemone` schema (Choice, Score, Noul) with no training and no generated answer text.
 
 ### Infra / SDKs / Integrations
 
