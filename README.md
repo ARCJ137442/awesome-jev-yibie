@@ -62,7 +62,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 ## Current coverage
 
 - [Classification & Routing](categories/classification-routing.md) — 18 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 18 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 19 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 12 entries
 - [Agent Decisions](categories/agent-decisions.md) — 27 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
@@ -144,6 +144,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [jev-axi](https://github.com/shiftynick/jev-axi) - Agent safety: PreToolUse gate for Claude Code and Codex that has Jev score each shell command for destructiveness, exfiltration, remote code execution, and security weakening, deciding routine commands locally so nothing is sent for them, and scoring 44/44 on the 44 labeled tool calls in its repository.
 - [pi-verdict](https://github.com/jesset/pi-verdict) - Agent safety: Pi permission gate where Jev answers one Choice (allow/ask/deny) per gray-zone tool call — deterministic rules settle clear cases first, deny blocks, ask escalates to a human confirm, and errors or timeouts deny; Jev is an optional backend, OpenRouter-only and experimental.
 - [jev-commit](https://github.com/valentynkit/jev-commit) - Developer tooling: pre-commit hook where one Jev call judges whether the commit message matches the staged diff, flags debug leftovers and unmentioned work, and blocks only on a detected credential.
+- [Blink](https://blink.review) - Code review: CLI that coding agents run after every change, with Jev checking the diff near-instantly in place of an LLM reviewer.
 
 ### Scoring & Ranking
 
