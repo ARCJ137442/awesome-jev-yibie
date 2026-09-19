@@ -61,10 +61,10 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 18 entries
+- [Classification & Routing](categories/classification-routing.md) — 17 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 16 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 10 entries
-- [Agent Decisions](categories/agent-decisions.md) — 21 entries
+- [Agent Decisions](categories/agent-decisions.md) — 22 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 12 entries
 - [Calibration & Research](categories/calibration-research.md) — 16 entries
@@ -103,7 +103,6 @@ Each entry lives in exactly one category. When a project could fit multiple cate
 
 Source file: [`categories/classification-routing.md`](categories/classification-routing.md)
 
-- [jev-social](https://github.com/socai-io/jev-social) - Social media research: uses a Jev `Choice` to route requests to Instagram, TikTok, or LinkedIn workflows in socai, rejecting unsupported or low-confidence decisions before browser execution.
 - [Notra](https://github.com/usenotra/notra) - Marketing analytics: production GEO platform whose `NOTRA_JEV_CLASSIFIERS` flag routes brand-visibility classifiers off an LLM and onto Jev `Boolean` decisions at a 0.5 threshold, targeting 300 ms p50.
 - [jev-router](https://github.com/gargpratyush/jev-router) - Developer tooling: routes Claude Code tasks to the cheapest capable model by asking Jev to choose among candidates.
 - [jev-router (prismhq)](https://github.com/prismhq/jev-router) - LLM infrastructure: open-source LiteLLM-based router where a Jev decision picks which model serves each request.
@@ -161,6 +160,8 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 ### Agent Decisions
 
 Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
+
+- [jev-social](https://github.com/socai-io/jev-social) - Social media research: uses a Jev `Choice` at each step to select a concrete socai CLI operation and observed post or profile target on Instagram, TikTok, or LinkedIn, rejecting malformed or low-confidence decisions before execution.
 
 - [Jev Ultrafast](https://github.com/browser-use/jev-ultrafast) - Browser automation: browser-use's ultrafast agent where Jev decides each next action and element to click, calling a language model only when text must be typed.
 - [pi-typesafe-jev](https://github.com/legacybridge-tech/pi-typesafe-jev) - Coding agents: exposes System One judgments as five Pi tools so a model makes narrow semantic judgments while code and users keep control of thresholds, weights, and actions.
