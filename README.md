@@ -61,7 +61,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 17 entries
+- [Classification & Routing](categories/classification-routing.md) — 18 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 16 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 10 entries
 - [Agent Decisions](categories/agent-decisions.md) — 21 entries
@@ -103,6 +103,7 @@ Each entry lives in exactly one category. When a project could fit multiple cate
 
 Source file: [`categories/classification-routing.md`](categories/classification-routing.md)
 
+- [jev-social](https://github.com/socai-io/jev-social) - Social media research: uses a Jev `Choice` to route requests to Instagram, TikTok, or LinkedIn workflows in socai, rejecting unsupported or low-confidence decisions before browser execution.
 - [Notra](https://github.com/usenotra/notra) - Marketing analytics: production GEO platform whose `NOTRA_JEV_CLASSIFIERS` flag routes brand-visibility classifiers off an LLM and onto Jev `Boolean` decisions at a 0.5 threshold, targeting 300 ms p50.
 - [jev-router](https://github.com/gargpratyush/jev-router) - Developer tooling: routes Claude Code tasks to the cheapest capable model by asking Jev to choose among candidates.
 - [jev-router (prismhq)](https://github.com/prismhq/jev-router) - LLM infrastructure: open-source LiteLLM-based router where a Jev decision picks which model serves each request.

@@ -10,6 +10,7 @@ Use this category for programs where Jev sorts incoming state into categories or
 
 ## Entries
 
+- [jev-social](https://github.com/socai-io/jev-social) - Social media research: uses a Jev `Choice` to route requests to Instagram, TikTok, or LinkedIn workflows in socai, rejecting unsupported or low-confidence decisions before browser execution.
 - [Notra](https://github.com/usenotra/notra) - Marketing analytics: production GEO platform whose `NOTRA_JEV_CLASSIFIERS` flag routes brand-visibility classifiers off an LLM and onto Jev `Boolean` decisions at a 0.5 threshold, targeting 300 ms p50.
 - [jev-router](https://github.com/gargpratyush/jev-router) - Developer tooling: routes Claude Code tasks to the cheapest capable model by asking Jev to choose among candidates.
 - [jev-router (prismhq)](https://github.com/prismhq/jev-router) - LLM infrastructure: open-source LiteLLM-based router where a Jev decision picks which model serves each request.
