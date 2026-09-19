@@ -67,7 +67,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Agent Decisions](categories/agent-decisions.md) — 20 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 11 entries
-- [Calibration & Research](categories/calibration-research.md) — 9 entries
+- [Calibration & Research](categories/calibration-research.md) — 10 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 27 entries
 - [Game & Simulation](categories/game-simulation.md) — 6 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
@@ -212,6 +212,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [NanoJev](https://github.com/TianyuCodings/NanoJev) - Open replica: a 0.6B parallel decision model that returns full probability distributions with no output-token decoding, shipped with its training pipeline, weights, and dataset.
 - [open-alternative-jev](https://github.com/ikermoel/open-alternative-jev) - Open alternative: runs a Jev-shaped decision model locally on your own GPU.
 - [mini-jev](https://github.com/r-ms/mini-jev) - Local reproduction: implements Jev's typed-decision interface on top of a local LLM.
+- [Laya](https://github.com/NandhaKishorM/laya) - Open alternative: non-autoregressive decision model that answers `choice`, `score`, and `noul` questions with RLCD-trained calibrated probabilities in a single ~35 ms forward pass, published on PyPI and Hugging Face.
 - [Jev-compatible public API](https://x.com/ekzhang1/status/2100651678110515383) - Open research: a public Jev-shaped API backed by an open Qwen3.6-35B-A3B model so anyone can try the typed-decision interface.
 - [kev](https://github.com/jaredpalmer/kev) - Trainable replica: a tiny Jev-like model on top of Qwen2.5-0.5B that trains and runs on a MacBook, shipped with its own research runs and evaluation scripts.
 - [jevinci](https://github.com/achimala/jevinci) - Creative experiment: paints images by having Jev predict every pixel's colour in parallel, with predicted confidence deciding how wide each stroke is drawn.
