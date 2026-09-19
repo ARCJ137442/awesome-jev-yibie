@@ -47,6 +47,21 @@ wait_mergeable() {
   return 1
 }
 
+# 安全网：有的 PR 只改分类文件、不碰 README.md，会【干净合并】但把首页计数留在旧值。
+# 所以每次合并后都重建一次 README，有漂移就直接补一个提交。
+sync_readme() {
+  git checkout -q main 2>/dev/null
+  git fetch -q origin main 2>/dev/null
+  git merge -q --ff-only origin/main 2>/dev/null || git reset -q --hard origin/main
+  python3 scripts/build-readme.py >/dev/null 2>&1 || return 0
+  if [ -n "$(git status --short)" ]; then
+    git add -A
+    git commit -q -m "chore: rebuild README after PR merge" 2>/dev/null \
+      && git push -q origin main 2>/dev/null \
+      && info "README 计数已补建并推送"
+  fi
+}
+
 # 解当前一轮冲突：README 重新生成，分类文件保留 main 侧并补上本 PR 的条目行
 resolve_round() {
   local n="$1" added
@@ -81,6 +96,7 @@ for n in "${PRS[@]}"; do
   if wait_mergeable "$n"; then
     if gh pr merge "$n" --merge --subject "Merge pull request #$n from $fork" >/dev/null 2>&1; then
       info "✓ 直接合并"
+      sync_readme
       continue
     fi
     info "直接合并失败，转 rebase"
@@ -133,6 +149,7 @@ for n in "${PRS[@]}"; do
   if wait_mergeable "$n" && gh pr merge "$n" --merge \
       --subject "Merge pull request #$n from $fork" >/dev/null 2>&1; then
     info "✓ rebase 后合并"
+    sync_readme
   else
     info "✗ 合并仍失败"
   fi
