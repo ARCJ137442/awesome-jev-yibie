@@ -62,7 +62,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 ## Current coverage
 
 - [Classification & Routing](categories/classification-routing.md) — 17 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 17 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 18 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 10 entries
 - [Agent Decisions](categories/agent-decisions.md) — 25 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
@@ -142,6 +142,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [jev-pref](https://github.com/doeixd/jev-pref) - Code review: turns the preferences in a project's AGENTS.md into `jev-pref.json` rules that Jev checks against each diff hunk, staged file set, or pull request, returning `fix_now` or advisory findings to the coding agent and a nonzero exit code on blocking ones.
 - [jev-axi](https://github.com/shiftynick/jev-axi) - Agent safety: PreToolUse gate for Claude Code and Codex that has Jev score each shell command for destructiveness, exfiltration, remote code execution, and security weakening, deciding routine commands locally so nothing is sent for them, and scoring 44/44 on the 44 labeled tool calls in its repository.
 - [pi-verdict](https://github.com/jesset/pi-verdict) - Agent safety: Pi permission gate where Jev answers one Choice (allow/ask/deny) per gray-zone tool call — deterministic rules settle clear cases first, deny blocks, ask escalates to a human confirm, and errors or timeouts deny; Jev is an optional backend, OpenRouter-only and experimental.
+- [jev-commit](https://github.com/valentynkit/jev-commit) - Developer tooling: pre-commit hook where one Jev call judges whether the commit message matches the staged diff, flags debug leftovers and unmentioned work, and blocks only on a detected credential.
 
 ### Scoring & Ranking
 
