@@ -61,19 +61,19 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 18 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 19 entries
+- [Classification & Routing](categories/classification-routing.md) — 20 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 20 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 13 entries
-- [Agent Decisions](categories/agent-decisions.md) — 27 entries
+- [Agent Decisions](categories/agent-decisions.md) — 29 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 13 entries
-- [Calibration & Research](categories/calibration-research.md) — 16 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 30 entries
+- [Calibration & Research](categories/calibration-research.md) — 17 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 33 entries
 - [Game & Simulation](categories/game-simulation.md) — 8 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 3 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 47 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 50 entries
 
 ### Open categories still being seeded
 
@@ -121,6 +121,8 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [json-render](https://github.com/vercel-labs/json-render) - Generative UI: Vercel Labs' UI framework uses Jev in its compose path to pick which components and actions a rendered interface should contain.
 - [omo-jevlike-router](https://github.com/islee23520/omo-jevlike-router) - Skill routing: shrinks the skill catalog in a system prompt with one forward pass over a frozen Qwen, routing each request Jev-style.
 - [jev-cookbook](https://github.com/nexibeo/jev-cookbook) - Developer education: 15 runnable Node recipes that route support tickets, file documents, categorize bank transactions and label Gmail with Jev `Choice` and `Noul` questions, sending low-confidence answers to human review.
+- [flue-jev-demo](https://github.com/matthewp/flue-jev-demo) - Agent routing: routes a Flue agent's work with Jev through Cloudflare AI Gateway.
+- [sift](https://github.com/bohutang/sift) - Content labelling: Chrome extension that labels every post in an X timeline - substance, humour, chit-chat, promo, junk, or AI-written - with Jev decisions.
 
 ### Verification & Guardrails
 
@@ -132,7 +134,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [OpenWork](https://github.com/different-ai/openwork) - Engineering workflow: wires Jev into its eval testkit as a verification judge so agent-produced work is gated by typed verdicts rather than a text model.
 - [jev-guard](https://github.com/leepokai/jev-guard) - Agent security: prompt-injection and dangerous-action guard for Claude Code, Codex, Pi, and ACP agents, with Jev deciding what to block.
 - [Foreman](https://github.com/thruwire/foreman) - Software factory: sits above Codex workers and has Jev independently judge whether an implementation is complete, its tests sufficient, or a human is needed.
-- [jev-code](https://github.com/devagrawal09/jev-code) - Coding agents: bounded Jev workflows that keep agent judgments typed instead of free-form.
+- [stanley-code](https://github.com/devagrawal09/stanley-code) - Coding agents: bounded Jev workflows that keep agent judgments typed instead of free-form.
 - [opencompany](https://github.com/useopencompany/opencompany) - Agent workspace: runs its approval review through Jev so workspace actions are gated by a typed decision.
 - [jev-git](https://github.com/AkashPriyadarshii/jev-git) - Developer tooling: sub-second Git pre-commit & pre-push reflex gate that screens staged diffs for secrets and destructive commands using Jev.
 - [pi-heed](https://github.com/Nyarlathoteppppp/pi-heed) - Runtime constraints: checks every side-effecting tool call from the Pi agent against what the user actually asked for.
@@ -145,6 +147,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [pi-verdict](https://github.com/jesset/pi-verdict) - Agent safety: Pi permission gate where Jev answers one Choice (allow/ask/deny) per gray-zone tool call — deterministic rules settle clear cases first, deny blocks, ask escalates to a human confirm, and errors or timeouts deny; Jev is an optional backend, OpenRouter-only and experimental.
 - [jev-commit](https://github.com/valentynkit/jev-commit) - Developer tooling: pre-commit hook where one Jev call judges whether the commit message matches the staged diff, flags debug leftovers and unmentioned work, and blocks only on a detected credential.
 - [Blink](https://blink.review) - Code review: CLI that coding agents run after every change, with Jev checking the diff near-instantly in place of an LLM reviewer.
+- [hermes-jev-approvals](https://github.com/anpicasso/hermes-jev-approvals) - Agent approvals: proof of concept that puts Jev in front of Hermes Agent's command approvals, reporting 8.7x faster decisions and 4.4x fewer prompts to the user.
 
 ### Scoring & Ranking
 
@@ -196,6 +199,8 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [jev-canvas](https://github.com/gaborishka/jev-canvas) - Multimodal UI: draw on a tldraw canvas by voice while pointing a webcam-tracked finger; on every partial transcript Jev answers eight typed questions (is it a command, is the sentence complete, action, shape, colour, target, place, size) and plain code gates them with thresholds, in English and Ukrainian, 300–550 ms per decision.
 - [jev-belay](https://github.com/valentynkit/jev-belay) - Coding agents: Claude Code Stop hook that reads the transcript for evidence and spends one four-question Jev call only when files changed with no passing check since, failing open on any error.
 - [Jev for Chrome](https://github.com/chy4pro/jev-for-chrome) - Browser automation: unofficial Chrome extension port of Jev Ultrafast where a Jev `Choice` picks the operation and DOM element each step and two `Noul` checks (goal reached, stuck) veto a premature DONE or BLOCKED, with a small text model used only when text must be typed.
+- [jev-pruner](https://github.com/tamaratran/jev-pruner) - Context management: Claude Code plugin that trims long Bash output with Jev before the model ever sees it, keeping terminal noise out of the window.
+- [jev-desktop](https://github.com/yikangy873-gif/jev-desktop) - Computer use: supplies Jev action selection inside Codex Computer Use, choosing among desktop actions rather than asking a language model at every step.
 
 ### Data Labeling & Curation
 
@@ -242,6 +247,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [jevlike](https://github.com/vinnylarouge/jevlike) - Training library: build a small model that chooses among a changing list of text options and returns one probability per option in a single pass - the base CUA-S1-FORMS was built on.
 - [jevbetter](https://github.com/olanotolu/jevbetter) - Improved scorer: a stronger one-pass scorer over a variable list of text options, using a hashed n-gram encoder, rival-aware attention, and gated heads.
 - [jevlike-esp32](https://github.com/david-cermak/jevlike-esp32) - Edge deployment: exports a jevlike scorer as ESP32 firmware with a C scorer and a host-side check, putting one-pass decisions on a microcontroller.
+- [von](https://github.com/wfzyx/von) - Open alternative: a 395M non-autoregressive System One model that answers typed questions with calibrated probabilities in under 15 ms, positioned as a local drop-in replacement for Jev.
 
 ### Infra / SDKs / Integrations
 
@@ -261,7 +267,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [typesafe-ai/skills](https://github.com/typesafe-ai/skills) - Official tooling: installable agent skills package (`npx skills add typesafe-ai/skills`) that teaches agents the Jev workflow.
 - [Smithers](https://github.com/smithersai/smithers) - Agent frameworks: TypeScript workflow framework with a Jev session checker wired into its workflows.
 - [skillbox](https://github.com/kitze/skillbox) - Skills infrastructure: self-hosted versioned skills library that adds optional Jev recommendations using your own TypeSafe or Gateway key.
-- [Jevbridge](https://github.com/gamesonrblx/Jevbridge) - Agent bridges: ACP and MCP adapter that exposes Jev typed decisions to Codex, Claude, Grok, and other LLMs.
+- [Jevbridge](https://github.com/tacticocc/Jevbridge) - Agent bridges: ACP and MCP adapter that exposes Jev typed decisions to Codex, Claude, Grok, and other LLMs.
 - [jev (Elixir)](https://github.com/dannote/jev) - Elixir ecosystem: GenServer client that replies with Jev's answer so callers can pattern match on it directly.
 - [jev-go](https://github.com/Stumble/jev-go) - Go ecosystem: community Go SDK for Jev.
 - [jev-cli](https://github.com/tumf/jev-cli) - Developer tooling: small dependency-free CLI for Jev.
@@ -277,6 +283,9 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [jevkit](https://github.com/ariel-frischer/jevkit) - Developer tooling: Rust CLI that validates `Choice`/`Score`/`Noul` question sets with 13 offline lint rules before any Jev call, then sends the canonical wire payload and prints parsed, confidence-bearing JSON answers to stdout using exit code 2 to reject a billed-but-useless request.
 - [jev-use](https://github.com/shitianfang/jev-use) - MCP ecosystem: Claude Code / Codex / pi plugin (MCP server + library, native pi extension) that hands agent steps needing no text output to Jev as typed judgments — untypeable and generation-needing questions are rejected before the call, low-confidence answers come back flagged as priors, and a fail-open PreToolUse gate can only deny or ask.
 - [huncho](https://github.com/edgardcham/huncho) - TypeScript ecosystem: dependency-free SDK that turns Jev `Noul`, `Choice` and `Score` answers into named decisions with `enter`/`exit` thresholds (hysteresis), nested decision trees settled in one call, a JSONL journal, replay of a threshold change over recorded answers with no inference, and Brier/reliability calibration, over TypeSafe direct, OpenRouter or Vercel AI Gateway.
+- [jev-experiments](https://github.com/dabit3/jev-experiments) - Demo collection: 22 latency-focused Jev applications built by Devin, each with its own README and testing notes, spanning shell guards, log sentinels, instant search, reranking, and voice turn-taking.
+- [ruby_decision_model](https://github.com/obie/ruby_decision_model) - Ruby ecosystem: client for decision models such as Jev, so Ruby applications can put typed questions directly to the model.
+- [s1_ruby](https://github.com/innocentdiaz/s1_ruby) - Ruby ecosystem: makes System One measurement, and the collapse that follows it, a Ruby primitive, with a TypeSafe provider behind its own spec suite.
 
 ### Game & Simulation
 
@@ -364,6 +373,9 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Stagehand plus Jev browser control](https://x.com/kylejeong/status/2100622054945095934) - X: sends the accessibility tree as state and candidate actions as questions so Jev decides each step, reporting about $0.001 and near-instant execution for one task.
 - [Introducing CUA-S1](https://x.com/trycua/status/2101014004927729737) - X: Cua open-sources a family of small, specialised System One models for computer use, starting with form filling and asking what the next specialist should learn.
 - [One 50 ms pass versus 23 turns](https://x.com/be_arsh/status/2101026864341164110) - X: the sharpest framing of the specialist case - a 706K-parameter model fills a whole form in one 50 ms pass, while an LLM agent needs 23 turns and 39.6 seconds for the same form.
+- [I reviewed 287 open-source Jev projects](https://reddit.com/r/LLMDevs/comments/1wko2e5/i_reviewed_287_opensource_jev_projects_here_are/) - Reddit: a reviewer works through 287 Jev repositories and narrows them to 20 that actually explain the model, a useful counterweight to star-count browsing.
+- [TypeSafe AI's Jev Is Not an LLM - and That May Be the Point](https://forkast.news/typesafe-ais-jev-is-not-an-llm-and-that-may-be-the-point/) - News analysis: treats the model's refusal to generate text as the feature rather than a limitation, and follows through on what that implies for inference spend.
+- [Ask HN: What do you think of Noul, a new decision primitive](https://news.ycombinator.com/item?id=49760225) - Hacker News: a proposal to treat `Noul` - the probability-of-true answer type - as a general software primitive rather than a Jev-specific one.
 
 ## Submission format
 
