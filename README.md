@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 13 entries
 - [Calibration & Research](categories/calibration-research.md) — 16 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 30 entries
-- [Game & Simulation](categories/game-simulation.md) — 6 entries
+- [Game & Simulation](categories/game-simulation.md) — 7 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 3 entries
@@ -283,6 +283,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [jev-plays-pokemon](https://github.com/milanboers/jev-plays-pokemon) - Gaming: reads Pokémon Red game state as text, answers typed questions each turn, and lets deterministic code turn the answers into moves.
 - [typesafe-jev-drone-demo](https://github.com/kxzk/typesafe-jev-drone-demo) - Simulation: Three.js drone simulator with a Python backend where Jev drives the navigation decisions.
 - [typesafe-playground](https://github.com/kavehmz/typesafe-playground) - Interactive playground: small Jev experiments that put the decision on screen, from routing a support message to steering a car in a 3D world.
+- [PlayJev](https://github.com/OmniJev/PlayJev) - Gaming: open 0.8B vision-language model that reads one 448 px game frame, returns a probability over the moves the game lists in a single forward pass with no generated text, and hands its low-confidence steps to a search program, across ten browser games.
 
 ### Finance & Trading
 
