@@ -64,7 +64,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Classification & Routing](categories/classification-routing.md) — 17 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 16 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 10 entries
-- [Agent Decisions](categories/agent-decisions.md) — 21 entries
+- [Agent Decisions](categories/agent-decisions.md) — 22 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 12 entries
 - [Calibration & Research](categories/calibration-research.md) — 16 entries
@@ -182,6 +182,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [public-browser](https://github.com/Silbercue/public-browser) - Browser control: lets Claude Code and Cursor drive a real Chrome profile, with a Jev loop deciding the actions, reporting roughly 30% fewer tokens and 25% lower cost.
 - [pi-typesafe-router](https://github.com/jekozyra/pi-typesafe-router) - Coding agents: routes Pi's work through typed Jev decisions.
 - [wakegate](https://github.com/shitianfang/wakegate) - Long-running agents: before a sleeping agent's LLM is resumed on a timer or incoming event, Jev answers a `Choice` (wake, not yet, unrelated) against the agent's own sleep note, and code skips the wakeup only when wake is below 0.2 while always waking on user messages, bare timers, a skip limit, errors, and timeouts; one run passed 21 of 21 hand-written scenarios, which the README calls a smoke test rather than a benchmark.
+- [BrowserClaw](https://github.com/GoldenLoaf24h/browserclaw) - Browser automation: Zero-lock, session-preserving Chrome MCP server that couples a local Jev System One semantic micro-loop (`chrome_act_toward_goal`) with an 85%+ pruned DOM tree (Shadow DOM & iframe pierced), dispatching native CDP events (`isTrusted: true`) on active logged-in sessions without focus theft.
 
 ### Data Labeling & Curation
 
