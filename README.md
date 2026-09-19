@@ -64,7 +64,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Classification & Routing](categories/classification-routing.md) — 17 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 16 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 10 entries
-- [Agent Decisions](categories/agent-decisions.md) — 22 entries
+- [Agent Decisions](categories/agent-decisions.md) — 23 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 13 entries
 - [Calibration & Research](categories/calibration-research.md) — 16 entries
