@@ -68,7 +68,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 11 entries
 - [Calibration & Research](categories/calibration-research.md) — 9 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 25 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 26 entries
 - [Game & Simulation](categories/game-simulation.md) — 6 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -244,6 +244,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [hono-jev-router](https://github.com/yusukebe/hono-jev-router) - Web frameworks: Hono middleware that routes HTTP requests by meaning rather than by method and path, deciding with Jev.
 - [rotom](https://github.com/RyanKung/rotom) - Local gateways: OpenAI- and Anthropic-compatible API gateway that carries Jev through its model catalog and evaluation path.
 - [Jev AI](https://jev-ai.pro) - Developer tooling: public Jev playground and API that puts typed `Choice`, `Score` and Yes/No questions to the model about pasted text - ticket triage, moderation, review scoring - and returns a parsed answer with a confidence value in about 0.5 s per decision.
+- [jevql](https://github.com/kylemclaren/jevql) - Data tooling: psql-shaped CLI and Go/TypeScript/Python SDKs that run plain SQL on a vanilla Postgres (no extension) and then ask Jev Noul, Choice, or Score questions about each surviving row so the client can apply `jev()` filters, `jev_prob` sorts, and `jev_choice` groups.
 
 ### Game & Simulation
 
