@@ -63,17 +63,17 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 21 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 20 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 13 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 14 entries
 - [Agent Decisions](categories/agent-decisions.md) — 31 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 3 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 15 entries
-- [Calibration & Research](categories/calibration-research.md) — 21 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 37 entries
-- [Game & Simulation](categories/game-simulation.md) — 8 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 16 entries
+- [Calibration & Research](categories/calibration-research.md) — 22 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 42 entries
+- [Game & Simulation](categories/game-simulation.md) — 9 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 4 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 52 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 54 entries
 
 ### Open categories still being seeded
 
@@ -167,6 +167,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jev.nvim](https://github.com/valentynkit/jev.nvim) - Developer tooling: Neovim plugin that splits the buffer into functions with Treesitter, scores each against a plain-language question with Jev, and ranks answers by probability in quickfix.
 - [jev-reranker](https://github.com/hotchpotch/jev-reranker) - Retrieval and RAG: uses Jev Noul judgments to assess retrieved documents for relevance and usefulness as answer evidence, then sorts results and optionally filters them using a configurable threshold.
 - [jev-skip](https://github.com/valentynkit/jev-skip) - Media: browser extension that reads the YouTube caption track and scores each segment's sponsor probability on the seek bar before the intro ends, reporting 77% of SponsorBlock's sponsor seconds caught over 23 videos at $0.0008 a video.
+- [jev-semgrep](https://github.com/uehaj/jev-semgrep) - Semantic search: greps by meaning across languages, having Jev score every line against a meaning and letting meanings combine with AND, backed by a 13-file test suite.
 
 ### Agent Decisions
 
@@ -233,6 +234,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [jev-orderby-bench](https://github.com/yodablocks/jev-orderby-bench) - Model evaluation: measures whether a SQL ORDER BY over a Jev probability is defensible (pairwise inversion, Score ordinality against a human grade, calibration, wording invariants, sort-key ties) under a pre-registered gate that jev-1.13.0 passes on 20 Newsgroups topics and fails four of six conditions on Amazon ESCI product relevance, and shows a DuckDB extension's default 40-row batching fails the ranking gate that one row per request passes.
 - [jev-ood-calibration](https://github.com/scienthoon/jev-ood-calibration) - Model evaluation: independent calibration test of Jev on 900 rule-generated support tickets it cannot have seen plus three public benchmarks, publishing every raw response, ECE against a simulated noise floor, temperature refit, and the per-type sign of miscalibration (Choice and Score overconfident, Boolean underconfident).
 - [BTK audit studies](https://boringtoolskit.com/blog/seo-audit-cost-2026/) - Content & growth: Jev striking-distance triage ranks SEO fixes and drives study pages; 1,204 pages judged per run, 4,816 judgments in under 3 minutes, $0.0048 per 12-query batch.
+- [Can Jev Be a Better Agent Evaluator?](https://www.langchain.com/blog/jev-agent-evals-langsmith) - Agent evaluation: LangChain compares Jev against LLM judges on accuracy, repeatability, latency and cost, concluding Jev is the cheaper and more consistent judge for online evals.
 
 ### Calibration & Research
 
@@ -259,6 +261,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [minojev](https://github.com/zeredy879/minojev) - Open replica: a 547k-parameter model that answers runtime-defined `Choice` (2-255 candidates), `Boolean`, and `Score` questions with dev-calibrated distributions in one forward pass and zero output tokens, trained from scratch on CPU with committed datasets, predictions, and ECE results (maze 0.016).
 - [Luce](https://github.com/scienthoon/luce) - Open recipe: describe the decision task in a sentence, an LLM teacher writes the training data, a LoRA + decision head on Qwen3-4B-Base answers choice/score/boolean questions with calibrated probabilities in one forward pass; trains on a 12 GB card. Reports accuracy and ECE next to Jev on identical test items (rule-generated tickets 91.1 vs 75.1, phishing 97.4 vs 62.6, GitHub issue priority 41.1 vs 37.5); browser replay demo without a GPU.
 - [poorjev](https://github.com/rupeshpoojary9/poorjev) - Local reproduction: implements Jev's typed `Choice`/`Score`/`Noul` interface on commodity zero-shot NLI models and makes the confidence honest with temperature scaling and conformal abstention, shipping a reproducible calibration eval (ECE 0.170 to 0.071, cross-validated) that runs offline with no API key.
+- [openJev-verdict-2.0](https://github.com/Heman10x-NGU/openJev-verdict-2.0) - Open decision engine: a calibrated 151M non-autoregressive model that reports beating both TypeSafe Jev and Laya on typed-decision benchmarks, shipped with its own test suite.
 
 ### Infra / SDKs / Integrations
 
@@ -301,6 +304,11 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [JarvisCore](https://github.com/Prescott-Data/jarviscore-framework) - Agent frameworks: Python multi-agent runtime that ships Jev natively from 1.12, where agents ask typed `Choice`, `Score` and `Noul` questions through a decision client separate from the text model, the Kernel picks a specialist subagent by `Choice`, and each retrieved RAG passage is withheld from the generating model when its prompt-injection `Noul` exceeds 0.70.
 - [hunch](https://github.com/carldaws/hunch) - Ruby ecosystem: turns judgment calls into control flow — `if Hunch.likely?("fraudulent", given: order)` reads like plain Ruby but branches on a typed Jev answer, with `pick` for Choice, `rate` for Score, and graded predicates from `possibly?` to `definitely?`.
 - [Early experimentation using Jev to rethink harness UX](https://www.elvex.com/blog/early-experimentation-using-jev-to-rethink-harness-ux) - Harness integration: an agent platform wires Jev into its LLM harness as a callable tool for search, approvals and context, reporting 2,000 expense reports categorized in 20 seconds for five cents.
+- [jev-mcp (burnigtm)](https://github.com/burnigtm/jev-mcp) - MCP ecosystem: server that puts Jev into the coding loop for Cursor, Codex, and any MCP client, with 20 test files behind it.
+- [jev-skill-suggester](https://github.com/win4r/jev-skill-suggester) - Coding agents: recommends which installed skills apply to a request, keeping the recommendation bounded and letting Jev decide.
+- [grok-bot-jev](https://github.com/Bodila51/grok-bot-jev) - Agent bridges: connects Jev to Grok Bot as a cheap decision layer, with usage gates, a skill template, and worked examples.
+- [jev-architect](https://github.com/karanb192/jev-architect) - Design skill: finds, designs, and evaluates Jev decision loops, packaged as a skill with references on decision design and delivery.
+- [Building a Harness with Jev](https://www.langchain.com/blog/building-a-harness-with-jev) - Framework guide: LangChain's walkthrough of wiring Jev into an agent harness as the decision layer, from a team that then published its own evaluation of Jev as a judge.
 
 ### Game & Simulation
 
@@ -314,6 +322,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [typesafe-playground](https://github.com/kavehmz/typesafe-playground) - Interactive playground: small Jev experiments that put the decision on screen, from routing a support message to steering a car in a 3D world.
 - [PlayJev](https://github.com/OmniJev/PlayJev) - Gaming: open 0.8B vision-language model that reads one 448 px game frame, returns a probability over the moves the game lists in a single forward pass with no generated text, and hands its low-confidence steps to a search program, across ten browser games.
 - [jev-plays-pokemon-red](https://github.com/valentynkit/jev-plays-pokemon-red) - Gaming: Pokemon Red on PyBoy where deterministic code owns the route and arithmetic, Jev picks only at branches, and every battle turn's faint prediction is scored by Brier against RAM state.
+- [jev-reflex-autonomy-lab](https://github.com/khordoo/jev-reflex-autonomy-lab) - Drone autonomy: a multi-drone lab where Jev supplies the reflex decisions, with an optional slower strategy layer guiding them.
 
 ### Finance & Trading
 
@@ -363,7 +372,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [19 open-source Jev projects](https://x.com/GoSailGlobal/status/2100859307671855113) - X (Chinese): tallies 19 open-source Jev projects totalling more than 6,800 stars.
 - [Jev is the fish at the poker table](https://backnotprop.com/blog/jev-poker/) - Blog: plays poker with Jev and uses the table to probe where a fast decision model helps and where it does not.
 - [Jev is about to change the AI economy](https://thefinancialengineer.substack.com/p/typesafes-jev-is-about-to-change) - Substack: argues that cheap calibrated decisions move where inference spend goes.
-- [Awesome Jev by 0xLogicrw](https://x.com/0xLogicrw/status/2100478725393686556) - X (Chinese): a hand-checked list of Jev projects published one day after launch, one of several community indexes that appeared within 48 hours.
+- [Awesome Jev by 0xLogicrw](https://x.com/0xLogicrw/status/2100478725393686556) - X (Chinese): a hand-checked list of Jev projects that has since grown into a navigation site indexing 287 of them, published one day after launch.
 - [Jev repository roundup (Japanese)](https://x.com/studio_yebisu/status/2100686990090047569) - X (Japanese): rounds up the Jev repositories with the most practical promise, observing that computer use and automated trading dominate the early use cases.
 - [Six things I'll still use Jev for](https://x.com/isaac_flath/status/2100623016644223175) - X: a practitioner lists the six Jev uses he still expects to rely on after 60 days, an early usefulness review rather than a launch reaction.
 - [WTF is Jev, ELI5](https://x.com/mvanhorn/status/2100761338918363550) - X: frames Jev as "AI multiple choice, not AI essay writing", one of the clearer plain-language explanations of the System One shape.
@@ -394,6 +403,8 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Ask HN: What do you think of Noul, a new decision primitive](https://news.ycombinator.com/item?id=49760225) - Hacker News: a proposal to treat `Noul` - the probability-of-true answer type - as a general software primitive rather than a Jev-specific one.
 - [When a designer gets access to Jev](https://x.com/heystefan_/status/2101369117496521042) - X: a product designer's 33-second demo in which a natural-language phrase narrows a large icon set to the matching ones with Jev deciding which - 4.8k likes and a reply thread where the author discusses the icons Jev gets wrong.
 - [Made with Jev](https://madewithjev.com) - Site: a directory of Jev builds, guides, and posts with reported cost and speed, plus free Jev-powered tools such as an AI slop detector.
+- [Jev is just a classifier, and that is fine](https://x.com/bojie_li/status/2100688989006475580) - X (Chinese): a technical counterpoint arguing Jev is a representation model rather than something new, and that its latency follows mechanically from one prefill plus a single parallel token per question with logprobs.
+- [LangChain is already using Jev inside its harness](https://x.com/dongxi_nlp/status/2100813094951748074) - X (Chinese): reads LangChain's adoption as confirmation that Jev fits the fixed-harness roles - agent routing, model routing - rather than open-ended generation.
 
 ## Submission format
 
