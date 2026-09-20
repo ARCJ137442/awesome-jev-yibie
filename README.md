@@ -64,7 +64,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Classification & Routing](categories/classification-routing.md) — 20 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 20 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 13 entries
-- [Agent Decisions](categories/agent-decisions.md) — 30 entries
+- [Agent Decisions](categories/agent-decisions.md) — 31 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 15 entries
 - [Calibration & Research](categories/calibration-research.md) — 18 entries
@@ -202,6 +202,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [jev-pruner](https://github.com/tamaratran/jev-pruner) - Context management: Claude Code plugin that trims long Bash output with Jev before the model ever sees it, keeping terminal noise out of the window.
 - [jev-desktop](https://github.com/yikangy873-gif/jev-desktop) - Computer use: supplies Jev action selection inside Codex Computer Use, choosing among desktop actions rather than asking a language model at every step.
 - [jev-agent-skill](https://github.com/yuyang2230/jev-agent-skill) - Developer tooling: Claude Code/ZCode skill that offloads classify/route, batch-screen, score, and compliance-check judgments to Jev via OpenCode Zen's free tier, bundling a zero-dependency jev.py caller (transient-500 retry, WAF-safe UA, GBK-pipe-safe stdin) and a production Taobao-shop comment-triage pipeline that keeps raw items out of the agent context.
+- [Yappy](https://yappy.biz/jev/) - Computer use: macOS voice agent that asks Jev one `Choice` per step (operation and target control) over the front window's accessibility table, executes only validated high-confidence answers, and escalates to a full LLM agent on low confidence, no-effect actions, or unknown field values; author-reported 275–690 ms per decision.
 
 ### Data Labeling & Curation
 
