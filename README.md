@@ -68,7 +68,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 3 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 15 entries
 - [Calibration & Research](categories/calibration-research.md) — 18 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 35 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 36 entries
 - [Game & Simulation](categories/game-simulation.md) — 8 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -266,6 +266,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [jev-mcp (jkudish)](https://github.com/jkudish/jev-mcp) - MCP ecosystem: proof-of-concept MCP server that puts Jev claim verification, content screening, and candidate ranking behind standard MCP tools.
 - [jev-mcp (blakestone-x)](https://github.com/blakestone-x/jev-mcp) - MCP ecosystem: MCP server exposing Jev classify, score, check, match, and screen as tools for any agent, with confidence on every answer.
 - [zio-typesafe-ai](https://github.com/jamesward/zio-typesafe-ai) - Scala ecosystem: ZIO client for TypeSafe AI with a typed DSL over Jev decisions.
+- [laya-mlx](https://github.com/mizorewww/laya-mlx) - Local runtime: independent MLX port of the Laya checkpoints that runs typed decisions natively on Apple Silicon — 13.4 ms median end-to-end per short English decision, 7.4 ms with the multilingual checkpoint, and zero output tokens, with no PyTorch, Transformers runtime, or cloud API.
 - [TypeSafe AI Swift SDK](https://github.com/alterhq/typesafe-sdk-swift) - Swift ecosystem: dependency-free Swift 6 client for Jev Choice, Score, and Noul questions with strict concurrency, configurable authentication and retries, and offline transport tests.
 - [laravel-typesafe-jev](https://github.com/Butochnikov/laravel-typesafe-jev) - PHP ecosystem: unofficial Laravel integration for Jev with typed responses, async requests, scoped dependency injection, and testing fakes.
 - [advocaat](https://github.com/pithings/advocaat) - Data tooling: small type-safe client for asking Jev questions about a dataset.
