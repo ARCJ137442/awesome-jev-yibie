@@ -68,12 +68,12 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 3 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 15 entries
 - [Calibration & Research](categories/calibration-research.md) — 18 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 36 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 37 entries
 - [Game & Simulation](categories/game-simulation.md) — 8 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 4 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 50 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 51 entries
 
 ### Open categories still being seeded
 
@@ -297,6 +297,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [s1_ruby](https://github.com/innocentdiaz/s1_ruby) - Ruby ecosystem: makes System One measurement, and the collapse that follows it, a Ruby primitive, with a TypeSafe provider behind its own spec suite.
 - [JarvisCore](https://github.com/Prescott-Data/jarviscore-framework) - Agent frameworks: Python multi-agent runtime that ships Jev natively from 1.12, where agents ask typed `Choice`, `Score` and `Noul` questions through a decision client separate from the text model, the Kernel picks a specialist subagent by `Choice`, and each retrieved RAG passage is withheld from the generating model when its prompt-injection `Noul` exceeds 0.70.
 - [hunch](https://github.com/carldaws/hunch) - Ruby ecosystem: turns judgment calls into control flow — `if Hunch.likely?("fraudulent", given: order)` reads like plain Ruby but branches on a typed Jev answer, with `pick` for Choice, `rate` for Score, and graded predicates from `possibly?` to `definitely?`.
+- [Early experimentation using Jev to rethink harness UX](https://www.elvex.com/blog/early-experimentation-using-jev-to-rethink-harness-ux) - Harness integration: an agent platform wires Jev into its LLM harness as a callable tool for search, approvals and context, reporting 2,000 expense reports categorized in 20 seconds for five cents.
 
 ### Game & Simulation
 
@@ -388,6 +389,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [I reviewed 287 open-source Jev projects](https://reddit.com/r/LLMDevs/comments/1wko2e5/i_reviewed_287_opensource_jev_projects_here_are/) - Reddit: a reviewer works through 287 Jev repositories and narrows them to 20 that actually explain the model, a useful counterweight to star-count browsing.
 - [TypeSafe AI's Jev Is Not an LLM - and That May Be the Point](https://forkast.news/typesafe-ais-jev-is-not-an-llm-and-that-may-be-the-point/) - News analysis: treats the model's refusal to generate text as the feature rather than a limitation, and follows through on what that implies for inference spend.
 - [Ask HN: What do you think of Noul, a new decision primitive](https://news.ycombinator.com/item?id=49760225) - Hacker News: a proposal to treat `Noul` - the probability-of-true answer type - as a general software primitive rather than a Jev-specific one.
+- [When a designer gets access to Jev](https://x.com/heystefan_/status/2101369117496521042) - X: a product designer's 33-second demo in which a natural-language phrase narrows a large icon set to the matching ones with Jev deciding which - 4.8k likes and a reply thread where the author discusses the icons Jev gets wrong.
 
 ## Submission format
 
