@@ -73,7 +73,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 4 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 51 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 52 entries
 
 ### Open categories still being seeded
 
@@ -391,6 +391,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [TypeSafe AI's Jev Is Not an LLM - and That May Be the Point](https://forkast.news/typesafe-ais-jev-is-not-an-llm-and-that-may-be-the-point/) - News analysis: treats the model's refusal to generate text as the feature rather than a limitation, and follows through on what that implies for inference spend.
 - [Ask HN: What do you think of Noul, a new decision primitive](https://news.ycombinator.com/item?id=49760225) - Hacker News: a proposal to treat `Noul` - the probability-of-true answer type - as a general software primitive rather than a Jev-specific one.
 - [When a designer gets access to Jev](https://x.com/heystefan_/status/2101369117496521042) - X: a product designer's 33-second demo in which a natural-language phrase narrows a large icon set to the matching ones with Jev deciding which - 4.8k likes and a reply thread where the author discusses the icons Jev gets wrong.
+- [Made with Jev](https://madewithjev.com) - Site: a directory of Jev builds, guides, and posts with reported cost and speed, plus free Jev-powered tools such as an AI slop detector.
 
 ## Submission format
 
