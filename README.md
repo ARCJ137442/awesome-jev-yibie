@@ -63,7 +63,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 21 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 20 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 16 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 17 entries
 - [Agent Decisions](categories/agent-decisions.md) — 31 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 3 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 16 entries
@@ -170,6 +170,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jev-skip](https://github.com/valentynkit/jev-skip) - Media: browser extension that reads the YouTube caption track and scores each segment's sponsor probability on the seek bar before the intro ends, reporting 77% of SponsorBlock's sponsor seconds caught over 23 videos at $0.0008 a video.
 - [jev-semgrep](https://github.com/uehaj/jev-semgrep) - Semantic search: greps by meaning across languages, having Jev score every line against a meaning and letting meanings combine with AND, backed by a 13-file test suite.
 - [nlgrep](https://github.com/YehuiTang0316/jev-nlgrep) - Developer tooling: uses Jev `Noul` judgments to find code, docs, logs, and text satisfying natural-language conditions, with a configurable probability threshold and ranked file results linked to source lines.
+- [slop-grader](https://github.com/lukstei/slop-grader) - Content quality: CLI tool that grades text files against custom rulesets for AI slop, grammar, and technical doc quality using Jev scores and line-level flags, then guides an AI agent to auto-fix violations.
 
 ### Agent Decisions
 
