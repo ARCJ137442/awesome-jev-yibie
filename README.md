@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Verification & Guardrails](categories/verification-guardrails.md) — 20 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 13 entries
 - [Agent Decisions](categories/agent-decisions.md) — 31 entries
-- [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
+- [Data Labeling & Curation](categories/data-labeling-curation.md) — 3 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 15 entries
 - [Calibration & Research](categories/calibration-research.md) — 18 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 35 entries
@@ -208,6 +208,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 
 Source file: [`categories/data-labeling-curation.md`](categories/data-labeling-curation.md)
 
+- [jev-align (Sutro)](https://github.com/sutro-sh/jev-align) - Dataset engineering: evaluates CSV, Parquet, and JSONL rows with Jev `Choice`, `Score`, or `Boolean` decisions, sends ambiguous and audit samples to a human, and uses accepted human labels to optimize the saved definition with GEPA.
 - [jev-curate](https://github.com/AkashPriyadarshii/jev-curate) - Dataset engineering: sifts synthetic JSONL and Parquet rows using Jev Noul checks and calibrated confidence scores, streaming passed records and rejections straight to disk.
 - [typeful-triage](https://github.com/cephalization/jev-triage) - Open-source maintenance: multiplayer triage dashboard where Jev answers a fixed set of typed questions per issue — kind, severity, urgency, duplicate, and next step — and every human correction is kept and shown back to the model on later runs.
 
