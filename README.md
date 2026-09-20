@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 16 entries
 - [Calibration & Research](categories/calibration-research.md) — 22 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 42 entries
-- [Game & Simulation](categories/game-simulation.md) — 9 entries
+- [Game & Simulation](categories/game-simulation.md) — 10 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 4 entries
@@ -326,6 +326,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [PlayJev](https://github.com/OmniJev/PlayJev) - Gaming: open 0.8B vision-language model that reads one 448 px game frame, returns a probability over the moves the game lists in a single forward pass with no generated text, and hands its low-confidence steps to a search program, across ten browser games.
 - [jev-plays-pokemon-red](https://github.com/valentynkit/jev-plays-pokemon-red) - Gaming: Pokemon Red on PyBoy where deterministic code owns the route and arithmetic, Jev picks only at branches, and every battle turn's faint prediction is scored by Brier against RAM state.
 - [jev-reflex-autonomy-lab](https://github.com/khordoo/jev-reflex-autonomy-lab) - Drone autonomy: a multi-drone lab where Jev supplies the reflex decisions, with an optional slower strategy layer guiding them.
+- [Soupbase](https://github.com/spoonnotfound/soupbase) - Gaming: uses Jev `Choice` judgments to answer lateral-thinking puzzle questions and assess proposed solutions, with application code requiring supported facts, a coherent explanation, and sufficient confidence before marking a puzzle solved.
 
 ### Finance & Trading
 
