@@ -61,7 +61,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 20 entries
+- [Classification & Routing](categories/classification-routing.md) — 21 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 20 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 13 entries
 - [Agent Decisions](categories/agent-decisions.md) — 31 entries
@@ -116,6 +116,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [DiffJury](https://github.com/raihankhan-rk/diffjury) - Code review: routes each pull request by risk with Jev before a human reviewer is assigned, doubling as a review coach.
 - [HA-Jev](https://github.com/AboveColin/HA-Jev) - Smart home: Home Assistant integration that answers questions about the house as a probability, a choice, or a score.
 - [secondlayer](https://github.com/ryanwaits/secondlayer) - Fault triage: self-hosted Stacks data service whose Slack gate and fault-triage paths both run on Jev decisions.
+- [jev-logtriage](https://github.com/jyatesdotdev/jev-logtriage) - On-call operations: batches collapsed Loki logs into one Jev call of Noul, Score, and Choice questions, then maps answers in code to suppress, watch, review, notify, or page, with low confidence going to review and nothing executed.
 - [new-api-typesafe-plugin](https://github.com/FFatTiger/new-api-plugin-typesafe) - LLM gateway: adds a native `/v1/systemone` endpoint to new-api so typed decisions sit behind the same gateway as chat models.
 - [duet-agent](https://github.com/dzhng/duet-agent) - Agent harness: keeps a Jev-backed routing table for deciding which model should serve a request.
 - [json-render](https://github.com/vercel-labs/json-render) - Generative UI: Vercel Labs' UI framework uses Jev in its compose path to pick which components and actions a rendered interface should contain.
