@@ -66,7 +66,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Scoring & Ranking](categories/scoring-ranking.md) — 13 entries
 - [Agent Decisions](categories/agent-decisions.md) — 30 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 2 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 14 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 15 entries
 - [Calibration & Research](categories/calibration-research.md) — 18 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 34 entries
 - [Game & Simulation](categories/game-simulation.md) — 8 entries
@@ -213,6 +213,8 @@ Source file: [`categories/data-labeling-curation.md`](categories/data-labeling-c
 ### Evaluation & Benchmarking
 
 Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-benchmarking.md)
+
+- [Jev Web Analyzer](https://github.com/replynodes/jev-web-analyzer) - Product evaluation: analyzes a public SaaS landing page as clean Markdown and asks Jev ten bounded `Choice` questions about first-visit understanding, returning inspectable findings for the first change to make.
 
 - [Jev Playground](https://github.com/hegargarcia/jev-playground) - Model evaluation: benchmarks Jev against Luna, Haiku, and Gemini at choosing validated legal moves in explicit-state games, scoring decision quality and consistency across a sequence of moves.
 - [Jev vs Mistral and Gemini for event validation](https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation) - Event discovery: head-to-head test of Jev against Mistral Small and Gemini Flash-Lite at validating local event listings.
