@@ -67,7 +67,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Agent Decisions](categories/agent-decisions.md) — 31 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 3 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 15 entries
-- [Calibration & Research](categories/calibration-research.md) — 18 entries
+- [Calibration & Research](categories/calibration-research.md) — 19 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 37 entries
 - [Game & Simulation](categories/game-simulation.md) — 8 entries
 - [Finance & Trading](categories/finance-trading.md) — 3 entries
@@ -256,6 +256,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [jevlike-esp32](https://github.com/david-cermak/jevlike-esp32) - Edge deployment: exports a jevlike scorer as ESP32 firmware with a C scorer and a host-side check, putting one-pass decisions on a microcontroller.
 - [von](https://github.com/wfzyx/von) - Open alternative: a 395M non-autoregressive System One model that answers typed questions with calibrated probabilities in under 15 ms, positioned as a local drop-in replacement for Jev.
 - [JevForge](https://github.com/zwliJay/jev-forge) - Open research: an end-to-end stack for auditable data construction, Qwen3.5-0.8B training, fixed Mind2Web and OOD evaluation, local serving, and a preliminary RLCD baseline.
+- [minojev](https://github.com/zeredy879/minojev) - Open replica: a 547k-parameter model that answers runtime-defined `Choice` (2-255 candidates), `Boolean`, and `Score` questions with dev-calibrated distributions in one forward pass and zero output tokens, trained from scratch on CPU with committed datasets, predictions, and ECE results (maze 0.016).
 
 ### Infra / SDKs / Integrations
 
