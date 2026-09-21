@@ -72,7 +72,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Game & Simulation](categories/game-simulation.md) — 14 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
-- [Content Moderation](categories/content-moderation.md) — 5 entries
+- [Content Moderation](categories/content-moderation.md) — 6 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 54 entries
 
 ### Open categories still being seeded
@@ -379,6 +379,7 @@ Source file: [`categories/content-moderation.md`](categories/content-moderation.
 - [mastra-jev-moderation](https://github.com/CodeAlive-AI/mastra-jev-moderation) - AI assistants: Mastra input processor that asks Jev a `Boolean` "must this message be blocked?" plus a category `Choice` in one request, aborting the turn at 0.7 and failing open behind a deadline and circuit breaker; in production it blocked 9/9 hostile and 0/49 real messages at ~0.4 s median, about 4× cheaper than an LLM moderator.
 - [Jev Chat for Twitch](https://github.com/ethanplusai/jev-chat-for-twitch) - Live chat filtering: bring-your-own-key Chrome extension that reads a Twitch channel's chat over the anonymous IRC WebSocket, asks Jev one category `Choice` per message in batches of 20, and shows a second column of only the messages matching a chosen intent (helpful, questions, funny, feedback); about 504 input tokens per message, roughly $0.15 per hour on a 2-message-per-second chat and $0.76 per hour at 50 per second.
 - [profanity-checker](https://github.com/4rays/profanity-checker) - Trust & safety: Cloudflare Worker that asks Jev `Noul` for literal profanity in text or usernames and a second `Noul` for phonetic or look-alike disguise (`a55h0le`, `mike_hunt`); the threshold, `max()` policy, JSON response, and OpenAPI schema live in Worker code and the endpoint is callable from other Workers via service bindings.
+- [PlotVeil](https://github.com/Dearest/plotveil) - Spoiler protection: Chrome extension that covers each YouTube comment while one Jev `Noul` question, batched 20 at a time, answers whether it reveals a concrete plot event of the video being watched or of another title the user protects, with the extension owning the 0.85 / 0.7 / 0.5 threshold and keeping the comment covered when the check fails.
 
 ### Related Practices / Discussions
 
