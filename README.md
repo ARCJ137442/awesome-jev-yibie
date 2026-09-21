@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 16 entries
 - [Calibration & Research](categories/calibration-research.md) — 22 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 43 entries
-- [Game & Simulation](categories/game-simulation.md) — 10 entries
+- [Game & Simulation](categories/game-simulation.md) — 11 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 4 entries
@@ -338,6 +338,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [jev-plays-pokemon-red](https://github.com/valentynkit/jev-plays-pokemon-red) - Gaming: Pokemon Red on PyBoy where deterministic code owns the route and arithmetic, Jev picks only at branches, and every battle turn's faint prediction is scored by Brier against RAM state.
 - [jev-reflex-autonomy-lab](https://github.com/khordoo/jev-reflex-autonomy-lab) - Drone autonomy: a multi-drone lab where Jev supplies the reflex decisions, with an optional slower strategy layer guiding them.
 - [Soupbase](https://github.com/spoonnotfound/soupbase) - Gaming: uses Jev `Choice` judgments to answer lateral-thinking puzzle questions and assess proposed solutions, with application code requiring supported facts, a coherent explanation, and sufficient confidence before marking a puzzle solved.
+- [jev-torneo-animales](https://github.com/hectorlcastro09/jev-torneo-animales) - Gaming: winner-stays-on tournament of up to 2,569 animals where each fight is one Jev `Choice` between two names under land, water or air rules held in `state`, asking the champion against the next K challengers in a single request and discarding the speculative answers once the champion falls — 1,999 fights in about 16 s at roughly US$0.01.
 
 ### Finance & Trading
 
