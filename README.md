@@ -63,7 +63,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 25 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 24 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 21 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
 - [Agent Decisions](categories/agent-decisions.md) — 33 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 18 entries
@@ -183,6 +183,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jselect](https://github.com/keltokhy/jselect) - Research and retrieval: selects source-linked evidence within a token budget using Jev Noul relevance judgments and local diversity-aware selection.
 - [jsort](https://github.com/keltokhy/jsort) - Text measurement: ranks text along a plain-English criterion using pairwise Jev Noul comparisons and a locally fitted Bradley-Terry scale.
 - [jgrep (kyu1204)](https://github.com/kyu1204/jgrep) - Developer tools: semantic grep that asks Jev one Noul per 5-60 line code chunk, diff hunk or CSV row (16 per request) and prints grep-style file:line hits above a threshold, so English sentences work as CI lint rules.
+- [DWIM](https://github.com/rohit9mehta/dwim) - Desktop productivity: a macOS command palette that reads the frontmost app's menu tree through the accessibility API, asks Jev one `Noul` per menu item against the user's plain-language request, and presses the top match when it clears a probability threshold, falling back to a ranked list otherwise and never auto-running destructive items.
 
 ### Agent Decisions
 
