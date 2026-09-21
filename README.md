@@ -62,7 +62,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 ## Current coverage
 
 - [Classification & Routing](categories/classification-routing.md) — 27 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 24 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 25 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
 - [Agent Decisions](categories/agent-decisions.md) — 33 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
@@ -159,6 +159,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [jev-engineering](https://github.com/eugeniughelbur/jev-engineering) - Agent safety: gates coding-agent tool calls with deterministic rules first and one typed Jev call second, then publishes a rerunnable 300-call injection test showing what the gate catches and what walks past it.
 - [jev-harness](https://github.com/ismaelsoilet/jev-harness) - Developer tooling: gates AI coding agent execution with Jev `Choice`, `Score`, and `Noul` decisions, triaging test tracebacks in < 2ms to resolve dependencies deterministically without frontier LLMs and aborting circular doom loops.
 - [Reflex](https://github.com/kaustav1996/reflex) - Coding agents: Pi-based coding agent that sends each state-changing tool call through one Jev request of five `Noul` risk checks plus a risk `Score`, maps the answers in code to allow, ask or block by the user's risk setting (protected paths always ask), and also uses Jev to pick the model tier per prompt and to send back "done" claims that ran no verification, at about 400 ms per decision.
+- [r2r-jev](https://github.com/Thneoly/r2r-jev) - Agent governance: asks Jev two `Noul` checks per tool call (beyond scope, destructive) and admits each judgment as Evidence that can degrade Trust, Delegation, and Authorization until a human override repairs the relation, so later calls inherit the history; includes a stateless-vs-stateful comparison with a scenario adversarial to persistence.
 
 ### Scoring & Ranking
 
