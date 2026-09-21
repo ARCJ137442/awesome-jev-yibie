@@ -61,19 +61,19 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 28 entries
+- [Classification & Routing](categories/classification-routing.md) — 30 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 25 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 23 entries
-- [Agent Decisions](categories/agent-decisions.md) — 33 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 24 entries
+- [Agent Decisions](categories/agent-decisions.md) — 34 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 19 entries
-- [Calibration & Research](categories/calibration-research.md) — 22 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 45 entries
+- [Calibration & Research](categories/calibration-research.md) — 23 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 50 entries
 - [Game & Simulation](categories/game-simulation.md) — 15 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
-- [Content Moderation](categories/content-moderation.md) — 6 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 54 entries
+- [Content Moderation](categories/content-moderation.md) — 7 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 60 entries
 
 ### Open categories still being seeded
 
@@ -131,6 +131,8 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [Jev Wrapped](https://github.com/gaborishka/jev-wrapped) - Media analysis: reads up to 1,500 posts from the last year of a public Telegram channel and asks Jev a `Choice` over ten kinds of post plus three `Noul` questions (paid ad, clickbait, emotional pressure) about each, counting an ad from 0.7, or from 0.4 when the kind is also ad, and clickbait and pressure from 0.5, then draws the monthly mix on a shareable card that links the highest-scoring posts for a manual check.
 - [Jev-Mail](https://github.com/vynnlee/jev-mail) - Email productivity: runs a 24/7 Gmail classifier on user-owned Google Apps Script where Jev scores urgency, importance, and category, routing uncertain or suspicious mail to Review without a local daemon.
 - [AI-decision-maker](https://github.com/zlZayn/AI-decision-maker) - Data cleaning: asks Jev `Choice` questions to classify CSV columns into a 13-code type vocabulary and each dataset into one of six scenes, then executes every write locally; measured Jev at 6.6–12.7× an LLM's token cost on this task because the output is already one character while per-question criteria repeat.
+- [hearth-jev-rental-search](https://github.com/Nancy-Chauhan/hearth-jev-rental-search) - Housing search: autonomous multi-source rental search where Jev decides which listings match the criteria.
+- [pi-jev-skill-picker](https://github.com/safzanpirani/pi-jev-skill-picker) - Coding agents: ranks the Pi agent's installed skills against the current task with Jev before any of them run.
 
 ### Verification & Guardrails
 
@@ -189,6 +191,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jgrep (kyu1204)](https://github.com/kyu1204/jgrep) - Developer tools: semantic grep that asks Jev one Noul per 5-60 line code chunk, diff hunk or CSV row (16 per request) and prints grep-style file:line hits above a threshold, so English sentences work as CI lint rules.
 - [DWIM](https://github.com/rohit9mehta/dwim) - Desktop productivity: a macOS command palette that reads the frontmost app's menu tree through the accessibility API, asks Jev one `Noul` per menu item against the user's plain-language request, and presses the top match when it clears a probability threshold, falling back to a ranked list otherwise and never auto-running destructive items.
 - [jev-resume-screening](https://github.com/nanami-0713/jev-resume-screening) - Recruiting: screens one resume against a JD in a single request of five Noul evidence gates, four Score dimensions, and one background-routing Choice, with criteria hardened v1→v3 against negative-control resumes (a glossy-trap CV's self-described "AI heavy user" fell 0.95→0.49) and any low-confidence answer escalated to human review.
+- [hippo-memory](https://github.com/kitfunso/hippo-memory) - Agent memory: a biologically-inspired memory store whose optional Jev reranker lifts recall R@1 from 0.41 to 0.62 on a private 300-query developer store.
 
 ### Agent Decisions
 
@@ -228,6 +231,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [Yappy](https://yappy.biz/jev/) - Computer use: macOS voice agent that asks Jev one `Choice` per step (operation and target control) over the front window's accessibility table, executes only validated high-confidence answers, and escalates to a full LLM agent on low confidence, no-effect actions, or unknown field values; author-reported 275–690 ms per decision.
 - [JevLoop](https://github.com/zjunlp/JevLoop) - Agent harness: routes the loop's own judgements to Jev, where a `Choice` picks the next tool from candidates rebuilt every step, a `Score` grades the call's risk, and a `Noul` decides whether it needs authorisation, while plain code acts on the answers so a high risk score forces human authorisation that no probability can override (7.7% of wall clock with the offline judge, 79% over the hosted API).
 - [DataJev](https://github.com/zzz1YAO/DataJev) - Data analysis agents: an LLM performs Python-based analysis while Jev reads the compressed analytical state and decides whether the agent should continue the current direction, switch to another one, verify a finding, or stop and synthesize the answer.
+- [jev-mobile](https://github.com/Friedjof/jev-mobile) - Mobile control: fast structured Android control loops that route each step through Jev alongside Mobile MCP, with 35 test files.
 
 ### Data Labeling & Curation
 
@@ -277,7 +281,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [mini-jev](https://github.com/r-ms/mini-jev) - Local reproduction: implements Jev's typed-decision interface on top of a local LLM.
 - [Laya](https://github.com/NandhaKishorM/laya) - Open alternative: non-autoregressive decision model that answers `choice`, `score`, and `noul` questions with RLCD-trained calibrated probabilities in a single ~35 ms forward pass, published on PyPI and Hugging Face.
 - [Jev-compatible public API](https://x.com/ekzhang1/status/2100651678110515383) - Open research: a public Jev-shaped API backed by an open Qwen3.6-35B-A3B model so anyone can try the typed-decision interface.
-- [kev](https://github.com/jaredpalmer/kev) - Trainable replica: a tiny Jev-like model on top of Qwen2.5-0.5B that trains and runs on a MacBook, shipped with its own research runs and evaluation scripts.
+- [kev](https://github.com/jaredpalmer/kev) - Trainable replica: a family of small Jev-like decision models on Qwen2.5 at 0.6B, 4B, and 8B that train and run on a MacBook, shipped with their own research runs and evaluation scripts.
 - [jevinci](https://github.com/achimala/jevinci) - Creative experiment: paints images by having Jev predict every pixel's colour in parallel, with predicted confidence deciding how wide each stroke is drawn.
 - [jev-local](https://github.com/us/jev-local) - Local reproduction: Jev-compatible `POST /v1/systemone` server answering typed `Choice`/`Score`/`Noul` questions with confidence from open weights, verified as an official-SDK drop-in with temperature-fit calibration (set3 n=1316, 0.83 overall).
 - [LitJev](https://github.com/zhengxuyu/litjev) - Local reproduction: a reproduction of Jev that turns any Qwen model into a fast decision model, serving the same `/v1/systemone` schema (Choice, Score, Noul) with no training and no generated answer text.
@@ -291,6 +295,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [Luce](https://github.com/scienthoon/luce) - Open recipe: describe the decision task in a sentence, an LLM teacher writes the training data, a LoRA + decision head on Qwen3-4B-Base answers choice/score/boolean questions with calibrated probabilities in one forward pass; trains on a 12 GB card. Reports accuracy and ECE next to Jev on identical test items (rule-generated tickets 91.1 vs 75.1, phishing 97.4 vs 62.6, GitHub issue priority 41.1 vs 37.5); browser replay demo without a GPU.
 - [poorjev](https://github.com/rupeshpoojary9/poorjev) - Local reproduction: implements Jev's typed `Choice`/`Score`/`Noul` interface on commodity zero-shot NLI models and makes the confidence honest with temperature scaling and conformal abstention, shipping a reproducible calibration eval (ECE 0.170 to 0.071, cross-validated) that runs offline with no API key.
 - [openJev-verdict-2.0](https://github.com/Heman10x-NGU/openJev-verdict-2.0) - Open decision engine: a calibrated 151M non-autoregressive model that reports beating both TypeSafe Jev and Laya on typed-decision benchmarks, shipped with its own test suite.
+- [OpenDecision](https://github.com/deepanwadhwa/OpenDecision) - Open alternative: a local semantic decision engine that describes itself as the open-source equivalent of Jev, answering `Choice`, `Noul`, and `Score` questions from structured state and documents without a hosted call.
 
 ### Infra / SDKs / Integrations
 
@@ -341,6 +346,11 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [Building a Harness with Jev](https://www.langchain.com/blog/building-a-harness-with-jev) - Framework guide: LangChain's walkthrough of wiring Jev into an agent harness as the decision layer, from a team that then published its own evaluation of Jev as a judge.
 - [openrouter-jev-mcp](https://github.com/ctmx/openrouter-jev-mcp) - MCP ecosystem: Python decision gateway and stdio MCP server exposing TypeSafe's Jev model through OpenRouter's alpha decisions endpoint.
 - [system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) - Python ecosystem: TypeSafe AI's official open-source drop-in adapter for running and benchmarking Jev System One decision evaluations across OpenAI- and Anthropic-compatible LLM APIs.
+- [neurolink](https://github.com/juspay/neurolink) - Provider abstraction: Juspay's TypeScript interface over forty AI providers, with `decide` as a first-class inference type alongside generate and stream.
+- [jev-spring-boot-starter](https://github.com/danvega/jev-spring-boot-starter) - Java ecosystem: Spring Boot 4 starter that puts Jev behind Spring MVC and RestClient.
+- [jevify](https://github.com/altryne/jevify) - Agent skill: finds where a codebase could hand a decision to Jev, designs the typed questions for it, and learns from recent community usage.
+- [mysql-ailike](https://github.com/maayanlevy/mysql-ailike) - Database filtering: MySQL plugin that filters rows by a natural-language predicate instead of a literal one, powered by Jev.
+- [jev-usecases](https://github.com/kenhuangus/jev-usecases) - Reference harnesses: a set of production-shaped use-case harnesses built around confidence-gated decision logic.
 
 ### Game & Simulation
 
@@ -387,6 +397,7 @@ Source file: [`categories/content-moderation.md`](categories/content-moderation.
 - [Jev Chat for Twitch](https://github.com/ethanplusai/jev-chat-for-twitch) - Live chat filtering: bring-your-own-key Chrome extension that reads a Twitch channel's chat over the anonymous IRC WebSocket, asks Jev one category `Choice` per message in batches of 20, and shows a second column of only the messages matching a chosen intent (helpful, questions, funny, feedback); about 504 input tokens per message, roughly $0.15 per hour on a 2-message-per-second chat and $0.76 per hour at 50 per second.
 - [profanity-checker](https://github.com/4rays/profanity-checker) - Trust & safety: Cloudflare Worker that asks Jev `Noul` for literal profanity in text or usernames and a second `Noul` for phonetic or look-alike disguise (`a55h0le`, `mike_hunt`); the threshold, `max()` policy, JSON response, and OpenAPI schema live in Worker code and the endpoint is callable from other Workers via service bindings.
 - [PlotVeil](https://github.com/Dearest/plotveil) - Spoiler protection: Chrome extension that covers each YouTube comment while one Jev `Noul` question, batched 20 at a time, answers whether it reveals a concrete plot event of the video being watched or of another title the user protects, with the extension owning the 0.85 / 0.7 / 0.5 threshold and keeping the comment covered when the check fails.
+- [jev_antispam_bot](https://github.com/backmeupplz/jev_antispam_bot) - Telegram moderation: minimal grammY anti-spam bot that asks Jev about each message, with ten test files behind it.
 
 ### Related Practices / Discussions
 
@@ -446,6 +457,12 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Made with Jev](https://madewithjev.com) - Site: a directory of Jev builds, guides, and posts with reported cost and speed, plus free Jev-powered tools such as an AI slop detector.
 - [Jev is just a classifier, and that is fine](https://x.com/bojie_li/status/2100688989006475580) - X (Chinese): a technical counterpoint arguing Jev is a representation model rather than something new, and that its latency follows mechanically from one prefill plus a single parallel token per question with logprobs.
 - [LangChain is already using Jev inside its harness](https://x.com/dongxi_nlp/status/2100813094951748074) - X (Chinese): reads LangChain's adoption as confirmation that Jev fits the fixed-harness roles - agent routing, model routing - rather than open-ended generation.
+- [Jev is now available to everyone, no waitlist](https://x.com/typesafeai/status/2101786156572823624) - X: TypeSafe drops the waitlist and moves Jev from early access to general availability, the change that makes every other entry in this list reproducible by a reader.
+- [JEV captcha arbitrage](https://x.com/kenonews/status/2101656436136661163) - X: works through the economics of solving CAPTCHAs with Jev at $0.0068 per hundred against a marketplace paying a cent each, a pointed illustration of what per-decision pricing does to an existing market.
+- [A deep dive into Jev](https://flaviocopes.com/jev/) - Blog: a veteran technical writer's walkthrough of the System One idea, useful as the explanation to hand someone who has only seen LLM marketing.
+- [Replacing an agentic classification loop with Jev](https://blog.r6i.it/typesafe-jev-vs-agentic-loop.html) - Blog: swaps an agent's classification loop for a single Jev call and reports the loop running 7x faster.
+- [Awesome TypeSafe Jev](https://github.com/AbdelStark/awesome-typesafe-jev) - Curated list: a source-backed field guide with SDKs and live demos, the largest of the community indexes at 423 stars.
+- [60 Jev use cases in Chinese](https://x.com/yaojingang/status/2101867443820113982) - X (Chinese): rounds up sixty cases with twelve called out as most worth studying, organised around the same division of labour - the generative model writes, Jev classifies, scores, and chooses.
 
 ## Submission format
 
