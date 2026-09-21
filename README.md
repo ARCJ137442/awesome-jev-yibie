@@ -61,7 +61,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 22 entries
+- [Classification & Routing](categories/classification-routing.md) — 23 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 20 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 19 entries
 - [Agent Decisions](categories/agent-decisions.md) — 31 entries
@@ -125,6 +125,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [jev-cookbook](https://github.com/nexibeo/jev-cookbook) - Developer education: 15 runnable Node recipes that route support tickets, file documents, categorize bank transactions and label Gmail with Jev `Choice` and `Noul` questions, sending low-confidence answers to human review.
 - [flue-jev-demo](https://github.com/matthewp/flue-jev-demo) - Agent routing: routes a Flue agent's work with Jev through Cloudflare AI Gateway.
 - [sift](https://github.com/bohutang/sift) - Content labelling: Chrome extension that labels every post in an X timeline - substance, humour, chit-chat, promo, junk, or AI-written - with Jev decisions.
+- [DocJev](https://github.com/jerryjliu/docjev) - Document pipelines: LlamaIndex's open-source library that classifies a document against natural-language category rules or finds the boundaries between sub-documents, with swappable OCR backends (liteparse or LlamaParse) and a benchmark harness whose 40-document pilot classified 40/40 originals correctly at about 182 ms Jev decision p50.
 
 ### Verification & Guardrails
 

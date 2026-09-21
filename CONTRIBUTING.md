@@ -91,28 +91,40 @@ If a project is mostly prompt documents, skills, or templates, that is fine — 
 
 ## AI-assisted work, and bulk submissions
 
-AI-assisted development is welcome here. Plenty of listed projects were built with coding agents, and that is not a reason to exclude them. It does change what the reviewer needs from you.
+AI-assisted development is welcome here. Plenty of listed projects were built with coding agents, and that is not a reason to exclude them.
+
+### Rule: do not submit bulk drops of AI-generated projects
+
+This is a rule, not a preference, and it is the one rule in this document that will get a submission **queued rather than reviewed**.
+
+Bursts of AI-generated repositories are the fastest way to bury the signal this list exists to collect. So:
+
+- **One project per pull request, one pull request per project.** Do not bundle siblings.
+- **At most three entries per author per rolling seven days**, however many repositories exist. Entries beyond that are queued to the next cycle — not reviewed early, and not rejected on sight.
+- **A batch counts as one submission.** Repositories sharing a scaffold, a README template, an `AGENTS.md` / `CLAUDE.md` / `STATE.md` set, or a single-commit history are treated as one project family. Eight siblings released on one afternoon do not become eight entries.
+- **A shared release date is a risk signal, not momentum.** Projects released together are reviewed individually and are not credited to each other.
+- **Undisclosed AI generation pauses the whole batch.** If a submission turns out to have been generated without disclosure, every pending entry from that author waits until the disclosure is made. The disclosure costs nothing; the concealment costs the queue position.
+
+None of this restricts AI-written code. It restricts the pattern in which volume stands in for depth.
 
 ### Disclose AI generation
 
 If a project was generated or substantially written by an AI system, say so in the pull request, and preferably in the repository. Disclosure is not a penalty — it sets the review bar honestly, and it tells maintainers to check depth rather than authorship.
 
-Undisclosed generation usually becomes obvious anyway: a shared scaffold, a single bulk commit, documents far outweighing code. Being caught that way costs more trust than the disclosure would have.
+Disclosure is usually unnecessary anyway once the pattern is obvious: a shared scaffold, a single bulk commit, documents outweighing code. Being caught that way costs more trust than saying so up front would have.
 
 ### Do not ship a scaffold as evidence
 
 One `AGENTS.md` / `CLAUDE.md` / `STATE.md` / `CHANGELOG.md` template reused across several repositories does not make any of them more complete. Neither does a README that documents features the code does not implement.
 
-### Submission rate
+### The depth bar in practice
 
-Bulk submission is the most common way this list loses signal.
+Maintainers may accept a project with a caveat when the code is real but depth is unproven, and may decline one member of a batch while accepting its siblings. A reviewer will check:
 
-- **One entry per pull request.** Do not bundle unrelated projects.
-- **At most three entries per author per rolling seven days.** This is a review-priority rule, not a ban: entries beyond it are queued to a later cycle, not rejected on sight.
-- **Projects released together are reviewed individually.** Being in the same batch grants no shared credibility, and a weak member can hold up a strong one.
-- **A shared release date is treated as a risk signal**, not as momentum.
-
-Maintainers may accept a project with a caveat when the code is real but depth is unproven, and may decline one member of a batch while accepting its siblings.
+- Does the code perform the decision it claims, or only describe it?
+- Is there at least one runnable check — a test, an example with expected output, or a public demo?
+- If the repository is mostly prompt documents, is it submitted and described as a skill rather than as a tool?
+- Do the numbers in the entry trace back to the linked page?
 
 ## Entry format
 
@@ -217,3 +229,4 @@ Before submitting, confirm:
 - [ ] Any number in the entry traces back to the linked page.
 - [ ] AI generation is disclosed, if it applies.
 - [ ] This is not more than my third entry in a rolling seven-day window.
+- [ ] These repositories are not a batch sharing one scaffold, README template, or single-commit history — a batch counts as one submission, not several.
