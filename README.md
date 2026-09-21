@@ -66,7 +66,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Scoring & Ranking](categories/scoring-ranking.md) — 21 entries
 - [Agent Decisions](categories/agent-decisions.md) — 33 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 17 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 18 entries
 - [Calibration & Research](categories/calibration-research.md) — 22 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 45 entries
 - [Game & Simulation](categories/game-simulation.md) — 14 entries
@@ -256,6 +256,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [ASSAY-001](https://github.com/jourdanlabs/assay-001) - Independent pre-registered check of Jev calibration and type safety on Banking77 / CLINC150. Split verdict, full logs. Write-up: [donttrustme.ai](https://donttrustme.ai/assay-001.html)
 - [BTK audit studies](https://boringtoolskit.com/blog/seo-audit-cost-2026/) - Content & growth: Jev striking-distance triage ranks SEO fixes and drives study pages; 1,204 pages judged per run, 4,816 judgments in under 3 minutes, $0.0048 per 12-query batch.
 - [Can Jev Be a Better Agent Evaluator?](https://www.langchain.com/blog/jev-agent-evals-langsmith) - Agent evaluation: LangChain compares Jev against LLM judges on accuracy, repeatability, latency and cost, concluding Jev is the cheaper and more consistent judge for online evals.
+- [jev-acento](https://github.com/marcosmartinez/jev-acento) - Language evaluation: pre-registered paired audit of Jev on Spanish over 3,200 human-labelled items, finding that a Spanish `state` costs 3.0-6.4 pp of accuracy and roughly doubles ECE on XNLI and PAWS-X while writing `instructions` in Spanish changes nothing, and shipping a CLI to rerun the same comparison on your own labelled data.
 
 ### Calibration & Research
 
