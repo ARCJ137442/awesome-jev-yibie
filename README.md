@@ -61,10 +61,11 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 30 entries
+- [Classification & Routing](categories/classification-routing.md) — 26 entries
+- [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 25 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 24 entries
-- [Agent Decisions](categories/agent-decisions.md) — 34 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
+- [Agent Decisions](categories/agent-decisions.md) — 33 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 19 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
@@ -72,7 +73,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Game & Simulation](categories/game-simulation.md) — 15 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
-- [Content Moderation](categories/content-moderation.md) — 7 entries
+- [Content Moderation](categories/content-moderation.md) — 6 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 60 entries
 
 ### Open categories still being seeded
@@ -84,6 +85,7 @@ Each entry lives in exactly one category. When a project could fit multiple cate
 ## Browse by category
 
 - [Classification & Routing](#classification-routing) ([source](categories/classification-routing.md))
+- [Adaptive & Realtime UI](#adaptive-realtime-ui) ([source](categories/adaptive-realtime-ui.md))
 - [Verification & Guardrails](#verification-guardrails) ([source](categories/verification-guardrails.md))
 - [Scoring & Ranking](#scoring-ranking) ([source](categories/scoring-ranking.md))
 - [Agent Decisions](#agent-decisions) ([source](categories/agent-decisions.md))
@@ -112,19 +114,15 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [jev-agent-skill-router](https://github.com/GodsBoy/jev-agent-skill-router) - Agent infrastructure: routes agent skill selection through typed, confidence-aware Jev decisions so weak matches are declined instead of guessed.
 - [typesafe-jev CV screener](https://github.com/gtaras7/typesafe-jev) - Recruiting: screens a folder of CVs with Jev typed judgments against an editable policy, re-scoring candidates for free when the policy changes.
 - [Jev email intent workflow](https://github.com/GiesN/typesafe-jev-workflow) - Back-office automation: async LangGraph workflow gets a typed Jev `Choice` (`invoice` or `general`) and routes each inbound email to the matching handler.
-- [unclutter](https://github.com/kitze/unclutter) - Browser tooling: WXT extension where Jev decides per page element whether it is clutter, removing it under reusable template rules.
-- [typesafe-adblock](https://github.com/realZachi/typesafe-adblock) - Browser tooling: Chrome extension that asks Jev whether each DOM element is an ad, turning ad blocking into a stream of per-element typed questions.
 - [DiffJury](https://github.com/raihankhan-rk/diffjury) - Code review: routes each pull request by risk with Jev before a human reviewer is assigned, doubling as a review coach.
 - [HA-Jev](https://github.com/AboveColin/HA-Jev) - Smart home: Home Assistant integration that answers questions about the house as a probability, a choice, or a score.
 - [secondlayer](https://github.com/ryanwaits/secondlayer) - Fault triage: self-hosted Stacks data service whose Slack gate and fault-triage paths both run on Jev decisions.
 - [jev-logtriage](https://github.com/jyatesdotdev/jev-logtriage) - On-call operations: batches collapsed Loki logs into one Jev call of Noul, Score, and Choice questions, then maps answers in code to suppress, watch, review, notify, or page, with low confidence going to review and nothing executed.
 - [new-api-typesafe-plugin](https://github.com/FFatTiger/new-api-plugin-typesafe) - LLM gateway: adds a native `/v1/systemone` endpoint to new-api so typed decisions sit behind the same gateway as chat models.
 - [duet-agent](https://github.com/dzhng/duet-agent) - Agent harness: keeps a Jev-backed routing table for deciding which model should serve a request.
-- [json-render](https://github.com/vercel-labs/json-render) - Generative UI: Vercel Labs' UI framework uses Jev in its compose path to pick which components and actions a rendered interface should contain.
 - [omo-jevlike-router](https://github.com/islee23520/omo-jevlike-router) - Skill routing: shrinks the skill catalog in a system prompt with one forward pass over a frozen Qwen, routing each request Jev-style.
 - [jev-cookbook](https://github.com/nexibeo/jev-cookbook) - Developer education: 15 runnable Node recipes that route support tickets, file documents, categorize bank transactions and label Gmail with Jev `Choice` and `Noul` questions, sending low-confidence answers to human review.
 - [flue-jev-demo](https://github.com/matthewp/flue-jev-demo) - Agent routing: routes a Flue agent's work with Jev through Cloudflare AI Gateway.
-- [sift](https://github.com/bohutang/sift) - Content labelling: Chrome extension that labels every post in an X timeline - substance, humour, chit-chat, promo, junk, or AI-written - with Jev decisions.
 - [DocJev](https://github.com/jerryjliu/docjev) - Document pipelines: LlamaIndex's open-source library that classifies a document against natural-language category rules or finds the boundaries between sub-documents, with swappable OCR backends (liteparse or LlamaParse) and a benchmark harness whose 40-document pilot classified 40/40 originals correctly at about 182 ms Jev decision p50.
 - [jev-fit](https://jev-fit.com) - Developer tooling: hosted fit checker that sends a pasted software idea and a fixed typed rubric to Jev in one call, where a `Choice` picks plain code, Jev or a reasoning LLM behind a `Noul` gate for non-tasks, code vetoes Jev when the idea needs images, and low confidence returns "not sure"; closed source, free page and API.
 - [jev-skill-router](https://github.com/shimo4228/jev-skill-router) - Coding agents: Claude Code plugin whose UserPromptSubmit hook asks Jev one `Choice` over the installed skill roster plus `Boolean`-style gates on whether any skill is needed, suggests a skill only when the gate and the per-candidate fit both clear 0.30, and defaults to a shadow mode that logs the decision without injecting it.
@@ -133,6 +131,19 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [AI-decision-maker](https://github.com/zlZayn/AI-decision-maker) - Data cleaning: asks Jev `Choice` questions to classify CSV columns into a 13-code type vocabulary and each dataset into one of six scenes, then executes every write locally; measured Jev at 6.6–12.7× an LLM's token cost on this task because the output is already one character while per-question criteria repeat.
 - [hearth-jev-rental-search](https://github.com/Nancy-Chauhan/hearth-jev-rental-search) - Housing search: autonomous multi-source rental search where Jev decides which listings match the criteria.
 - [pi-jev-skill-picker](https://github.com/safzanpirani/pi-jev-skill-picker) - Coding agents: ranks the Pi agent's installed skills against the current task with Jev before any of them run.
+
+### Adaptive & Realtime UI
+
+Source file: [`categories/adaptive-realtime-ui.md`](categories/adaptive-realtime-ui.md)
+
+- [typesafe-adblock](https://github.com/realZachi/typesafe-adblock) - Browser tooling: Chrome extension that asks Jev whether each DOM element is an ad, turning ad blocking into a stream of per-element typed questions.
+- [unclutter](https://github.com/kitze/unclutter) - Browser tooling: WXT extension where Jev decides per page element whether it is clutter, removing it under reusable template rules.
+- [sift](https://github.com/bohutang/sift) - Content labelling: Chrome extension that labels every post in an X timeline - substance, humour, chit-chat, promo, junk, or AI-written - with Jev decisions.
+- [json-render](https://github.com/vercel-labs/json-render) - Generative UI: Vercel Labs' UI framework uses Jev in its compose path to pick which components and actions a rendered interface should contain.
+- [PlotVeil](https://github.com/Dearest/plotveil) - Spoiler protection: Chrome extension that covers each YouTube comment while one Jev `Noul` question, batched 20 at a time, answers whether it reveals a concrete plot event of the video being watched or of another title the user protects, with the extension owning the 0.85 / 0.7 / 0.5 threshold and keeping the comment covered when the check fails.
+- [jev-canvas](https://github.com/gaborishka/jev-canvas) - Multimodal UI: draw on a tldraw canvas by voice while pointing a webcam-tracked finger; on every partial transcript Jev answers eight typed questions (is it a command, is the sentence complete, action, shape, colour, target, place, size) and plain code gates them with thresholds, in English and Ukrainian, 300–550 ms per decision.
+- [DWIM](https://github.com/rohit9mehta/dwim) - Desktop productivity: a macOS command palette that reads the frontmost app's menu tree through the accessibility API, asks Jev one `Noul` per menu item against the user's plain-language request, and presses the top match when it clears a probability threshold, falling back to a ranked list otherwise and never auto-running destructive items.
+- [SemanticSpace](https://semanticspace.dev/) - Semantic mapping: places phrases in 2D by asking Jev how strongly each one relates to two chosen axis concepts and using those scores as coordinates.
 
 ### Verification & Guardrails
 
@@ -177,7 +188,6 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jev-scout](https://github.com/AkashPriyadarshii/jev-scout) - Developer tooling: sub-second zero-hallucination open-source repo and crate scout using TypeSafe Jev speculative fan-out scoring.
 - [jev-seo](https://github.com/AkashPriyadarshii/jev-seo) - Zero-cost, agent-first SEO & Generative Engine Optimization (GEO) search radar CLI suite and MCP server powered by DuckDuckGo and TypeSafe Jev System One.
 - [JevSlop](https://github.com/TKY-27/JevSlop) - Writing quality: scores public note.com articles on eight Jev `Score` axes inside a single `systemOne` request and turns them into a 0-100 Slop Score in ordinary TypeScript.
-- [SemanticSpace](https://semanticspace.dev/) - Semantic mapping: places phrases in 2D by asking Jev how strongly each one relates to two chosen axis concepts and using those scores as coordinates.
 - [Supercov](https://github.com/supercorp-ai/supercov) - Code quality for coding agents: Jev answers twelve `Noul` properties per source file so the agent knows what to fix first.
 - [jev.nvim](https://github.com/valentynkit/jev.nvim) - Developer tooling: Neovim plugin that splits the buffer into functions with Treesitter, scores each against a plain-language question with Jev, and ranks answers by probability in quickfix.
 - [jev-reranker](https://github.com/hotchpotch/jev-reranker) - Retrieval and RAG: uses Jev Noul judgments to assess retrieved documents for relevance and usefulness as answer evidence, then sorts results and optionally filters them using a configurable threshold.
@@ -189,7 +199,6 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jselect](https://github.com/keltokhy/jselect) - Research and retrieval: selects source-linked evidence within a token budget using Jev Noul relevance judgments and local diversity-aware selection.
 - [jsort](https://github.com/keltokhy/jsort) - Text measurement: ranks text along a plain-English criterion using pairwise Jev Noul comparisons and a locally fitted Bradley-Terry scale.
 - [jgrep (kyu1204)](https://github.com/kyu1204/jgrep) - Developer tools: semantic grep that asks Jev one Noul per 5-60 line code chunk, diff hunk or CSV row (16 per request) and prints grep-style file:line hits above a threshold, so English sentences work as CI lint rules.
-- [DWIM](https://github.com/rohit9mehta/dwim) - Desktop productivity: a macOS command palette that reads the frontmost app's menu tree through the accessibility API, asks Jev one `Noul` per menu item against the user's plain-language request, and presses the top match when it clears a probability threshold, falling back to a ranked list otherwise and never auto-running destructive items.
 - [jev-resume-screening](https://github.com/nanami-0713/jev-resume-screening) - Recruiting: screens one resume against a JD in a single request of five Noul evidence gates, four Score dimensions, and one background-routing Choice, with criteria hardened v1→v3 against negative-control resumes (a glossy-trap CV's self-described "AI heavy user" fell 0.95→0.49) and any low-confidence answer escalated to human review.
 - [hippo-memory](https://github.com/kitfunso/hippo-memory) - Agent memory: a biologically-inspired memory store whose optional Jev reranker lifts recall R@1 from 0.41 to 0.62 on a private 300-query developer store.
 
@@ -222,7 +231,6 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [pi-typesafe-router](https://github.com/jekozyra/pi-typesafe-router) - Coding agents: routes Pi's work through typed Jev decisions.
 - [wakegate](https://github.com/shitianfang/wakegate) - Long-running agents: before a sleeping agent's LLM is resumed on a timer or incoming event, Jev answers a `Choice` (wake, not yet, unrelated) against the agent's own sleep note, and code skips the wakeup only when wake is below 0.2 while always waking on user messages, bare timers, a skip limit, errors, and timeouts; one run passed 21 of 21 hand-written scenarios, which the README calls a smoke test rather than a benchmark.
 - [BrowserClaw](https://github.com/GoldenLoaf24h/browserclaw) - Browser automation: Zero-lock, session-preserving Chrome MCP server that couples a local Jev System One semantic micro-loop (`chrome_act_toward_goal`) with an 85%+ pruned DOM tree (Shadow DOM & iframe pierced), dispatching native CDP events (`isTrusted: true`) on active logged-in sessions without focus theft.
-- [jev-canvas](https://github.com/gaborishka/jev-canvas) - Multimodal UI: draw on a tldraw canvas by voice while pointing a webcam-tracked finger; on every partial transcript Jev answers eight typed questions (is it a command, is the sentence complete, action, shape, colour, target, place, size) and plain code gates them with thresholds, in English and Ukrainian, 300–550 ms per decision.
 - [jev-belay](https://github.com/valentynkit/jev-belay) - Coding agents: Claude Code Stop hook that reads the transcript for evidence and spends one four-question Jev call only when files changed with no passing check since, failing open on any error.
 - [Jev for Chrome](https://github.com/chy4pro/jev-for-chrome) - Browser automation: unofficial Chrome extension port of Jev Ultrafast where a Jev `Choice` picks the operation and DOM element each step and two `Noul` checks (goal reached, stuck) veto a premature DONE or BLOCKED, with a small text model used only when text must be typed.
 - [jev-pruner](https://github.com/tamaratran/jev-pruner) - Context management: Claude Code plugin that trims long Bash output with Jev before the model ever sees it, keeping terminal noise out of the window.
@@ -396,7 +404,6 @@ Source file: [`categories/content-moderation.md`](categories/content-moderation.
 - [mastra-jev-moderation](https://github.com/CodeAlive-AI/mastra-jev-moderation) - AI assistants: Mastra input processor that asks Jev a `Boolean` "must this message be blocked?" plus a category `Choice` in one request, aborting the turn at 0.7 and failing open behind a deadline and circuit breaker; in production it blocked 9/9 hostile and 0/49 real messages at ~0.4 s median, about 4× cheaper than an LLM moderator.
 - [Jev Chat for Twitch](https://github.com/ethanplusai/jev-chat-for-twitch) - Live chat filtering: bring-your-own-key Chrome extension that reads a Twitch channel's chat over the anonymous IRC WebSocket, asks Jev one category `Choice` per message in batches of 20, and shows a second column of only the messages matching a chosen intent (helpful, questions, funny, feedback); about 504 input tokens per message, roughly $0.15 per hour on a 2-message-per-second chat and $0.76 per hour at 50 per second.
 - [profanity-checker](https://github.com/4rays/profanity-checker) - Trust & safety: Cloudflare Worker that asks Jev `Noul` for literal profanity in text or usernames and a second `Noul` for phonetic or look-alike disguise (`a55h0le`, `mike_hunt`); the threshold, `max()` policy, JSON response, and OpenAPI schema live in Worker code and the endpoint is callable from other Workers via service bindings.
-- [PlotVeil](https://github.com/Dearest/plotveil) - Spoiler protection: Chrome extension that covers each YouTube comment while one Jev `Noul` question, batched 20 at a time, answers whether it reveals a concrete plot event of the video being watched or of another title the user protects, with the extension owning the 0.85 / 0.7 / 0.5 threshold and keeping the comment covered when the check fails.
 - [jev_antispam_bot](https://github.com/backmeupplz/jev_antispam_bot) - Telegram moderation: minimal grammY anti-spam bot that asks Jev about each message, with ten test files behind it.
 
 ### Related Practices / Discussions

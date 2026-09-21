@@ -9,6 +9,7 @@ README_PATH = REPO_ROOT / "README.md"
 
 CATEGORIES = [
     "classification-routing.md",
+    "adaptive-realtime-ui.md",
     "verification-guardrails.md",
     "scoring-ranking.md",
     "agent-decisions.md",
