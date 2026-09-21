@@ -63,7 +63,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 24 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 22 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 19 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 20 entries
 - [Agent Decisions](categories/agent-decisions.md) — 31 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 16 entries
@@ -178,6 +178,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [slop-grader](https://github.com/lukstei/slop-grader) - Content quality: CLI tool that grades text files against custom rulesets for AI slop, grammar, and technical doc quality using Jev scores and line-level flags, then guides an AI agent to auto-fix violations.
 - [jselect](https://github.com/keltokhy/jselect) - Research and retrieval: selects source-linked evidence within a token budget using Jev Noul relevance judgments and local diversity-aware selection.
 - [jsort](https://github.com/keltokhy/jsort) - Text measurement: ranks text along a plain-English criterion using pairwise Jev Noul comparisons and a locally fitted Bradley-Terry scale.
+- [jgrep (kyu1204)](https://github.com/kyu1204/jgrep) - Developer tools: semantic grep that asks Jev one Noul per 5-60 line code chunk, diff hunk or CSV row (16 per request) and prints grep-style file:line hits above a threshold, so English sentences work as CI lint rules.
 
 ### Agent Decisions
 
