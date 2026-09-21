@@ -63,13 +63,13 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 28 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 25 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 23 entries
 - [Agent Decisions](categories/agent-decisions.md) — 33 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 18 entries
 - [Calibration & Research](categories/calibration-research.md) — 22 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 45 entries
-- [Game & Simulation](categories/game-simulation.md) — 14 entries
+- [Game & Simulation](categories/game-simulation.md) — 15 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 6 entries
@@ -188,6 +188,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jsort](https://github.com/keltokhy/jsort) - Text measurement: ranks text along a plain-English criterion using pairwise Jev Noul comparisons and a locally fitted Bradley-Terry scale.
 - [jgrep (kyu1204)](https://github.com/kyu1204/jgrep) - Developer tools: semantic grep that asks Jev one Noul per 5-60 line code chunk, diff hunk or CSV row (16 per request) and prints grep-style file:line hits above a threshold, so English sentences work as CI lint rules.
 - [DWIM](https://github.com/rohit9mehta/dwim) - Desktop productivity: a macOS command palette that reads the frontmost app's menu tree through the accessibility API, asks Jev one `Noul` per menu item against the user's plain-language request, and presses the top match when it clears a probability threshold, falling back to a ranked list otherwise and never auto-running destructive items.
+- [jev-resume-screening](https://github.com/nanami-0713/jev-resume-screening) - Recruiting: screens one resume against a JD in a single request of five Noul evidence gates, four Score dimensions, and one background-routing Choice, with criteria hardened v1→v3 against negative-control resumes (a glossy-trap CV's self-described "AI heavy user" fell 0.95→0.49) and any low-confidence answer escalated to human review.
 
 ### Agent Decisions
 
@@ -358,6 +359,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [2048 × Jev](https://github.com/ARCJ137442/jev-2048) - Gaming: a 2048 board where every move is a Jev `Choice` over four directions with no heuristic fallback, gated by a user-set confidence threshold that pauses play for human review, with editable prompts and board rules, bring-your-own-key backends, and archive import/export.
 - [Jevtown](https://github.com/gaborishka/jevtown) - Audience simulation: a town of 10,000 personas computed from their id reads a post, listing, product or headline; one request asks Jev about 60 `Score` questions on who would care plus seven `Noul` moderation checks (0.5 keeps the text out of the public feed, 0.85 blocks it), batched `Choice` questions then return each persona's reaction in waves of 600, 1,500 and 3,000, and code sends the text to the next wave only while glad reactions outweigh sorry ones by at least 0.1 of the wave.
 - [RoboJEV](https://github.com/lykycy123/RoboJEV) - Robotics simulation: uses two-stage Jev `Choice` decisions over structured state to select intent and Cartesian motion/gripper commands for a Franka Panda in MuJoCo, rejecting malformed responses and checking task success independently through physics.
+- [Jev Chess](https://jevchess.com) - Gaming: one shared board where the internet collectively plays against Jev; every legal move is an option of a single `Choice` question so an illegal move is impossible, returned probabilities shade the pieces on the board, and a live calibration panel scores each claimed confidence against a one-ply material check.
 
 ### Finance & Trading
 
