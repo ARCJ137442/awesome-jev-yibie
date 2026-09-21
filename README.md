@@ -66,7 +66,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Verification & Guardrails](categories/verification-guardrails.md) — 25 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
 - [Agent Decisions](categories/agent-decisions.md) — 35 entries
-- [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
+- [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 20 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 50 entries
@@ -252,6 +252,7 @@ Source file: [`categories/data-labeling-curation.md`](categories/data-labeling-c
 - [typeful-triage](https://github.com/cephalization/jev-triage) - Open-source maintenance: multiplayer triage dashboard where Jev answers a fixed set of typed questions per issue — kind, severity, urgency, duplicate, and next step — and every human correction is kept and shown back to the model on later runs.
 - [jlink](https://github.com/keltokhy/jlink) - Research data: links records under a plain-English match rule using Jev Noul pair judgments, with local candidate blocking and match resolution.
 - [jgrep](https://github.com/keltokhy/jgrep) - Data filtering: filters text, structured records, functions, and diff hunks against plain-English descriptions using Jev Noul judgments.
+- [jevgrep (allebee)](https://github.com/allebee/jevgrep) - Log triage: filters logs and other text streams, including live `tail -f` output, by asking Jev one Noul per line against a plain-English question and printing lines at or above a probability threshold, with a hand-labelled benchmark against Claude in the repository.
 
 ### Evaluation & Benchmarking
 
