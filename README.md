@@ -61,7 +61,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 26 entries
+- [Classification & Routing](categories/classification-routing.md) — 27 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 24 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
 - [Agent Decisions](categories/agent-decisions.md) — 33 entries
@@ -129,6 +129,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [jev-fit](https://jev-fit.com) - Developer tooling: hosted fit checker that sends a pasted software idea and a fixed typed rubric to Jev in one call, where a `Choice` picks plain code, Jev or a reasoning LLM behind a `Noul` gate for non-tasks, code vetoes Jev when the idea needs images, and low confidence returns "not sure"; closed source, free page and API.
 - [jev-skill-router](https://github.com/shimo4228/jev-skill-router) - Coding agents: Claude Code plugin whose UserPromptSubmit hook asks Jev one `Choice` over the installed skill roster plus `Boolean`-style gates on whether any skill is needed, suggests a skill only when the gate and the per-candidate fit both clear 0.30, and defaults to a shadow mode that logs the decision without injecting it.
 - [Jev Wrapped](https://github.com/gaborishka/jev-wrapped) - Media analysis: reads up to 1,500 posts from the last year of a public Telegram channel and asks Jev a `Choice` over ten kinds of post plus three `Noul` questions (paid ad, clickbait, emotional pressure) about each, counting an ad from 0.7, or from 0.4 when the kind is also ad, and clickbait and pressure from 0.5, then draws the monthly mix on a shareable card that links the highest-scoring posts for a manual check.
+- [Jev-Mail](https://github.com/vynnlee/jev-mail) - Email productivity: runs a 24/7 Gmail classifier on user-owned Google Apps Script where Jev scores urgency, importance, and category, routing uncertain or suspicious mail to Review without a local daemon.
 
 ### Verification & Guardrails
 
