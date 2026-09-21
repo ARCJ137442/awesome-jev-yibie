@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 25 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
-- [Agent Decisions](categories/agent-decisions.md) — 34 entries
+- [Agent Decisions](categories/agent-decisions.md) — 35 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 19 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
@@ -241,6 +241,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [JevLoop](https://github.com/zjunlp/JevLoop) - Agent harness: routes the loop's own judgements to Jev, where a `Choice` picks the next tool from candidates rebuilt every step, a `Score` grades the call's risk, and a `Noul` decides whether it needs authorisation, while plain code acts on the answers so a high risk score forces human authorisation that no probability can override (7.7% of wall clock with the offline judge, 79% over the hosted API).
 - [DataJev](https://github.com/zzz1YAO/DataJev) - Data analysis agents: an LLM performs Python-based analysis while Jev reads the compressed analytical state and decides whether the agent should continue the current direction, switch to another one, verify a finding, or stop and synthesize the answer.
 - [jev-mobile](https://github.com/Friedjof/jev-mobile) - Mobile control: fast structured Android control loops that route each step through Jev alongside Mobile MCP, with 35 test files.
+- [GUI JEV Harness](https://github.com/ZihuaEvan/GUI_JEV) - Computer use: recursive screenshot grounding where Jev returns a `Choice` over grid-tile candidates at each level, and local probability and margin gates decide whether to descend or refuse, emitting only a raster point and bounding box and never clicking.
 
 ### Data Labeling & Curation
 
