@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 25 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
-- [Agent Decisions](categories/agent-decisions.md) — 33 entries
+- [Agent Decisions](categories/agent-decisions.md) — 34 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 19 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
@@ -216,6 +216,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [robo-harness](https://github.com/grmkris/robo-harness) - Robotics: SO-101 arm workbench where a Jev decision runner picks bounded joint steps from typed candidate actions under a spend budget.
 - [dsh-auto-mode](https://git.allen-software.com/allenh1/dsh-auto-mode) - Coding agents: DeepSeek Harness permission preset whose end-prompt step has Jev answer the open questions an agent leaves in its final message, steering them back only when a choice clears 0.6 confidence and an autonomy-safety Noul clears 0.5, and returning the turn to the human otherwise.
 - [augustus](https://github.com/24601/Augustus) - Coding agents: agent skill that maps Choice, Score, and Noul onto classical methods so an agent can place typed judgment in software, with a composition algebra, question-design diagnosis, and a validation gate that requires a falsifying experiment.
+- [Jevonian](https://github.com/xinyao27/jevonian) - Coding agents: local OpenAI/Anthropic-compatible proxy where one Jev call picks both the model route and the thinking level for `jevonian/auto` from session state, quota health, candidate capabilities, and cache-switch penalties, after deterministic code has filtered candidates and while pinned models, explicit `jevonian/<route>` requests, and `routing.mode: "off"` skip Jev entirely; `minConfidence` marks a low-confidence route in the ledger rather than accepting it, and the ledger records the serving model and why.
 - [yoshi](https://github.com/compozy/yoshi) - Context management: proxy for Claude Code and Codex where Jev judges which conversation history is still needed before pruning.
 - [pi-jev (TheoOliveira)](https://github.com/TheoOliveira/pi-jev) - Coding agents: semantic tool routing and typed System One decisions for the Pi coding agent.
 - [pi-quiet-ask](https://github.com/HyunjunJeon/pi-quiet-ask) - Coding agents: gives the Pi agent a quiet Jev decision layer for judgments it would otherwise hand to a chat model.
