@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 17 entries
 - [Calibration & Research](categories/calibration-research.md) — 22 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 44 entries
-- [Game & Simulation](categories/game-simulation.md) — 12 entries
+- [Game & Simulation](categories/game-simulation.md) — 13 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 4 entries
@@ -345,6 +345,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [Soupbase](https://github.com/spoonnotfound/soupbase) - Gaming: uses Jev `Choice` judgments to answer lateral-thinking puzzle questions and assess proposed solutions, with application code requiring supported facts, a coherent explanation, and sufficient confidence before marking a puzzle solved.
 - [jev-torneo-animales](https://github.com/hectorlcastro09/jev-torneo-animales) - Gaming: winner-stays-on tournament of up to 2,569 animals where each fight is one Jev `Choice` between two names under land, water or air rules held in `state`, asking the champion against the next K challengers in a single request and discarding the speculative answers once the champion falls — 1,999 fights in about 16 s at roughly US$0.01.
 - [2048 × Jev](https://github.com/ARCJ137442/jev-2048) - Gaming: a 2048 board where every move is a Jev `Choice` over four directions with no heuristic fallback, gated by a user-set confidence threshold that pauses play for human review, with editable prompts and board rules, bring-your-own-key backends, and archive import/export.
+- [Jevtown](https://github.com/gaborishka/jevtown) - Audience simulation: a town of 10,000 personas computed from their id reads a post, listing, product or headline; one request asks Jev about 60 `Score` questions on who would care plus seven `Noul` moderation checks (0.5 keeps the text out of the public feed, 0.85 blocks it), batched `Choice` questions then return each persona's reaction in waves of 600, 1,500 and 3,000, and code sends the text to the next wave only while glad reactions outweigh sorry ones by at least 0.1 of the wave.
 
 ### Finance & Trading
 
