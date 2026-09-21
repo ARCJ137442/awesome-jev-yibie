@@ -68,7 +68,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 17 entries
 - [Calibration & Research](categories/calibration-research.md) — 22 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 44 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 45 entries
 - [Game & Simulation](categories/game-simulation.md) — 13 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -331,6 +331,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [jev-architect](https://github.com/karanb192/jev-architect) - Design skill: finds, designs, and evaluates Jev decision loops, packaged as a skill with references on decision design and delivery.
 - [Building a Harness with Jev](https://www.langchain.com/blog/building-a-harness-with-jev) - Framework guide: LangChain's walkthrough of wiring Jev into an agent harness as the decision layer, from a team that then published its own evaluation of Jev as a judge.
 - [openrouter-jev-mcp](https://github.com/ctmx/openrouter-jev-mcp) - MCP ecosystem: Python decision gateway and stdio MCP server exposing TypeSafe's Jev model through OpenRouter's alpha decisions endpoint.
+- [system-one-adapter-python](https://github.com/typesafe-ai/system-one-adapter-python) - Python ecosystem: TypeSafe AI's official open-source drop-in adapter for running and benchmarking Jev System One decision evaluations across OpenAI- and Anthropic-compatible LLM APIs.
 
 ### Game & Simulation
 
