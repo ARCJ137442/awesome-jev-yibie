@@ -63,7 +63,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 25 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 24 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 20 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 21 entries
 - [Agent Decisions](categories/agent-decisions.md) — 33 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 17 entries
@@ -164,6 +164,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 
 - [Clean Code Judge](https://github.com/frostney/clean-code-review) - Code quality: scores every file of a pull request on 31 boolean Clean Code smells plus function size and nesting, then hands the verdicts to a writing model for the review prose.
 - [citation-verifier](https://github.com/MarissaFamularo/citation-verifier) - Academic publishing: checks whether each cited paper actually supports the sentence citing it, with Claude locating the quote, Jev scoring the support, and a human making the final call.
+- [jev-assist](https://github.com/glud123/jev-assist) - Coding agents: ranks every tracked file by relevance to a one-line task description — Jev asks each file the same typed question in parallel batches, so an agent in a 600-file repo starts from the handful it actually needs — with a validate command that grades the ranking against past commits.
 - [jev-bfs](https://github.com/komikat/jev-bfs) - Search tooling: finds link paths between English Wikipedia articles by having Jev rank each page's outgoing links while Python controls the search.
 - [Jev Search](https://github.com/superagents-lab/jev-search) - Web search: uses Jev Noul judgments on result titles and snippets to rank Search1API results by relevance, with application code merging duplicate URLs and grouping lower-scoring matches separately.
 - [pagegrade](https://github.com/kitze/pagegrade) - Content quality: grades page sections for clarity, writing, and on-page SEO with Jev and returns per-section scores.
