@@ -63,13 +63,13 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 25 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 24 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 20 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 21 entries
 - [Agent Decisions](categories/agent-decisions.md) — 33 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 17 entries
 - [Calibration & Research](categories/calibration-research.md) — 22 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 45 entries
-- [Game & Simulation](categories/game-simulation.md) — 13 entries
+- [Game & Simulation](categories/game-simulation.md) — 14 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 5 entries
@@ -164,6 +164,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 
 - [Clean Code Judge](https://github.com/frostney/clean-code-review) - Code quality: scores every file of a pull request on 31 boolean Clean Code smells plus function size and nesting, then hands the verdicts to a writing model for the review prose.
 - [citation-verifier](https://github.com/MarissaFamularo/citation-verifier) - Academic publishing: checks whether each cited paper actually supports the sentence citing it, with Claude locating the quote, Jev scoring the support, and a human making the final call.
+- [jev-assist](https://github.com/glud123/jev-assist) - Coding agents: ranks every tracked file by relevance to a one-line task description — Jev asks each file the same typed question in parallel batches, so an agent in a 600-file repo starts from the handful it actually needs — with a validate command that grades the ranking against past commits.
 - [jev-bfs](https://github.com/komikat/jev-bfs) - Search tooling: finds link paths between English Wikipedia articles by having Jev rank each page's outgoing links while Python controls the search.
 - [Jev Search](https://github.com/superagents-lab/jev-search) - Web search: uses Jev Noul judgments on result titles and snippets to rank Search1API results by relevance, with application code merging duplicate URLs and grouping lower-scoring matches separately.
 - [pagegrade](https://github.com/kitze/pagegrade) - Content quality: grades page sections for clarity, writing, and on-page SEO with Jev and returns per-section scores.
@@ -350,6 +351,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [jev-torneo-animales](https://github.com/hectorlcastro09/jev-torneo-animales) - Gaming: winner-stays-on tournament of up to 2,569 animals where each fight is one Jev `Choice` between two names under land, water or air rules held in `state`, asking the champion against the next K challengers in a single request and discarding the speculative answers once the champion falls — 1,999 fights in about 16 s at roughly US$0.01.
 - [2048 × Jev](https://github.com/ARCJ137442/jev-2048) - Gaming: a 2048 board where every move is a Jev `Choice` over four directions with no heuristic fallback, gated by a user-set confidence threshold that pauses play for human review, with editable prompts and board rules, bring-your-own-key backends, and archive import/export.
 - [Jevtown](https://github.com/gaborishka/jevtown) - Audience simulation: a town of 10,000 personas computed from their id reads a post, listing, product or headline; one request asks Jev about 60 `Score` questions on who would care plus seven `Noul` moderation checks (0.5 keeps the text out of the public feed, 0.85 blocks it), batched `Choice` questions then return each persona's reaction in waves of 600, 1,500 and 3,000, and code sends the text to the next wave only while glad reactions outweigh sorry ones by at least 0.1 of the wave.
+- [RoboJEV](https://github.com/lykycy123/RoboJEV) - Robotics simulation: uses two-stage Jev `Choice` decisions over structured state to select intent and Cartesian motion/gripper commands for a Franka Panda in MuJoCo, rejecting malformed responses and checking task success independently through physics.
 
 ### Finance & Trading
 
