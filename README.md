@@ -67,7 +67,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
 - [Agent Decisions](categories/agent-decisions.md) — 35 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 19 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 20 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 50 entries
 - [Game & Simulation](categories/game-simulation.md) — 15 entries
@@ -278,6 +278,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [Can Jev Be a Better Agent Evaluator?](https://www.langchain.com/blog/jev-agent-evals-langsmith) - Agent evaluation: LangChain compares Jev against LLM judges on accuracy, repeatability, latency and cost, concluding Jev is the cheaper and more consistent judge for online evals.
 - [jev-acento](https://github.com/marcosmartinez/jev-acento) - Language evaluation: pre-registered paired audit of Jev on Spanish over 3,200 human-labelled items, finding that a Spanish `state` costs 3.0-6.4 pp of accuracy and roughly doubles ECE on XNLI and PAWS-X while writing `instructions` in Spanish changes nothing, and shipping a CLI to rerun the same comparison on your own labelled data.
 - [Jev vs GPT-4.1 on a synthetic survey](https://github.com/jjd-lab/jev-synthetic-survey) - Survey research: runs Jev and GPT-4.1 as the same 300 synthetic respondents over 24,596 paired Twin-2K-500 cells under criteria fixed in advance, finding that asking a yes/no item as `Noul` rather than `Choice` moves the result more than the gap between the two models, at a thirty-fourth of the cost. Write-up: [jjd-lab.github.io](https://jjd-lab.github.io/jev-synthetic-survey/)
+- [pytest-jev](https://github.com/allebee/pytest-jev) - LLM app testing: a pytest plugin that asks one Jev Noul per plain-English claim about a reply (all claims in one request), passes a claim at p ≥ 0.8 and fails anything unsure, and adds Choice and Score checks; on its 12 example tests it matched Claude Sonnet 5's verdicts in 5.3 s vs 27.1 s at $0.00017 vs $0.0192 per run.
 
 ### Calibration & Research
 
