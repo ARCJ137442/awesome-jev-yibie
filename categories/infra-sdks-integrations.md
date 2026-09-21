@@ -52,3 +52,4 @@ Use this category for ecosystem tooling built around Jev — SDKs, wrappers, gat
 - [grok-bot-jev](https://github.com/Bodila51/grok-bot-jev) - Agent bridges: connects Jev to Grok Bot as a cheap decision layer, with usage gates, a skill template, and worked examples.
 - [jev-architect](https://github.com/karanb192/jev-architect) - Design skill: finds, designs, and evaluates Jev decision loops, packaged as a skill with references on decision design and delivery.
 - [Building a Harness with Jev](https://www.langchain.com/blog/building-a-harness-with-jev) - Framework guide: LangChain's walkthrough of wiring Jev into an agent harness as the decision layer, from a team that then published its own evaluation of Jev as a judge.
+- [openrouter-jev-mcp](https://github.com/ctmx/openrouter-jev-mcp) - MCP ecosystem: Python decision gateway and stdio MCP server exposing TypeSafe's Jev model through OpenRouter's alpha decisions endpoint.
