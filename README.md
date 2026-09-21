@@ -62,7 +62,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 ## Current coverage
 
 - [Classification & Routing](categories/classification-routing.md) — 24 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 21 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 22 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 19 entries
 - [Agent Decisions](categories/agent-decisions.md) — 31 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
@@ -153,6 +153,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [Blink](https://blink.review) - Code review: CLI that coding agents run after every change, with Jev checking the diff near-instantly in place of an LLM reviewer.
 - [hermes-jev-approvals](https://github.com/anpicasso/hermes-jev-approvals) - Agent approvals: proof of concept that puts Jev in front of Hermes Agent's command approvals, reporting 8.7x faster decisions and 4.4x fewer prompts to the user.
 - [taste-lint](https://github.com/mblode/taste-lint) - Writing / UI: CLI that uses Jev probabilities on semantic taste checks to catch AI slop in UI, copy, and agent instructions before ship; measurable rules stay local and active findings can fail a run.
+- [jev-engineering](https://github.com/eugeniughelbur/jev-engineering) - Agent safety: gates coding-agent tool calls with deterministic rules first and one typed Jev call second, then publishes a rerunnable 300-call injection test showing what the gate catches and what walks past it.
 
 ### Scoring & Ranking
 
