@@ -62,7 +62,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 ## Current coverage
 
 - [Classification & Routing](categories/classification-routing.md) — 25 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 23 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 24 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 20 entries
 - [Agent Decisions](categories/agent-decisions.md) — 33 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 5 entries
@@ -72,7 +72,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Game & Simulation](categories/game-simulation.md) — 13 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
-- [Content Moderation](categories/content-moderation.md) — 4 entries
+- [Content Moderation](categories/content-moderation.md) — 5 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 54 entries
 
 ### Open categories still being seeded
@@ -156,6 +156,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [taste-lint](https://github.com/mblode/taste-lint) - Writing / UI: CLI that uses Jev probabilities on semantic taste checks to catch AI slop in UI, copy, and agent instructions before ship; measurable rules stay local and active findings can fail a run.
 - [jev-engineering](https://github.com/eugeniughelbur/jev-engineering) - Agent safety: gates coding-agent tool calls with deterministic rules first and one typed Jev call second, then publishes a rerunnable 300-call injection test showing what the gate catches and what walks past it.
 - [jev-harness](https://github.com/ismaelsoilet/jev-harness) - Developer tooling: gates AI coding agent execution with Jev `Choice`, `Score`, and `Noul` decisions, triaging test tracebacks in < 2ms to resolve dependencies deterministically without frontier LLMs and aborting circular doom loops.
+- [Reflex](https://github.com/kaustav1996/reflex) - Coding agents: Pi-based coding agent that sends each state-changing tool call through one Jev request of five `Noul` risk checks plus a risk `Score`, maps the answers in code to allow, ask or block by the user's risk setting (protected paths always ask), and also uses Jev to pick the model tier per prompt and to send back "done" claims that ran no verification, at about 400 ms per decision.
 
 ### Scoring & Ranking
 
@@ -372,6 +373,7 @@ Source file: [`categories/content-moderation.md`](categories/content-moderation.
 - [jev-spam-eval](https://github.com/bitnovus/jev-spam-eval) - Spam filtering: zero-shot spam classification with Jev `Boolean` questions, benchmarked against TF-IDF baselines.
 - [mastra-jev-moderation](https://github.com/CodeAlive-AI/mastra-jev-moderation) - AI assistants: Mastra input processor that asks Jev a `Boolean` "must this message be blocked?" plus a category `Choice` in one request, aborting the turn at 0.7 and failing open behind a deadline and circuit breaker; in production it blocked 9/9 hostile and 0/49 real messages at ~0.4 s median, about 4× cheaper than an LLM moderator.
 - [Jev Chat for Twitch](https://github.com/ethanplusai/jev-chat-for-twitch) - Live chat filtering: bring-your-own-key Chrome extension that reads a Twitch channel's chat over the anonymous IRC WebSocket, asks Jev one category `Choice` per message in batches of 20, and shows a second column of only the messages matching a chosen intent (helpful, questions, funny, feedback); about 504 input tokens per message, roughly $0.15 per hour on a 2-message-per-second chat and $0.76 per hour at 50 per second.
+- [profanity-checker](https://github.com/4rays/profanity-checker) - Trust & safety: Cloudflare Worker that asks Jev `Noul` for literal profanity in text or usernames and a second `Noul` for phonetic or look-alike disguise (`a55h0le`, `mike_hunt`); the threshold, `max()` policy, JSON response, and OpenAPI schema live in Worker code and the endpoint is callable from other Workers via service bindings.
 
 ### Related Practices / Discussions
 
