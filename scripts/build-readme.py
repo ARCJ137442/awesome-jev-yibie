@@ -9,6 +9,12 @@ REPO_ROOT = Path(__file__).resolve().parent.parent
 README_PATH = REPO_ROOT / "README.md"
 TAGS_PATH = REPO_ROOT / "tags.json"
 CONTRIBUTING_PATH = REPO_ROOT / "CONTRIBUTING.md"
+TAG_TABLE_START = "<!-- tags:start -->"
+TAG_TABLE_END = "<!-- tags:end -->"
+TAG_TABLE_NOTE = (
+    "<!-- Generated from tags.json by scripts/build-readme.py. "
+    "Edit tags.json, not this table. -->"
+)
 
 # ---------------------------------------------------------------------------
 # 可选标签（issue #138）
@@ -22,12 +28,68 @@ CONTRIBUTING_PATH = REPO_ROOT / "CONTRIBUTING.md"
 # 标签不是句子的一部分，所以「每条一句」的规则不受影响。
 # ---------------------------------------------------------------------------
 
-# agent：标签带色，同一种 agent 全表同色。色值锚定厂商品牌色后再压暗到
-# 白字对比度 >= 4.5:1（WCAG AA）；原始品牌色都不达标（Anthropic 陶土 #D97757
-# 与 OpenAI 绿 #10A37F 都是 2.9:1）。
 # The vocabulary lives in tags.json so that it exists once: this renderer, the
 # table in CONTRIBUTING.md and any external consumer read the same file.
-_AXES = json.loads(TAGS_PATH.read_text(encoding="utf-8"))["axes"]
+#
+# The two axes below are the ones this renderer understands. tags.json is data,
+# not a plugin point: adding a third axis needs parse_tags and badge_html to
+# learn about it, so an unknown axis is refused here rather than advertised in
+# CONTRIBUTING.md and then dropped at render time.
+SUPPORTED_AXES = ("agent", "type")
+
+# Tag values are matched case-insensitively and rendered into a markdown table,
+# so the vocabulary is restricted to what survives both.
+VALUE_RE = re.compile(r"^[a-z0-9][a-z0-9-]*$")
+
+
+def _fail(message: str) -> "NoReturn":
+    raise SystemExit(f"{TAGS_PATH.name}: {message}")
+
+
+def _public(mapping: dict, where: str) -> dict:
+    """Drop $-prefixed annotation keys, which tags.json uses for comments."""
+    if not isinstance(mapping, dict):
+        _fail(f"{where} must be an object")
+    return {k: v for k, v in mapping.items() if not k.startswith("$")}
+
+
+def load_axes() -> dict:
+    try:
+        raw = json.loads(TAGS_PATH.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        _fail("file not found")
+    except json.JSONDecodeError as exc:
+        _fail(f"invalid JSON at line {exc.lineno}, column {exc.colno}: {exc.msg}")
+
+    axes = _public(raw.get("axes", {}), "axes")
+    if tuple(axes) != SUPPORTED_AXES:
+        _fail(
+            f"axes must be exactly {list(SUPPORTED_AXES)}, got {list(axes)} — "
+            "a new axis also needs parse_tags() and badge_html()"
+        )
+
+    for axis, spec in axes.items():
+        values = _public(spec.get("values", {}), f"axes.{axis}.values")
+        if not values:
+            _fail(f"axes.{axis}.values is empty")
+        for value, value_spec in values.items():
+            if not VALUE_RE.match(value):
+                _fail(
+                    f"axes.{axis}.values.{value} must be lowercase "
+                    "letters, digits and hyphens"
+                )
+            if axis == "agent":
+                for key in ("label", "color"):
+                    if key not in _public(value_spec, f"axes.{axis}.values.{value}"):
+                        _fail(f"axes.{axis}.values.{value} is missing {key!r}")
+        spec["values"] = values
+        if axis == "type" and "color" not in spec:
+            _fail("axes.type is missing 'color'")
+
+    return axes
+
+
+_AXES = load_axes()
 
 AGENT_LABELS = {
     value: (spec["label"], spec["color"])
@@ -60,13 +122,23 @@ def parse_tags(raw: str) -> tuple[dict[str, str], list[str]]:
     return tags, unknown
 
 
+def shields_escape(text: str) -> str:
+    """shields.io reads <label>-<message>-<color>; a literal dash needs doubling.
+
+    Without this, `self-hosted` builds a URL shields answers with a 404 rather
+    than a badge.
+    """
+    return text.replace("-", "--").replace("_", "__").replace(" ", "%20")
+
+
 def badge_html(kind: str, value: str) -> str:
     if kind == "agent":
         label, color = AGENT_LABELS[value]
-        text = "agent-" + label.replace(" ", "%20")
         alt = f"agent: {label}"
     else:
-        color, text, alt = TYPE_COLOR, f"type-{value}", f"type: {value}"
+        label, color = value, TYPE_COLOR
+        alt = f"type: {value}"
+    text = f"{shields_escape(kind)}-{shields_escape(label)}"
     return f"![{alt}](https://img.shields.io/badge/{text}-{color}?style=flat-square)"
 
 
@@ -139,7 +211,7 @@ def pluralize(count: int) -> str:
 
 def parse_category(filename: str) -> Category:
     path = REPO_ROOT / "categories" / filename
-    lines = path.read_text().splitlines()
+    lines = path.read_text(encoding="utf-8").splitlines()
 
     try:
         title = next(line[2:].strip() for line in lines if line.startswith("# "))
@@ -383,9 +455,6 @@ def build_readme() -> str:
     return "\n".join(out)
 
 
-TAG_TABLE_START = "<!-- tags:start -->"
-TAG_TABLE_END = "<!-- tags:end -->"
-
 
 def render_tag_table() -> str:
     rows = ["| Key | Values |", "| --- | --- |"]
@@ -395,22 +464,43 @@ def render_tag_table() -> str:
     return "\n".join(rows)
 
 
+def find_tag_table(text: str) -> re.Match:
+    """Locate the single generated block, or fail naming what is wrong."""
+    starts = text.count(TAG_TABLE_START)
+    ends = text.count(TAG_TABLE_END)
+    if starts != 1 or ends != 1:
+        raise SystemExit(
+            f"{CONTRIBUTING_PATH.name}: expected exactly one "
+            f"{TAG_TABLE_START} / {TAG_TABLE_END} pair, found {starts} / {ends}"
+        )
+    match = re.search(
+        re.escape(TAG_TABLE_START) + r".*?" + re.escape(TAG_TABLE_END), text, re.S
+    )
+    if match is None:
+        raise SystemExit(
+            f"{CONTRIBUTING_PATH.name}: {TAG_TABLE_END} appears before {TAG_TABLE_START}"
+        )
+    return match
+
+
 def sync_contributing() -> None:
     """Rewrite the vocabulary table in CONTRIBUTING.md from tags.json."""
     text = CONTRIBUTING_PATH.read_text(encoding="utf-8")
-    pattern = re.escape(TAG_TABLE_START) + r".*?" + re.escape(TAG_TABLE_END)
-    if not re.search(pattern, text, re.S):
-        raise SystemExit(
-            f"{CONTRIBUTING_PATH.name}: missing {TAG_TABLE_START} / {TAG_TABLE_END} markers"
-        )
-    block = f"{TAG_TABLE_START}\n{render_tag_table()}\n{TAG_TABLE_END}"
-    updated = re.sub(pattern, lambda _match: block, text, flags=re.S)
+    match = find_tag_table(text)
+    block = "\n".join(
+        [TAG_TABLE_START, TAG_TABLE_NOTE, render_tag_table(), TAG_TABLE_END]
+    )
+    updated = text[: match.start()] + block + text[match.end() :]
     if updated != text:
         CONTRIBUTING_PATH.write_text(updated, encoding="utf-8")
 
 
 def main() -> None:
-    README_PATH.write_text(build_readme())
+    # Validate the CONTRIBUTING markers before writing anything: callers such as
+    # scripts/maintainer/merge-prs.sh discard this script's output and treat a
+    # non-zero exit as "nothing to do", so a half-done run would be invisible.
+    find_tag_table(CONTRIBUTING_PATH.read_text(encoding="utf-8"))
+    README_PATH.write_text(build_readme(), encoding="utf-8")
     sync_contributing()
 
 
