@@ -100,7 +100,7 @@ This is a rule, not a preference, and it is the one rule in this document that w
 Bursts of AI-generated repositories are the fastest way to bury the signal this list exists to collect. So:
 
 - **One project per pull request, one pull request per project.** Do not bundle siblings.
-- **At most three entries per author per rolling seven days**, however many repositories exist. Entries beyond that are queued to the next cycle — not reviewed early, and not rejected on sight.
+- **At most three entries per author are taken in a single review pass.** Entries beyond that are queued, never rejected on sight. The queue is honoured in the next pass, which means a contributor who submits five entries can expect them to land across two passes rather than one — the rule throttles the flow, it does not cap it.
 - **A batch counts as one submission.** Repositories sharing a scaffold, a README template, an `AGENTS.md` / `CLAUDE.md` / `STATE.md` set, or a single-commit history are treated as one project family. Eight siblings released on one afternoon do not become eight entries.
 - **A shared release date is a risk signal, not momentum.** Projects released together are reviewed individually and are not credited to each other.
 - **Undisclosed AI generation pauses the whole batch.** If a submission turns out to have been generated without disclosure, every pending entry from that author waits until the disclosure is made. The disclosure costs nothing; the concealment costs the queue position.

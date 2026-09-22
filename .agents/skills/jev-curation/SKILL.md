@@ -204,7 +204,7 @@ Before adding a repository, check depth (see CONTRIBUTING.md, "AI-assisted work,
 - Does the code actually call the Jev API, or is the claim README-only?
 - Is there a runnable check (test, example with expected output, public demo)?
 - Is the repository mostly prompt documents? Then describe it as such, or skip it.
-- Does a batch of same-day repositories share one scaffold? That is a risk signal, not momentum — review each on its own merits, and cap a single author at three entries per rolling seven days.
+- Does a batch of same-day repositories share one scaffold? That is a risk signal, not momentum — review each on its own merits, and take at most three entries per author in a single pass, queuing the rest.
 - Are the numbers in the entry traceable to the linked page? Strip what you cannot verify.
 
 ## Handling pull requests
@@ -213,7 +213,7 @@ When a contributor opens a PR:
 
 1. Verify the repository, do not just read the PR body — file tree, source, tests, CI, commit history, and whether the code really calls the Jev API.
 2. If the repository is thinner than the entry implies (README-only claims, no runnable check, docs outweighing code), say so in a review comment and ask for the missing evidence rather than merging or silently rejecting it.
-3. When an author already has three entries accepted in a rolling seven-day window, state the rule in the PR comment *before* acting, and queue the extra entries to a later cycle instead of rejecting them. Link the CONTRIBUTING section so the contributor knows it is policy, not a judgement about them. Queue by submission order, never by quality — picking "the best three" turns the rule into a hidden quality verdict, which is exactly what it exists to avoid. If one of the queued entries has more stars than the merged ones, say so explicitly in the comment.
+3. When an author already has three entries accepted in the current pass, state the rule in the PR comment *before* acting, and queue the extra entries to a later pass instead of rejecting them. Queued entries count against the pass that takes them, not the one that queued them, so honour the queue even when it lands the author a fourth or fifth entry inside the same week. Link the CONTRIBUTING section so the contributor knows it is policy, not a judgement about them. Queue by submission order, never by quality — picking "the best three" turns the rule into a hidden quality verdict, which is exactly what it exists to avoid. If one of the queued entries has more stars than the merged ones, say so explicitly in the comment.
 4. **Bulk AI-generated submissions are a rule, not a preference** (CONTRIBUTING → "Rule: do not submit bulk drops of AI-generated projects"). Before merging a cluster of same-author, same-day repositories, check for a shared scaffold (`AGENTS.md` / `CLAUDE.md` / `STATE.md`), a common README template, or single-commit histories — those mark one project family, which counts as **one** submission, so merge at most one and queue the rest. Disclose-or-pause also applies: if a submission was generated and not disclosed, hold the author's whole pending batch until they say so.
 5. Never edit a contributor's wording purely for style; do fix inaccurate claims.
 6. README.md is generated — when a PR conflicts there, rebase the branch and regenerate it (`python3 scripts/build-readme.py`) rather than hand-resolving. For conflicts in a category file, keep main's version and append the PR's new line.
