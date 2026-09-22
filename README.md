@@ -61,7 +61,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 30 entries
+- [Classification & Routing](categories/classification-routing.md) — 31 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 27 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
@@ -135,6 +135,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [Switchboard](https://github.com/ruban-24/switchboard) - Coding agents: open-source System One-powered router that automatically matches each Claude Code or Codex task to an appropriate model and reasoning effort, then keeps that choice stable for the conversation to preserve prompt-cache continuity; powered by Jev today, with Laya, Kev, and Cua-S1 coming soon.
 - [Tab Sorter](https://github.com/AstonyCat/jev-tab-grouper) - Browser tooling: Chrome MV3 extension that groups every tab in the window into named, colored Chrome tab groups from one parallel Jev call — one `Choice` question per tab against user-editable group criteria — with unclassified tabs falling to a fixed fallback bucket, manual groups untouched, and the pre-grouping tab order restored on ungroup; an optional LLM engine with self-invented group names is included for comparison runs.
 - [Feed Lens](https://github.com/SkywalkerDarren/feed-lens) - Social media: uses Jev `Noul` judgments against per-platform, user-defined topic and expression labels to annotate Weibo, Threads and X posts directly in a Chrome extension.
+- [jev-table-import-mapper](https://github.com/DuvInc/jev-table-import-mapper) - Data import: maps an uploaded CSV's columns onto a destination table with a strict deterministic name-equality pass, then one Jev `Noul` per remaining (source, destination) pair plus a guard `Noul` per incoming column, mapping 10 of 10 columns of a 23-column export at 253 questions in one call, 915 ms, $0.0012, unmapped fields left visible above a 0.75 threshold rather than guessed.
 
 ### Adaptive & Realtime UI
 
