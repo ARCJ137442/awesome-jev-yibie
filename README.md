@@ -70,7 +70,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 24 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 57 entries
-- [Game & Simulation](categories/game-simulation.md) — 16 entries
+- [Game & Simulation](categories/game-simulation.md) — 17 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 7 entries
@@ -421,6 +421,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [RoboJEV](https://github.com/lykycy123/RoboJEV) - Robotics simulation: uses two-stage Jev `Choice` decisions over structured state to select intent and Cartesian motion/gripper commands for a Franka Panda in MuJoCo, rejecting malformed responses and checking task success independently through physics.
 - [Jev Chess](https://jevchess.com) - Gaming: one shared board where the internet collectively plays against Jev; every legal move is an option of a single `Choice` question so an illegal move is impossible, returned probabilities shade the pieces on the board, and a live calibration panel scores each claimed confidence against a one-ply material check.
 - [Life Chess × Jev](https://github.com/ARCJ137442/jev-life) - Experimental game design: a turn-based Conway board where each side's move is one Jev `Boolean` per legal cell in a single request, with no heuristic fallback and a user-set confidence threshold flagging unsure turns; the game is new, so there is no established play to copy, and its rules are not self-evident — they render from editable templates with auto-filled placeholders, so a designer can rewrite a rule and re-ask.
+- [kNES](https://github.com/ArturSkowronski/kNES) - Gaming: a Kotlin NES emulator whose agent plays Super Mario Bros. and Final Fantasy through SemIf, the open implementation of the Jev interface, on a local Qwen3.5-4B reading the screen itself; the goals that apply this turn become the declared options of one typed `Choice`, so a button the game does not offer is impossible rather than unlikely, and 900 logged decisions at ~400 ms each on an M5 Pro never once answered off the menu.
 
 ### Finance & Trading
 
