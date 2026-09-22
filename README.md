@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 22 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 52 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 53 entries
 - [Game & Simulation](categories/game-simulation.md) — 16 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -376,6 +376,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [jev-usecases](https://github.com/kenhuangus/jev-usecases) - Reference harnesses: a set of production-shaped use-case harnesses built around confidence-gated decision logic.
 - [FastJev](https://github.com/chengyongru/fastjev) - Local runtime: self-hosted Python SDK and System One-compatible API for runtime-defined `Choice`, `Boolean`, and `Score` decisions on pinned open models across Torch, vLLM, MLX, llama.cpp, and WebGPU, with committed row-level benchmarks and checksums.
 - [kojev](https://github.com/ItisNoMatter/kojev) - Kotlin ecosystem: Kotlin Multiplatform (JVM, Android, iOS) client for Jev that answers Choice and Score questions as the caller's own enums, with one typed way to read answers, no default thresholds, and offline MockEngine tests.
+- [ask-jev](https://github.com/logicrw/ask-jev) - Python ecosystem: zero-dependency CLI that routes small semantic judgments — Choice, Noul, Score, batch questions, and verbatim passage extraction — to Jev for AI agents and CLI pipelines.
 
 ### Game & Simulation
 
