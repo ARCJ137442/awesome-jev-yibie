@@ -178,7 +178,7 @@ Vocabulary:
 
 | Key | Values |
 | --- | --- |
-| `agent` | `multi`, `claude-code`, `pi`, `codex`, `cursor`, `cline`, `opencode` |
+| `agent` | `multi`, `claude-code`, `pi`, `codex`, `cursor`, `cline` |
 | `type` | `api`, `cli`, `proxy`, `plugin`, `library`, `hosted`, `self-hosted` |
 
 Rules:

@@ -29,8 +29,13 @@ AGENT_LABELS = {
     "codex":       ("Codex",       "0D8668"),
     "cursor":      ("Cursor",      "BF3989"),
     "cline":       ("Cline",       "996C00"),
-    "opencode":    ("OpenCode",    "0E7490"),
 }
+
+# `opencode` 曾经在这里，2026-09-22 移除。它是因为一次误判进来的：扫描把
+# `jev-agent-skill` 描述里的 "OpenCode Zen's free tier" 当成了 OpenCode 编码 agent，
+# 而那是该项目路由所用的 LLM 网关。该条目的地标签一直是 claude-code，全库也从未
+# 有任何条目使用 opencode 标签 —— 所以词表里没有一条证据支持它。
+# 真正出现 OpenCode 项目时再加回来（见 issue #154）。
 
 # type：整个轴统一灰色 —— 只有 agent 承担色相，「用哪个 agent」才能扫得出来，
 # 也避免两个 badge 看起来像两个同等分量的声明。
