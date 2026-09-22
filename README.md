@@ -61,7 +61,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 27 entries
+- [Classification & Routing](categories/classification-routing.md) — 28 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 25 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
@@ -110,6 +110,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [jev-router (prismhq)](https://github.com/prismhq/jev-router) - LLM infrastructure: open-source LiteLLM-based router where a Jev decision picks which model serves each request.
 - [pi-jev-router](https://github.com/mejiasd3v/pi-jev-router) - Coding agents: adds automatic per-request model routing to the Pi coding agent through Jev decisions on Vercel AI Gateway.
 - [jcm-router](https://github.com/adarshmishra07/jcm-router) - Coding agents: local proxy that picks the Claude model and reasoning effort per message with a Jev decision while leaving the cached main chat untouched.
+- [Switchboard](https://github.com/ruban-24/switchboard) - Coding agents: asks Jev typed `Choice` questions for the least sufficient capability tier and model-specific reasoning effort, then applies deterministic local policy to pin the selected model and effort for each Claude Code or Codex conversation while preserving native authentication and approvals.
 - [Jev Auto Router](https://github.com/miniLV/Jev-Auto-Router) - Coding agents: per-call Codex GPT routing where Jev makes one typed Choice over host-available (model, effort) pairs; a local Responses proxy keeps the tool loop continuous, then independent verification and Router Compass record whether the task still passed (prototype).
 - [jev-agent-skill-router](https://github.com/GodsBoy/jev-agent-skill-router) - Agent infrastructure: routes agent skill selection through typed, confidence-aware Jev decisions so weak matches are declined instead of guessed.
 - [typesafe-jev CV screener](https://github.com/gtaras7/typesafe-jev) - Recruiting: screens a folder of CVs with Jev typed judgments against an editable policy, re-scoring candidates for free when the policy changes.
