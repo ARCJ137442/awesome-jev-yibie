@@ -64,17 +64,17 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Classification & Routing](categories/classification-routing.md) — 33 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 28 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 24 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 25 entries
 - [Agent Decisions](categories/agent-decisions.md) — 40 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 24 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 57 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 58 entries
 - [Game & Simulation](categories/game-simulation.md) — 18 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 7 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 66 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 71 entries
 
 ### Open categories still being seeded
 
@@ -223,6 +223,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [hippo-memory](https://github.com/kitfunso/hippo-memory) - Agent memory: a biologically-inspired memory store whose optional Jev reranker lifts recall R@1 from 0.41 to 0.62 on a private 300-query developer store.
 - [MemSearch Jev reranking](https://github.com/zilliztech/memsearch/blob/main/evaluation/reranking-evaluation.md) - Coding-agent memory: an optional Jev reranker asks Noul questions about retrieved Markdown chunks and sorts them by relevance to the query, with bilingual evaluation results.
 - [Oko](https://github.com/bartlomein/oko) - Developer tooling: local code search for coding agents that shortlists function-level chunks with ripgrep and BM25, asks Jev a `Noul` relevance question per chunk across three parallel requests, and returns the accepted ones as excerpts through MCP; the cutoff and excerpt selection live in code.
+- [grokbot-jev-jobs](https://github.com/mcgalleg/grokbot-jev-jobs) - Job search: a daily Vercel cron that scores public job postings against one resume with Jev through the Vercel AI Gateway, so only the plausible matches surface.
 
 ### Agent Decisions
 
@@ -403,6 +404,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [Search with Jev and Milvus](https://github.com/milvus-io/bootcamp/tree/master/bootcamp/RAG/search_with_jev) - Search engineering: nine runnable notebooks combine Gemini embeddings and Milvus retrieval with Jev Noul and Choice judgments, while Python applies ranking, filtering, routing, and stopping policies to synthetic examples.
 - [discern](https://github.com/doeixd/discern) - TypeScript ecosystem: Effect library where a Jev `Choice`, `Noul` or `Score` answer becomes a typed branch under caller-supplied thresholds, anything below them takes an `Uncertain` case the compiler forces you to handle, and procedure routing skips the model call entirely when deterministic predicates leave one candidate.
 - [jeff](https://github.com/logan-markewich/jeff) - Self-hosted runtimes: self-hosted drop-in replacement for TypeSafe Jev powered by GliFormer, exposing native Choice, Score, and Noul decision endpoints without cloud API dependencies.
+- [CloJev](https://github.com/antlobach/clojev) - Clojure ecosystem: unofficial portable Clojure SDK for System One, so Clojure applications can put typed questions to Jev without a Java interop layer.
 
 ### Game & Simulation
 
@@ -524,6 +526,11 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Jev vs GPT-6 Astra: when to use each](https://vercel.com/i/jev-vs-gpt-6-astra) - Guide: Vercel's own decision guide for choosing between a System One model and a frontier model, published alongside a companion page of seven Jev use cases.
 - [A Jev index rebuilt every four hours](https://x.com/LinearUncle/status/2102423502414618729) - X (Chinese): describes a multilingual Jev site that scrapes X every four hours and has accumulated more than 5,380 posts, an index maintained by machine rather than by a curator.
 - [Jev 1.13 jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13) - Documentation: TypeSafe's own page on model jaggedness for the 1.13 release.
+- [Jev cannot emit an invalid output, but where is the reliability curve?](https://www.reddit.com/r/ArtificialInteligence/comments/1wm873q/typesafes_jev_cannot_emit_an_invalid_output_but/) - Reddit: argues the type-safety guarantee is real and the calibration claim is not yet backed by a published ECE or reliability curve, the sharpest form of the question this list keeps running into.
+- [Jev is on Workers AI as typesafe/jev](https://www.reddit.com/r/CloudFlare/comments/1wmjsj2/typesafes_jev_the_decisiononly_model_is_on/) - Reddit: reports the model appearing on Cloudflare's Workers AI surface as `typesafe/jev`, a second Cloudflare integration alongside the AI Gateway listing.
+- [Why I couldn't build Jev at OpenAI](https://www.youtube.com/watch?v=cFx9Z3ZXca0) - Video: Diogo Almeida's talk on why this had to be a separate company, the closest thing to a design rationale for System One models.
+- [TypeSafe's Jev Can't See. I Made It Guess What I Drew Anyway](https://mikulskibartosz.name/typesafe-jev-guess-what-i-drew) - Blog: a drawing-guessing experiment that probes what a model with no image input can still recover from a text description of a sketch.
+- [Spike: Jev as a judgement layer to cut model cost](https://github.com/open-orcha/orcha/issues/253) - Issue: a multi-agent orchestration platform plans to move judgment out of its model-of-thought and onto Jev, framed as cutting cost while holding quality.
 
 ## Submission format
 
