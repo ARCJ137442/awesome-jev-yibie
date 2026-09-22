@@ -67,7 +67,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Scoring & Ranking](categories/scoring-ranking.md) — 26 entries
 - [Agent Decisions](categories/agent-decisions.md) — 40 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 25 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 26 entries
 - [Calibration & Research](categories/calibration-research.md) — 26 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 58 entries
 - [Game & Simulation](categories/game-simulation.md) — 18 entries
@@ -318,6 +318,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [jev-test](https://github.com/souvikr/jev-test) - Model benchmarking: reproducible test harness evaluating TypeSafe Jev Noul, Choice, and Score decisions via OpenRouter's Decisions API, comparing latency and accuracy against LLM prompt-and-parse baselines.
 - [Jev vs Fable on 520 real social posts](https://seenpaid.com/blog/jev-review-tested-against-fable) - Social media: a scheduler's pre-publish check asks Jev four Noul questions per caption (spam, clear opening, stands alone, promotional) as advisory signals, never a gate; on 100 posts labelled blind by Fable the two agreed 94/100 on promotion and 85/100 at a 0.65 spam threshold (Jev the stricter one 12 times to 3), and scoring all 520 posts cost $0.011 at a 341 ms median.
 - [Jev Does Not Play Dice](https://kantahayashiai.github.io/posts/jev-does-not-play-dice/) - Model evaluation: asks Jev a `Choice` over the six faces of a hidden fair die 400 times; Jev selects face 1 on all 400 trials with 82.9% mean reported probability and 19.0% accuracy, then tests whether stated probabilities survive in synthetic forecast documents, where a 30% shortage risk comes back as 5.3% via Choice and 26.7% via Noul; raw responses and analysis code on [GitHub](https://github.com/KantaHayashiAI/jev-does-not-play-dice).
+- [DecisionBench](https://github.com/Hanno-Labs/decision-bench) - Model evaluation: scores Jev Noul, Choice, and Score answers on pinned document-grounded tasks, counting malformed probability distributions as misses so model comparisons remain reproducible.
 
 ### Calibration & Research
 
