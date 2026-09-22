@@ -7,6 +7,88 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parent.parent
 README_PATH = REPO_ROOT / "README.md"
 
+# ---------------------------------------------------------------------------
+# 可选标签（issue #138）
+#
+# 条目可以带一个可选的标签块，位置在链接与分隔符之间：
+#
+#   - [name](url) `{agent: pi, type: proxy}` - Description.
+#
+# 标签块放在分隔符之前而不是行尾：这样 `- [Name](URL) - Description` 的语法不变，
+# 而且在分类文件里标签自成一列（描述会换行，放在行尾在源码里就看不见了）。
+# 标签不是句子的一部分，所以「每条一句」的规则不受影响。
+# ---------------------------------------------------------------------------
+
+# agent：标签带色，同一种 agent 全表同色。色值锚定厂商品牌色后再压暗到
+# 白字对比度 >= 4.5:1（WCAG AA）；原始品牌色都不达标（Anthropic 陶土 #D97757
+# 与 OpenAI 绿 #10A37F 都是 2.9:1）。
+AGENT_LABELS = {
+    "multi":       ("Multi",       "1F6FEB"),
+    "claude-code": ("Claude Code", "C1512C"),
+    "pi":          ("Pi",          "8250DF"),
+    "codex":       ("Codex",       "0D8668"),
+    "cursor":      ("Cursor",      "BF3989"),
+    "cline":       ("Cline",       "996C00"),
+    "opencode":    ("OpenCode",    "0E7490"),
+}
+
+# type：整个轴统一灰色 —— 只有 agent 承担色相，「用哪个 agent」才能扫得出来，
+# 也避免两个 badge 看起来像两个同等分量的声明。
+TYPE_LABELS = {
+    "api", "cli", "proxy", "plugin", "library", "hosted", "self-hosted",
+}
+TYPE_COLOR = "4B5563"
+
+ENTRY_RE = re.compile(r"^(- \[[^\]]+\]\([^)]+\))(?:\s*`\{([^}]*)\}`)?\s*-\s*(.+)$")
+
+
+def parse_tags(raw: str) -> tuple[dict[str, str], list[str]]:
+    """解析 `agent: pi, type: proxy`，返回 (标签, 未知项)。"""
+    tags: dict[str, str] = {}
+    unknown: list[str] = []
+    for pair in raw.split(","):
+        pair = pair.strip()
+        if not pair:
+            continue
+        if ":" not in pair:
+            unknown.append(pair)
+            continue
+        kind, value = (part.strip().lower() for part in pair.split(":", 1))
+        if kind == "agent" and value in AGENT_LABELS:
+            tags["agent"] = value
+        elif kind == "type" and value in TYPE_LABELS:
+            tags["type"] = value
+        else:
+            unknown.append(f"{kind}: {value}")
+    return tags, unknown
+
+
+def badge_html(kind: str, value: str) -> str:
+    if kind == "agent":
+        label, color = AGENT_LABELS[value]
+        text = "agent-" + label.replace(" ", "%20")
+        alt = f"agent: {label}"
+    else:
+        color, text, alt = TYPE_COLOR, f"type-{value}", f"type: {value}"
+    return f"![{alt}](https://img.shields.io/badge/{text}-{color}?style=flat-square)"
+
+
+def render_entry(line: str) -> tuple[str, dict[str, str]]:
+    """把条目里的标签块换成 badges，返回 (渲染后的行, 标签)。"""
+    m = ENTRY_RE.match(line)
+    if not m:
+        return line, {}
+    head, raw_tags, desc = m.group(1), m.group(2) or "", m.group(3)
+    if not raw_tags:
+        return line, {}
+    tags, unknown = parse_tags(raw_tags)
+    if unknown:
+        print(f"⚠️  unknown tag(s) {unknown} — {line[:80]}")
+    badges = " ".join(badge_html(k, tags[k]) for k in ("agent", "type") if k in tags)
+    if not badges:
+        return f"{head} - {desc}", {}
+    return f"{head} {badges} - {desc}", tags
+
 CATEGORIES = [
     "classification-routing.md",
     "adaptive-realtime-ui.md",
@@ -32,11 +114,13 @@ ALL_FILES = CATEGORIES + OPEN_TRACKING
 
 
 class Category:
-    def __init__(self, filename: str, title: str, count: int, lines: list[str]) -> None:
+    def __init__(self, filename: str, title: str, count: int, lines: list[str],
+                 tagged: list[tuple[str, dict[str, str]]] | None = None) -> None:
         self.filename = filename
         self.title = title
         self.count = count
         self.lines = lines
+        self.tagged = tagged or []
 
     @property
     def path(self) -> str:
@@ -79,6 +163,7 @@ def parse_category(filename: str) -> Category:
     count = sum(1 for line in raw_entry_lines if line.startswith("- ["))
 
     rendered: list[str] = []
+    tagged: list[tuple[str, dict[str, str]]] = []
     previous_blank = False
     for line in raw_entry_lines:
         stripped = line.strip()
@@ -87,8 +172,16 @@ def parse_category(filename: str) -> Category:
                 rendered.append("")
                 previous_blank = True
             continue
-        if line.startswith("### ") or line.startswith("- ["):
+        if line.startswith("### "):
             rendered.append(line)
+            previous_blank = False
+            continue
+        if line.startswith("- ["):
+            out_line, tags = render_entry(line)
+            rendered.append(out_line)
+            if tags:
+                name = re.match(r"- \[([^\]]+)\]\(([^)]+)\)", line)
+                tagged.append(((name.group(1), name.group(2)) if name else (line, ""), tags))
             previous_blank = False
 
     while rendered and not rendered[-1].strip():
@@ -97,7 +190,7 @@ def parse_category(filename: str) -> Category:
     if count == 0:
         rendered = ["_No direct Jev examples added yet._"]
 
-    return Category(filename=filename, title=title, count=count, lines=rendered)
+    return Category(filename=filename, title=title, count=count, lines=rendered, tagged=tagged)
 
 
 def bullet_line(category: Category) -> str:
@@ -234,6 +327,24 @@ def build_readme() -> str:
 
     for category in non_empty:
         out.append(f"- [{category.title}](#{github_anchor(category.title)}) ([source]({category.path}))")
+
+    # 「按 coding agent 检索」——标签存在时才有这一段。
+    # 这是标签真正的用途：读者想知道「我手上跑的那个 agent 能不能用」，
+    # 而不是想读一排 badge。
+    by_agent: dict[str, list[tuple[str, str]]] = {}
+    for category in non_empty:
+        for (name, url), tags in category.tagged:
+            if "agent" in tags:
+                by_agent.setdefault(tags["agent"], []).append((name, url))
+
+    if by_agent:
+        out.extend(["", "## Find by coding agent", "",
+                    "Optional tags on an entry name the coding agent it targets and the kind of integration it is. "
+                    "Most entries carry none — they are added only when the source itself supports the classification.", ""])
+        for agent in sorted(by_agent, key=lambda a: (-len(by_agent[a]), a)):
+            label = AGENT_LABELS[agent][0]
+            items = " · ".join(f"[{n}]({u})" for n, u in by_agent[agent])
+            out.append(f"- **{label}** ({len(by_agent[agent])}) — {items}")
 
     out.extend(
         [

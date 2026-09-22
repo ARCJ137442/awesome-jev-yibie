@@ -162,6 +162,35 @@ Why weak:
 - No method or threshold
 - Too vague to classify
 
+## Optional tags on an entry
+
+An entry may carry an optional tag block between the link and the separator. The generated `README.md` renders it as a badge, and the badges are what makes the *Find by coding agent* index possible — the one question a list like this cannot answer by scanning prose is "can I use this with the agent I already run?"
+
+```md
+- [pi-jev-router](https://github.com/mejiasd3v/pi-jev-router) `{agent: pi, type: proxy}` - Coding agents: adds automatic per-request model routing to the Pi coding agent through Jev decisions on Vercel AI Gateway.
+- [DocJev](https://github.com/jerryjliu/docjev) `{type: library}` - Document pipelines: LlamaIndex's open-source library that classifies a document against natural-language category rules.
+- [Jev Wrapped](https://github.com/gaborishka/jev-wrapped) - Media analysis: reads up to 1,500 posts from a public Telegram channel and asks Jev a `Choice` over ten kinds of post.
+```
+
+Most entries carry none, and that is the normal case — roughly one entry in ten names a coding agent at all. The block sits before the separator rather than at the end of the line so that the `- [Name](URL) - Description` grammar stays intact and the tags stay readable in the source file, where descriptions wrap.
+
+Vocabulary:
+
+| Key | Values |
+| --- | --- |
+| `agent` | `multi`, `claude-code`, `pi`, `codex`, `cursor`, `cline`, `opencode` |
+| `type` | `api`, `cli`, `proxy`, `plugin`, `library`, `hosted`, `self-hosted` |
+
+Rules:
+
+- **Tag only what the source supports.** The repository, its documentation, or its implementation has to say it. Never infer an agent from the fact that a project uses Jev.
+- **`multi` only when the project explicitly supports several agents.**
+- **At most one `agent` and one `type` per entry**, so no entry grows a badge row. If two types fit, pick the one a reader would search for.
+- **Tags are optional.** Omit them when the source does not say, and omit `type` when only the agent is documented — a wrong `type` is worse than a missing one.
+- **Tags supplement the description, they do not replace it.** The one-sentence rule still applies to the sentence; the tag block is not part of it.
+
+Unknown or misspelled tags are reported by `scripts/build-readme.py` and dropped from the render, so a typo fails loudly rather than silently.
+
 ## Where to place entries
 
 Add entries to exactly one of these category files:
