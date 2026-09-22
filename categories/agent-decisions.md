@@ -10,6 +10,8 @@ Use this category for programs where Jev supplies the decision step inside an ag
 
 ## Entries
 
+- [Jev by Example](https://github.com/ReallyArtificial/jev-by-example) - Agent development: runnable JavaScript lessons use Jev Choice, Score, and Noul judgments for memory reconciliation, recovery proposals, and handoff checks, with explicit application policies, offline fixtures, and opt-in live calls.
+
 - [jev-social](https://github.com/socai-io/jev-social) - Social media research: uses a Jev `Choice` at each step to select a concrete socai CLI operation and observed post or profile target on Instagram, TikTok, or LinkedIn, rejecting malformed or low-confidence decisions before execution.
 
 - [Jev Ultrafast](https://github.com/browser-use/jev-ultrafast) - Browser automation: browser-use's ultrafast agent where Jev decides each next action and element to click, calling a language model only when text must be typed.
