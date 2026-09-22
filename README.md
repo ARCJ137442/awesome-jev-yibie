@@ -67,7 +67,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Scoring & Ranking](categories/scoring-ranking.md) — 24 entries
 - [Agent Decisions](categories/agent-decisions.md) — 39 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
-- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 23 entries
+- [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 24 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 57 entries
 - [Game & Simulation](categories/game-simulation.md) — 16 entries
@@ -299,6 +299,7 @@ Source file: [`categories/evaluation-benchmarking.md`](categories/evaluation-ben
 - [Jevals.com](https://jevals.com/) - Model evaluation: independent leaderboard that asks Jev and six LLMs the same Noul, Choice and Score questions and grades every answer against human labels (PubMedQA, Banking77, HelpSteer2; 300 items × 5 runs each), finding Jev tied for first on PubMedQA yes/no at 1/28 of the top LLM's price, tied for second on Banking77 and no model beating the label base rates on HelpSteer2, with every per-decision probability published as CC BY 4.0 data.
 - [Jev IDS](https://github.com/jev-ids/jev-ids) - Network security: Intrusion Detection System (IDS) prototype built on Jev. It takes the metadata of a network flow and returns a verdict on whether the flow is an attack and its threat category, with probabilities. On a well-known cybersecurity benchmark (NSL-KDD), Jev IDS was compared against a state-of-the-art LLM (GPT-5.6 Luna) and a Machine Learning model (Random Forest). It was 4.8× faster and 3.8× cheaper than the LLM. It also raised 15× fewer false alarms than the Random Forest.
 - [jev-test](https://github.com/souvikr/jev-test) - Model benchmarking: reproducible test harness evaluating TypeSafe Jev Noul, Choice, and Score decisions via OpenRouter's Decisions API, comparing latency and accuracy against LLM prompt-and-parse baselines.
+- [Jev vs Fable on 520 real social posts](https://seenpaid.com/blog/jev-review-tested-against-fable) - Social media: a scheduler's pre-publish check asks Jev four Noul questions per caption (spam, clear opening, stands alone, promotional) as advisory signals, never a gate; on 100 posts labelled blind by Fable the two agreed 94/100 on promotion and 85/100 at a 0.65 spam threshold (Jev the stricter one 12 times to 3), and scoring all 520 posts cost $0.011 at a 341 ms median.
 
 ### Calibration & Research
 
