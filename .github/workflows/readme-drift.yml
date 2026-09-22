@@ -10,7 +10,9 @@ on:
     paths:
       - "categories/**"
       - "scripts/build-readme.py"
+      - "tags.json"
       - "README.md"
+      - "CONTRIBUTING.md"
   push:
     branches: [main]
 
@@ -40,11 +42,14 @@ jobs:
 
       - name: Fail on drift
         run: |
-          if ! git diff --quiet -- README.md; then
-            echo "::error::README.md does not match the category files."
-            echo "Edit the category file, then run: python3 scripts/build-readme.py"
-            echo "and commit the regenerated README.md."
-            git diff -- README.md
+          # CONTRIBUTING.md is only rewritten once the vocabulary table is
+          # generated; until then this simply never differs.
+          if ! git diff --quiet -- README.md CONTRIBUTING.md; then
+            echo "::error::A generated file does not match its sources."
+            echo "Edit the category file or tags.json, then run:"
+            echo "  python3 scripts/build-readme.py"
+            echo "and commit the regenerated files."
+            git diff -- README.md CONTRIBUTING.md
             exit 1
           fi
-          echo "README.md is in sync with the category files."
+          echo "Generated files are in sync with their sources."
