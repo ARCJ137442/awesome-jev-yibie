@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 27 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 24 entries
-- [Agent Decisions](categories/agent-decisions.md) — 39 entries
+- [Agent Decisions](categories/agent-decisions.md) — 40 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 23 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
@@ -258,6 +258,8 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [jev-compaction](https://github.com/Waxmell114514/jev-compaction) - Context management: standalone agent context compactor where Jev only scores transcript segments — kept lines stay verbatim, low scorers move to a store behind an expand() pointer instead of being deleted, and the append-only frozen prefix keeps the prompt cache valid; runnable offline demo, no API key needed.
 - [Visual-JEV](https://github.com/jiangxiluning/Visual-Jev) - A visual Jev—a native multimodal Jev based on Qwen3.5-4B—that supports direct image input without requiring modality conversion.
 - [DeepSearcher stopping-policy experiment](https://github.com/zilliztech/deep-searcher/blob/master/evaluation/jev_stopping/README.md) - Agentic search: a standalone evaluation uses Jev Noul judgments on accumulated evidence to decide whether to stop or continue within a search-round budget, comparing stopping behavior, evidence recall, and decision cost.
+
+- [OmniJev](https://github.com/shapsider/OmniJev) - Embodied robotics: a Jev-style finite-choice interface that feeds dual-camera images and text to a self-hosted multimodal model and takes the next preset skill for a MuJoCo arm as one typed choice, where released episodes finish transfer, stack and barrier tasks in 13 decisions and 39 output tokens each, 208/208 non-audio probe requests answer correctly, unobservable inputs come back "insufficient evidence" instead of a guess, and four public benchmark pilots hold accuracy equal to a direct short answer while cutting decision latency 6.8–13.6× and total tokens 51–86% (audio input is wired in the client but rejected by the current backend).
 
 ### Data Labeling & Curation
 
