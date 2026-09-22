@@ -70,7 +70,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 22 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 50 entries
-- [Game & Simulation](categories/game-simulation.md) — 15 entries
+- [Game & Simulation](categories/game-simulation.md) — 16 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 6 entries
@@ -388,6 +388,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [Jevtown](https://github.com/gaborishka/jevtown) - Audience simulation: a town of 10,000 personas computed from their id reads a post, listing, product or headline; one request asks Jev about 60 `Score` questions on who would care plus seven `Noul` moderation checks (0.5 keeps the text out of the public feed, 0.85 blocks it), batched `Choice` questions then return each persona's reaction in waves of 600, 1,500 and 3,000, and code sends the text to the next wave only while glad reactions outweigh sorry ones by at least 0.1 of the wave.
 - [RoboJEV](https://github.com/lykycy123/RoboJEV) - Robotics simulation: uses two-stage Jev `Choice` decisions over structured state to select intent and Cartesian motion/gripper commands for a Franka Panda in MuJoCo, rejecting malformed responses and checking task success independently through physics.
 - [Jev Chess](https://jevchess.com) - Gaming: one shared board where the internet collectively plays against Jev; every legal move is an option of a single `Choice` question so an illegal move is impossible, returned probabilities shade the pieces on the board, and a live calibration panel scores each claimed confidence against a one-ply material check.
+- [Life Chess × Jev](https://github.com/ARCJ137442/jev-life) - Experimental game design: a turn-based Conway board where each side's move is one Jev `Boolean` per legal cell in a single request, with no heuristic fallback and a user-set confidence threshold flagging unsure turns; the game is new, so there is no established play to copy, and its rules are not self-evident — they render from editable templates with auto-filled placeholders, so a designer can rewrite a rule and re-ask.
 
 ### Finance & Trading
 
