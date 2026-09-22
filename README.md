@@ -74,7 +74,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 7 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 60 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 61 entries
 
 ### Open categories still being seeded
 
@@ -486,6 +486,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Replacing an agentic classification loop with Jev](https://blog.r6i.it/typesafe-jev-vs-agentic-loop.html) - Blog: swaps an agent's classification loop for a single Jev call and reports the loop running 7x faster.
 - [Awesome TypeSafe Jev](https://github.com/AbdelStark/awesome-typesafe-jev) - Curated list: a source-backed field guide with SDKs and live demos, the largest of the community indexes at 423 stars.
 - [60 Jev use cases in Chinese](https://x.com/yaojingang/status/2101867443820113982) - X (Chinese): rounds up sixty cases with twelve called out as most worth studying, organised around the same division of labour - the generative model writes, Jev classifies, scores, and chooses.
+- [Jev Tutorial](https://www.jev-tutorial.org/) - Site: an independent multilingual implementation guide to Choice, Score, Noul, Python SDK requests, confidence thresholds, deterministic fallbacks, and human escalation.
 
 ## Submission format
 
