@@ -64,7 +64,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Classification & Routing](categories/classification-routing.md) — 31 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 27 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 23 entries
 - [Agent Decisions](categories/agent-decisions.md) — 37 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 22 entries
@@ -208,6 +208,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jgrep (kyu1204)](https://github.com/kyu1204/jgrep) - Developer tools: semantic grep that asks Jev one Noul per 5-60 line code chunk, diff hunk or CSV row (16 per request) and prints grep-style file:line hits above a threshold, so English sentences work as CI lint rules.
 - [jev-resume-screening](https://github.com/nanami-0713/jev-resume-screening) - Recruiting: screens one resume against a JD in a single request of five Noul evidence gates, four Score dimensions, and one background-routing Choice, with criteria hardened v1→v3 against negative-control resumes (a glossy-trap CV's self-described "AI heavy user" fell 0.95→0.49) and any low-confidence answer escalated to human review.
 - [hippo-memory](https://github.com/kitfunso/hippo-memory) - Agent memory: a biologically-inspired memory store whose optional Jev reranker lifts recall R@1 from 0.41 to 0.62 on a private 300-query developer store.
+- [MemSearch Jev reranking](https://github.com/zilliztech/memsearch/blob/main/evaluation/reranking-evaluation.md) - Coding-agent memory: an optional Jev reranker asks Noul questions about retrieved Markdown chunks and sorts them by relevance to the query, with bilingual evaluation results.
 
 ### Agent Decisions
 
