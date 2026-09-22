@@ -63,18 +63,18 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 33 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 27 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 28 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 24 entries
 - [Agent Decisions](categories/agent-decisions.md) — 40 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 24 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 57 entries
-- [Game & Simulation](categories/game-simulation.md) — 17 entries
+- [Game & Simulation](categories/game-simulation.md) — 18 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 7 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 61 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 66 entries
 
 ### Open categories still being seeded
 
@@ -193,6 +193,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [r2r-jev](https://github.com/Thneoly/r2r-jev) - Agent governance: asks Jev two `Noul` checks per tool call (beyond scope, destructive) and admits each judgment as Evidence that can degrade Trust, Delegation, and Authorization until a human override repairs the relation, so later calls inherit the history; includes a stateless-vs-stateful comparison with a scenario adversarial to persistence.
 - [GeekLink Jev Subtitle Translator](https://github.com/GeekLinkDev/jev-subtitle-translator) - Subtitle translation: asks Jev a `Noul` review question for each translated subtitle line to flag omissions, changed meaning, names, numbers, negation, or other defects for human review before export.
 - [TryJevAI](https://tryjevai.com/) - Scheduling: public Jev playground uses a typed `Choice` with an explicit `Unresolved` option to distinguish a mentioned arrival time from an agreed meeting time, showing the returned probabilities and prompting for missing agreement before treating a time as settled.
+- [Agent Chaperone](https://github.com/agent-chaperone/agent-chaperone) - Agent safety: MCP proxy plus hooks that screen a tool call before it runs and a tool result before the agent reads it, with 45 test files behind it.
 
 ### Scoring & Ranking
 
@@ -424,6 +425,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [Jev Chess](https://jevchess.com) - Gaming: one shared board where the internet collectively plays against Jev; every legal move is an option of a single `Choice` question so an illegal move is impossible, returned probabilities shade the pieces on the board, and a live calibration panel scores each claimed confidence against a one-ply material check.
 - [Life Chess × Jev](https://github.com/ARCJ137442/jev-life) - Experimental game design: a turn-based Conway board where each side's move is one Jev `Boolean` per legal cell in a single request, with no heuristic fallback and a user-set confidence threshold flagging unsure turns; the game is new, so there is no established play to copy, and its rules are not self-evident — they render from editable templates with auto-filled placeholders, so a designer can rewrite a rule and re-ask.
 - [kNES](https://github.com/ArturSkowronski/kNES) - Gaming: a Kotlin NES emulator whose agent plays Super Mario Bros. and Final Fantasy through SemIf, the open implementation of the Jev interface, on a local Qwen3.5-4B reading the screen itself; the goals that apply this turn become the declared options of one typed `Choice`, so a button the game does not offer is impossible rather than unlikely, and 900 logged decisions at ~400 ms each on an M5 Pro never once answered off the menu.
+- [Laya vs Jev arena](https://github.com/PromptEngineer48/laya-vs-jev-arena) - Model comparison: races an open local model against Jev through Snake and a Mortal-Kombat-style arena, the same game code driving both.
 
 ### Finance & Trading
 
@@ -517,6 +519,11 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Awesome TypeSafe Jev](https://github.com/AbdelStark/awesome-typesafe-jev) - Curated list: a source-backed field guide with SDKs and live demos, the largest of the community indexes at 423 stars.
 - [60 Jev use cases in Chinese](https://x.com/yaojingang/status/2101867443820113982) - X (Chinese): rounds up sixty cases with twelve called out as most worth studying, organised around the same division of labour - the generative model writes, Jev classifies, scores, and chooses.
 - [Jev Tutorial](https://www.jev-tutorial.org/) - Site: an independent multilingual implementation guide to Choice, Score, Noul, Python SDK requests, confidence thresholds, deterministic fallbacks, and human escalation.
+- [TypeSafe pauses Jev signups](https://x.com/typesafeai/status/2102281508950307159) - X: days after dropping the waitlist the vendor pauses signups again to protect quality of service, an unusually direct admission that demand outran capacity.
+- [Jev and the System One Model (Latent Space)](https://www.latent.space/p/jev) - Podcast: Diogo Almeida on RLCD, intelligence per dollar, reliability, and why chat-first interfaces may not be where this ends up.
+- [Jev vs GPT-6 Astra: when to use each](https://vercel.com/i/jev-vs-gpt-6-astra) - Guide: Vercel's own decision guide for choosing between a System One model and a frontier model, published alongside a companion page of seven Jev use cases.
+- [A Jev index rebuilt every four hours](https://x.com/LinearUncle/status/2102423502414618729) - X (Chinese): describes a multilingual Jev site that scrapes X every four hours and has accumulated more than 5,380 posts, an index maintained by machine rather than by a curator.
+- [Jev 1.13 jaggedness](https://docs.typesafe.ai/model-jaggedness/jev-1.13) - Documentation: TypeSafe's own page on model jaggedness for the 1.13 release.
 
 ## Submission format
 
