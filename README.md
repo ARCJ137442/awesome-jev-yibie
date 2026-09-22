@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 22 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 50 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 51 entries
 - [Game & Simulation](categories/game-simulation.md) — 16 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -373,6 +373,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [jevify](https://github.com/altryne/jevify) - Agent skill: finds where a codebase could hand a decision to Jev, designs the typed questions for it, and learns from recent community usage.
 - [mysql-ailike](https://github.com/maayanlevy/mysql-ailike) - Database filtering: MySQL plugin that filters rows by a natural-language predicate instead of a literal one, powered by Jev.
 - [jev-usecases](https://github.com/kenhuangus/jev-usecases) - Reference harnesses: a set of production-shaped use-case harnesses built around confidence-gated decision logic.
+- [FastJev](https://github.com/chengyongru/fastjev) - Local runtime: self-hosted Python SDK and System One-compatible API for runtime-defined `Choice`, `Boolean`, and `Score` decisions on pinned open models across Torch, vLLM, MLX, llama.cpp, and WebGPU, with committed row-level benchmarks and checksums.
 
 ### Game & Simulation
 

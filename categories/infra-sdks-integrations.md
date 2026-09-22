@@ -60,3 +60,4 @@ Use this category for ecosystem tooling built around Jev — SDKs, wrappers, gat
 - [jevify](https://github.com/altryne/jevify) - Agent skill: finds where a codebase could hand a decision to Jev, designs the typed questions for it, and learns from recent community usage.
 - [mysql-ailike](https://github.com/maayanlevy/mysql-ailike) - Database filtering: MySQL plugin that filters rows by a natural-language predicate instead of a literal one, powered by Jev.
 - [jev-usecases](https://github.com/kenhuangus/jev-usecases) - Reference harnesses: a set of production-shaped use-case harnesses built around confidence-gated decision logic.
+- [FastJev](https://github.com/chengyongru/fastjev) - Local runtime: self-hosted Python SDK and System One-compatible API for runtime-defined `Choice`, `Boolean`, and `Score` decisions on pinned open models across Torch, vLLM, MLX, llama.cpp, and WebGPU, with committed row-level benchmarks and checksums.
