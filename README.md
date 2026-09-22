@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 22 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 56 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 57 entries
 - [Game & Simulation](categories/game-simulation.md) — 16 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -385,6 +385,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [ask-jev](https://github.com/logicrw/ask-jev) - Python ecosystem: zero-dependency CLI that routes small semantic judgments — Choice, Noul, Score, batch questions, and verbatim passage extraction — to Jev for AI agents and CLI pipelines.
 - [Search with Jev and Milvus](https://github.com/milvus-io/bootcamp/tree/master/bootcamp/RAG/search_with_jev) - Search engineering: nine runnable notebooks combine Gemini embeddings and Milvus retrieval with Jev Noul and Choice judgments, while Python applies ranking, filtering, routing, and stopping policies to synthetic examples.
 - [discern](https://github.com/doeixd/discern) - TypeScript ecosystem: Effect library where a Jev `Choice`, `Noul` or `Score` answer becomes a typed branch under caller-supplied thresholds, anything below them takes an `Uncertain` case the compiler forces you to handle, and procedure routing skips the model call entirely when deterministic predicates leave one candidate.
+- [jeff](https://github.com/logan-markewich/jeff) - Self-hosted runtimes: self-hosted drop-in replacement for TypeSafe Jev powered by GliFormer, exposing native Choice, Score, and Noul decision endpoints without cloud API dependencies.
 
 ### Game & Simulation
 
