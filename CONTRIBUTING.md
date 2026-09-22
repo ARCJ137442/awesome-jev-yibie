@@ -12,9 +12,9 @@ Jev is not a chat model. It takes unstructured state plus a **typed question** a
 | --- | --- | --- |
 | `Choice` | one option from a set | routing, classification, tool selection |
 | `Score` | a number on a defined scale | rubric grading, quality scoring, ranking |
-| `Boolean` | true / false | verification gates, guardrails, policy checks |
+| `Noul` | the probability that a statement is true, 0 to 1 | verification gates, guardrails, policy checks |
 
-Each answer carries a confidence score, and TypeSafe AI reports per-decision cost in the fractions of a cent rather than per-token bills. If you want the vendor framing, read [the launch post](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
+`Choice` and `Score` carry a separate confidence score. A `Noul` needs none: with two outcomes the returned probability already describes the whole distribution, and your code picks the threshold. TypeSafe AI reports per-decision cost in the fractions of a cent rather than per-token bills. If you want the vendor framing, read [the launch post](https://typesafe.ai/blog/introducing-system-one-models-and-jev).
 
 ## What belongs here
 
@@ -138,14 +138,14 @@ Use this exact format:
 
 ```md
 - [TicketTriage](https://example.com) - Support operations: asks Jev to classify 40k inbound tickets per day into a fixed queue taxonomy, escalating anything below 0.8 confidence to a human.
-- [DiffGate](https://example.com) - Code review: gates agent-authored pull requests with a Jev `Boolean` check against repository conventions, blocking merges on a false verdict.
+- [DiffGate](https://example.com) - Code review: gates agent-authored pull requests with a Jev `Noul` on whether the diff follows repository conventions, blocking the merge below 0.8 and sending the middle band to a human reviewer.
 - [RubricGrader](https://example.com) - Education: scores short-answer submissions with a Jev `Score` against a locked rubric, replacing a per-submission LLM call at a fraction of the cost.
 ```
 
 Why these work:
 
 - names the decision being automated
-- names the typed shape (`Choice` / `Score` / `Boolean`)
+- names the typed shape (`Choice` / `Score` / `Noul`)
 - states the gate or escalation rule
 - gives a concrete consequence
 
