@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 25 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
-- [Agent Decisions](categories/agent-decisions.md) — 34 entries
+- [Agent Decisions](categories/agent-decisions.md) — 35 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 22 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
@@ -243,6 +243,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [DataJev](https://github.com/zzz1YAO/DataJev) - Data analysis agents: an LLM performs Python-based analysis while Jev reads the compressed analytical state and decides whether the agent should continue the current direction, switch to another one, verify a finding, or stop and synthesize the answer.
 - [jev-mobile](https://github.com/Friedjof/jev-mobile) - Mobile control: fast structured Android control loops that route each step through Jev alongside Mobile MCP, with 35 test files.
 - [GUI JEV Harness](https://github.com/ZihuaEvan/GUI_JEV) - Computer use: recursive screenshot grounding where Jev returns a `Choice` over grid-tile candidates at each level, and local probability and margin gates decide whether to descend or refuse, emitting only a raster point and bounding box and never clicking.
+- [jev-compaction](https://github.com/Waxmell114514/jev-compaction) - Context management: standalone agent context compactor where Jev only scores transcript segments — kept lines stay verbatim, low scorers move to a store behind an expand() pointer instead of being deleted, and the append-only frozen prefix keeps the prompt cache valid; runnable offline demo, no API key needed.
 
 ### Data Labeling & Curation
 
