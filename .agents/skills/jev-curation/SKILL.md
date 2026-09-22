@@ -110,6 +110,25 @@ Search in both languages when useful. Useful Chinese patterns:
 
 Keep Chinese queries narrow to avoid noisy generic matches.
 
+## `last30days`: the multi-channel sweep
+
+`last30days` (mvanhorn, MIT) is installed at `~/.agents/skills/last30days`, a symlink into the vendored clone at `~/.agent-reach/vendor/last30days-skill/skills/last30days`. It resolves for every project, so this repo and its sibling list share one copy; update it with `git -C ~/.agent-reach/vendor/last30days-skill pull`.
+
+```bash
+SKILL=~/.agent-reach/vendor/last30days-skill/skills/last30days
+python3 "$SKILL/scripts/last30days.py" doctor          # which sources are alive, and how to fix the dead ones
+python3 "$SKILL/scripts/last30days.py" "TypeSafe Jev" --days 7 --emit json --output /tmp/sweep.json
+```
+
+Then read `/tmp/sweep.json` and pull `url` / `title` per source. Live out of the box on this machine: reddit, youtube (via yt-dlp), hackernews, polymarket, github (via `gh`). X is unconfigured until `setup --allow-browser-cookies` runs, so keep using `twitter search` for X in the meantime.
+
+**What it reaches that the manual sweep cannot.** Two classes show up here and nowhere else:
+
+- **Unmerged integrations.** A pull request or an issue that adds Jev to an existing project is invisible to `gh search repos` and `gh search code`, because the code is not on the default branch and the repository never matches. `open-orcha/orcha#253`, `wso2/api-platform#3517`, `ahstn/oceans-llm#387` and `fakoli/anvil#238` all arrived this way — five third-party projects integrating Jev that the name-based searches had missed across a dozen prior passes.
+- **Discussion in places nothing indexes.** Small-subreddit threads, conference talks, personal blogs. The sharpest critique of the calibration claim came from r/ArtificialInteligence, and the design rationale from a Diogo Almeida talk — neither was reachable from a repository search.
+
+Treat it as a complement, not a replacement: it is strong on recency and breadth, while `gh search` remains better for exhaustive repository coverage. Run both, and reconcile.
+
 ## Promotion workflow
 
 Use this exact ladder:
