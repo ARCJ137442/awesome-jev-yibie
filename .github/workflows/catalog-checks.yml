@@ -1,4 +1,4 @@
-name: README drift
+name: Catalog checks
 
 # README.md is generated from the category files by scripts/build-readme.py.
 # This job regenerates it and fails if the result differs from what is committed,
@@ -13,6 +13,7 @@ on:
       - "tags.json"
       - "README.md"
       - "CONTRIBUTING.md"
+      - "scripts/audit-tags.py"
   push:
     branches: [main]
 
@@ -53,3 +54,6 @@ jobs:
             exit 1
           fi
           echo "Generated files are in sync with their sources."
+
+      - name: Audit tags against entry text
+        run: python3 scripts/audit-tags.py categories
