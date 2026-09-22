@@ -63,7 +63,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 - [Classification & Routing](categories/classification-routing.md) — 29 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 26 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 27 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
 - [Agent Decisions](categories/agent-decisions.md) — 37 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
@@ -178,6 +178,7 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [Reflex](https://github.com/kaustav1996/reflex) - Coding agents: Pi-based coding agent that sends each state-changing tool call through one Jev request of five `Noul` risk checks plus a risk `Score`, maps the answers in code to allow, ask or block by the user's risk setting (protected paths always ask), and also uses Jev to pick the model tier per prompt and to send back "done" claims that ran no verification, at about 400 ms per decision.
 - [r2r-jev](https://github.com/Thneoly/r2r-jev) - Agent governance: asks Jev two `Noul` checks per tool call (beyond scope, destructive) and admits each judgment as Evidence that can degrade Trust, Delegation, and Authorization until a human override repairs the relation, so later calls inherit the history; includes a stateless-vs-stateful comparison with a scenario adversarial to persistence.
 - [GeekLink Jev Subtitle Translator](https://github.com/GeekLinkDev/jev-subtitle-translator) - Subtitle translation: asks Jev a `Noul` review question for each translated subtitle line to flag omissions, changed meaning, names, numbers, negation, or other defects for human review before export.
+- [TryJevAI](https://tryjevai.com/) - Scheduling: public Jev playground uses a typed `Choice` with an explicit `Unresolved` option to distinguish a mentioned arrival time from an agreed meeting time, showing the returned probabilities and prompting for missing agreement before treating a time as settled.
 
 ### Scoring & Ranking
 
