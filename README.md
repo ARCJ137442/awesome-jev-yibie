@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 27 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 23 entries
-- [Agent Decisions](categories/agent-decisions.md) — 37 entries
+- [Agent Decisions](categories/agent-decisions.md) — 38 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 22 entries
 - [Calibration & Research](categories/calibration-research.md) — 23 entries
@@ -252,6 +252,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [GUI JEV Harness](https://github.com/ZihuaEvan/GUI_JEV) - Computer use: recursive screenshot grounding where Jev returns a `Choice` over grid-tile candidates at each level, and local probability and margin gates decide whether to descend or refuse, emitting only a raster point and bounding box and never clicking.
 - [jev-compaction](https://github.com/Waxmell114514/jev-compaction) - Context management: standalone agent context compactor where Jev only scores transcript segments — kept lines stay verbatim, low scorers move to a store behind an expand() pointer instead of being deleted, and the append-only frozen prefix keeps the prompt cache valid; runnable offline demo, no API key needed.
 - [Visual-JEV](https://github.com/jiangxiluning/Visual-Jev) - A visual Jev—a native multimodal Jev based on Qwen3.5-4B—that supports direct image input without requiring modality conversion.
+- [DeepSearcher stopping-policy experiment](https://github.com/zilliztech/deep-searcher/blob/master/evaluation/jev_stopping/README.md) - Agentic search: a standalone evaluation uses Jev Noul judgments on accumulated evidence to decide whether to stop or continue within a search-round budget, comparing stopping behavior, evidence recall, and decision cost.
 
 ### Data Labeling & Curation
 
