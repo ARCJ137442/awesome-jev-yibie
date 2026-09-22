@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 README_PATH = REPO_ROOT / "README.md"
+TAGS_PATH = REPO_ROOT / "tags.json"
+CONTRIBUTING_PATH = REPO_ROOT / "CONTRIBUTING.md"
 
 # ---------------------------------------------------------------------------
 # 可选标签（issue #138）
@@ -22,27 +25,16 @@ README_PATH = REPO_ROOT / "README.md"
 # agent：标签带色，同一种 agent 全表同色。色值锚定厂商品牌色后再压暗到
 # 白字对比度 >= 4.5:1（WCAG AA）；原始品牌色都不达标（Anthropic 陶土 #D97757
 # 与 OpenAI 绿 #10A37F 都是 2.9:1）。
+# The vocabulary lives in tags.json so that it exists once: this renderer, the
+# table in CONTRIBUTING.md and any external consumer read the same file.
+_AXES = json.loads(TAGS_PATH.read_text(encoding="utf-8"))["axes"]
+
 AGENT_LABELS = {
-    "multi":       ("Multi",       "1F6FEB"),
-    "claude-code": ("Claude Code", "C1512C"),
-    "pi":          ("Pi",          "8250DF"),
-    "codex":       ("Codex",       "0D8668"),
-    "cursor":      ("Cursor",      "BF3989"),
-    "cline":       ("Cline",       "996C00"),
+    value: (spec["label"], spec["color"])
+    for value, spec in _AXES["agent"]["values"].items()
 }
-
-# `opencode` 曾经在这里，2026-09-22 移除。它是因为一次误判进来的：扫描把
-# `jev-agent-skill` 描述里的 "OpenCode Zen's free tier" 当成了 OpenCode 编码 agent，
-# 而那是该项目路由所用的 LLM 网关。该条目的地标签一直是 claude-code，全库也从未
-# 有任何条目使用 opencode 标签 —— 所以词表里没有一条证据支持它。
-# 真正出现 OpenCode 项目时再加回来（见 issue #154）。
-
-# type：整个轴统一灰色 —— 只有 agent 承担色相，「用哪个 agent」才能扫得出来，
-# 也避免两个 badge 看起来像两个同等分量的声明。
-TYPE_LABELS = {
-    "api", "cli", "proxy", "plugin", "library", "hosted", "self-hosted",
-}
-TYPE_COLOR = "4B5563"
+TYPE_LABELS = set(_AXES["type"]["values"])
+TYPE_COLOR = _AXES["type"]["color"]
 
 ENTRY_RE = re.compile(r"^(- \[[^\]]+\]\([^)]+\))(?:\s*`\{([^}]*)\}`)?\s*-\s*(.+)$")
 
@@ -391,8 +383,35 @@ def build_readme() -> str:
     return "\n".join(out)
 
 
+TAG_TABLE_START = "<!-- tags:start -->"
+TAG_TABLE_END = "<!-- tags:end -->"
+
+
+def render_tag_table() -> str:
+    rows = ["| Key | Values |", "| --- | --- |"]
+    for axis, spec in _AXES.items():
+        values = ", ".join(f"`{value}`" for value in spec["values"])
+        rows.append(f"| `{axis}` | {values} |")
+    return "\n".join(rows)
+
+
+def sync_contributing() -> None:
+    """Rewrite the vocabulary table in CONTRIBUTING.md from tags.json."""
+    text = CONTRIBUTING_PATH.read_text(encoding="utf-8")
+    pattern = re.escape(TAG_TABLE_START) + r".*?" + re.escape(TAG_TABLE_END)
+    if not re.search(pattern, text, re.S):
+        raise SystemExit(
+            f"{CONTRIBUTING_PATH.name}: missing {TAG_TABLE_START} / {TAG_TABLE_END} markers"
+        )
+    block = f"{TAG_TABLE_START}\n{render_tag_table()}\n{TAG_TABLE_END}"
+    updated = re.sub(pattern, lambda _match: block, text, flags=re.S)
+    if updated != text:
+        CONTRIBUTING_PATH.write_text(updated, encoding="utf-8")
+
+
 def main() -> None:
     README_PATH.write_text(build_readme())
+    sync_contributing()
 
 
 if __name__ == "__main__":

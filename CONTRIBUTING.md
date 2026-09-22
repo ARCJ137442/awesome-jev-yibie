@@ -176,10 +176,12 @@ Most entries carry none, and that is the normal case — roughly one entry in te
 
 Vocabulary:
 
+<!-- tags:start -->
 | Key | Values |
 | --- | --- |
 | `agent` | `multi`, `claude-code`, `pi`, `codex`, `cursor`, `cline` |
 | `type` | `api`, `cli`, `proxy`, `plugin`, `library`, `hosted`, `self-hosted` |
+<!-- tags:end -->
 
 Rules:
 
