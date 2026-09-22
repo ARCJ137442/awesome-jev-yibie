@@ -61,7 +61,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 28 entries
+- [Classification & Routing](categories/classification-routing.md) — 29 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 26 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 22 entries
@@ -133,6 +133,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [pi-jev-skill-picker](https://github.com/safzanpirani/pi-jev-skill-picker) - Coding agents: ranks the Pi agent's installed skills against the current task with Jev before any of them run.
 - [Jevonian](https://github.com/xinyao27/jevonian) - Coding agents: local OpenAI/Anthropic-compatible proxy where one Jev call picks both the model route and the thinking level for `jevonian/auto` from session state, quota health, candidate capabilities, and cache-switch penalties, after deterministic code has filtered candidates and while pinned models, explicit `jevonian/<route>` requests, and `routing.mode: "off"` skip Jev entirely; `minConfidence` marks a low-confidence route in the ledger rather than accepting it, and the ledger records the serving model and why.
 - [Switchboard](https://github.com/ruban-24/switchboard) - Coding agents: open-source System One-powered router that automatically matches each Claude Code or Codex task to an appropriate model and reasoning effort, then keeps that choice stable for the conversation to preserve prompt-cache continuity; powered by Jev today, with Laya, Kev, and Cua-S1 coming soon.
+- [Tab Sorter](https://github.com/AstonyCat/jev-tab-grouper) - Browser tooling: Chrome MV3 extension that groups every tab in the window into named, colored Chrome tab groups from one parallel Jev call — one `Choice` question per tab against user-editable group criteria — with unclassified tabs falling to a fixed fallback bucket, manual groups untouched, and the pre-grouping tab order restored on ungroup; an optional LLM engine with self-invented group names is included for comparison runs.
 
 ### Adaptive & Realtime UI
 
