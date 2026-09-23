@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 28 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 26 entries
-- [Agent Decisions](categories/agent-decisions.md) — 41 entries
+- [Agent Decisions](categories/agent-decisions.md) — 42 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 26 entries
 - [Calibration & Research](categories/calibration-research.md) — 26 entries
@@ -231,6 +231,8 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 ### Agent Decisions
 
 Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
+
+- [Hermes JIT Context OS](https://github.com/wojciechwiesner/jit-context) - Coding agents: uses Jev as a sub-millisecond System 1 Epistemic Gate and Domain Router to score AST relevance, test proofs, and tool targets, cutting autonomous agent turns by 31.3% and blind file exploration by 52.6% on SWE-bench with fail-open circuit-breaker resilience.
 
 - [Jev by Example](https://github.com/ReallyArtificial/jev-by-example) - Agent development: runnable JavaScript lessons use Jev Choice, Score, and Noul judgments for memory reconciliation, recovery proposals, and handoff checks, with explicit application policies, offline fixtures, and opt-in live calls.
 
