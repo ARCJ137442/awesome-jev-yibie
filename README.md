@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 26 entries
 - [Calibration & Research](categories/calibration-research.md) — 27 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 65 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 66 entries
 - [Game & Simulation](categories/game-simulation.md) — 18 entries
 - [Finance & Trading](categories/finance-trading.md) — 5 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -435,6 +435,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [stuntd](https://github.com/bladedevoff/stuntd) ![agent: Claude Code](https://img.shields.io/badge/agent-Claude%20Code-C1512C?style=flat-square) ![type: proxy](https://img.shields.io/badge/type-proxy-4B5563?style=flat-square) - Local runtime / learning proxy: Jev-compatible local server on Laya that also proxies a Jev upstream, records every `Choice`, `Score` and `Noul` decision, trains a head per decision site, and answers live with calibrated confidence, falling back to the upstream below its threshold and demoting itself on drift; measured 22 ms per decision and 90% of support-triage questions answered locally at a 0.99 agreement target.
 - [Jev AI Tools](https://jevai.tools/) ![type: hosted](https://img.shields.io/badge/type-hosted-4B5563?style=flat-square) - Developer education: hosts six bounded recipes plus a custom builder for AI SDK `Choice`, `Score`, and `Boolean` evaluations; recipes display answer probabilities separately from provider confidence and use deterministic local thresholds to pause uncertain routes for review, while every configuration exports as TypeScript.
 - [Jeview](https://github.com/andududu/jeview) ![type: proxy](https://img.shields.io/badge/type-proxy-4B5563?style=flat-square) - Developer tooling: zero-dependency local proxy and live visualizer that intercepts Jev API calls, logs decisions to SQLite, and renders real-time decision flows in a browser dashboard.
+- [SemDecide](https://github.com/sharziki/semdecide) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) - Developer tooling: Unix CLI for semantic decisions in shell pipelines and CI, evaluating Jev predicates, routes, and scores with predictable exit codes.
 
 ### Game & Simulation
 
