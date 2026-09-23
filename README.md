@@ -64,7 +64,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Classification & Routing](categories/classification-routing.md) — 35 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 28 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 26 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 27 entries
 - [Agent Decisions](categories/agent-decisions.md) — 43 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 26 entries
@@ -227,6 +227,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [Oko](https://github.com/bartlomein/oko) - Developer tooling: local code search for coding agents that shortlists function-level chunks with ripgrep and BM25, asks Jev a `Noul` relevance question per chunk across three parallel requests, and returns the accepted ones as excerpts through MCP; the cutoff and excerpt selection live in code.
 - [grokbot-jev-jobs](https://github.com/mcgalleg/grokbot-jev-jobs) - Job search: a daily Vercel cron that scores public job postings against one resume with Jev through the Vercel AI Gateway, so only the plausible matches surface.
 - [jeff](https://github.com/saembit/jeff-cli) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) - Developer tooling: Go CLI whose rank command asks one Jev `Score` per item per weighted dimension of a YAML spec in a single request and sums weight times score in code to order the items, with noul, choice and score commands that turn a threshold into exit code 10 for shell scripts and CI.
+- [Paper Radar](https://github.com/Eliot5566/JEV-Paper-Radar) - Research: scores every new arXiv and bioRxiv paper against plain-English interests with one Noul each and publishes the top picks as a daily page and RSS feed.
 
 ### Agent Decisions
 
