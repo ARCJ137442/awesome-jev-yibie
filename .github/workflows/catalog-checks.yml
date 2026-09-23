@@ -1,0 +1,59 @@
+name: Catalog checks
+
+# README.md is generated from the category files by scripts/build-readme.py.
+# This job regenerates it and fails if the result differs from what is committed,
+# so a hand-edited README or a forgotten regeneration is caught in review rather
+# than silently reverted by the next person who runs the script.
+
+on:
+  pull_request:
+    paths:
+      - "categories/**"
+      - "scripts/build-readme.py"
+      - "tags.json"
+      - "README.md"
+      - "CONTRIBUTING.md"
+      - "scripts/audit-tags.py"
+  push:
+    branches: [main]
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Regenerate README
+        run: |
+          set -o pipefail
+          python3 scripts/build-readme.py 2>&1 | tee build.log
+
+      - name: Fail on unknown tags
+        run: |
+          if grep -q "unknown tag" build.log; then
+            echo "::error::A category file uses a tag value that is not in the vocabulary."
+            echo "The generator drops unknown tags, so the badge would silently go missing."
+            grep "unknown tag" build.log
+            exit 1
+          fi
+
+      - name: Fail on drift
+        run: |
+          # CONTRIBUTING.md is only rewritten once the vocabulary table is
+          # generated; until then this simply never differs.
+          if ! git diff --quiet -- README.md CONTRIBUTING.md; then
+            echo "::error::A generated file does not match its sources."
+            echo "Edit the category file or tags.json, then run:"
+            echo "  python3 scripts/build-readme.py"
+            echo "and commit the regenerated files."
+            git diff -- README.md CONTRIBUTING.md
+            exit 1
+          fi
+          echo "Generated files are in sync with their sources."
+
+      - name: Audit tags against entry text
+        run: python3 scripts/audit-tags.py categories
