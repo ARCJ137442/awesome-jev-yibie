@@ -71,7 +71,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Calibration & Research](categories/calibration-research.md) — 26 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 58 entries
 - [Game & Simulation](categories/game-simulation.md) — 18 entries
-- [Finance & Trading](categories/finance-trading.md) — 4 entries
+- [Finance & Trading](categories/finance-trading.md) — 5 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 7 entries
 - [Related Practices / Discussions](categories/related-practices-discussions.md) — 71 entries
@@ -443,6 +443,7 @@ Source file: [`categories/finance-trading.md`](categories/finance-trading.md)
 - [jev_stock](https://github.com/sosopop/jev_stock) - Short-term forecasting: experimental Hong Kong stock framework that turns structured market state into a Jev decision on price direction, with a backtest script for the first trading day.
 - [jev-trade](https://github.com/aowang-ai/jev-trade) - Crypto trading: asks Jev for a Choice of long or short on a Hyperliquid market each round, places that order, and runs the same loop across many assets.
 - [Jev X Sentiment Analysis](https://github.com/brainstormity/Jev-X-Sentiment-Analysis) - Crypto decision support: ingests 50-1,000 tweets per request through statistical pre-processing and SQLite deduplication, then has Jev turn the surviving evidence into a decision card with entry ranges, stop losses, and targets, without executing trades.
+- [jev-guard](https://github.com/klauswg/jev-guard) - Exchange risk operations: screens crypto exchange deposits and withdrawals with Jev triage (risk level, behavioral pattern, freeze probability) while hard rules veto and Java composes the final action, with a published 100-sample three-column calibration against a rules-only baseline.
 
 ### Compliance & Legal
 
