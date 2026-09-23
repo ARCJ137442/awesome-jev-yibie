@@ -190,7 +190,7 @@ Vocabulary, generated from [`tags.json`](tags.json) — add a value there, and r
 | Key | Values |
 | --- | --- |
 | `agent` | `multi`, `claude-code`, `pi`, `codex`, `cursor`, `cline` |
-| `type` | `api`, `cli`, `proxy`, `plugin`, `library`, `hosted`, `self-hosted` |
+| `type` | `api`, `cli`, `proxy`, `plugin`, `library`, `hosted`, `self-hosted`, `extension` |
 <!-- tags:end -->
 
 Rules:
