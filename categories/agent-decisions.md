@@ -10,6 +10,8 @@ Use this category for programs where Jev supplies the decision step inside an ag
 
 ## Entries
 
+- [Learn Jev end to end](https://github.com/harshithsunku/learn-jev-end-to-end) - Developer education: a 12-notebook Python course whose hand-rolled agent loop asks Jev a `Choice` (allow / ask / block) with `Noul` irreversibility and exfiltration checks before every tool call, sends ask verdicts to a human and fails closed on errors, and adds a `Choice` model router with a confidence fallback and a `Noul` "am I done?" gate, each measured against labeled fixtures.
+
 - [Hermes JIT Context OS](https://github.com/wojciechwiesner/jit-context) - Coding agents: uses Jev as a sub-millisecond System 1 Epistemic Gate and Domain Router to score AST relevance, test proofs, and tool targets, cutting autonomous agent turns by 31.3% and blind file exploration by 52.6% on SWE-bench with fail-open circuit-breaker resilience.
 
 - [Jev by Example](https://github.com/ReallyArtificial/jev-by-example) - Agent development: runnable JavaScript lessons use Jev Choice, Score, and Noul judgments for memory reconciliation, recovery proposals, and handoff checks, with explicit application policies, offline fixtures, and opt-in live calls.
