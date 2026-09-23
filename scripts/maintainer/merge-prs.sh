@@ -144,6 +144,30 @@ rebase_push_merge() {
       && info "已补建 README 提交（让分支自身通过 CI）"
   fi
 
+  # 条目之间的空行会把 markdown 列表拆成两段（#190 就是这样：贡献者在条目前多留了一行，
+  # 渲染成两个列表）。CI 的漂移检查抓不到它，因为重新生成的 README 带着同样的空行。
+  python3 - <<'PYNORM'
+import glob
+for p in glob.glob("categories/*.md"):
+    ls = open(p).read().split("\n")
+    out = []
+    for i, l in enumerate(ls):
+        if l.strip() == "":
+            prev = next((x for x in reversed(out) if x.strip()), "")
+            nxt = next((x for x in ls[i + 1:] if x.strip()), "")
+            if prev.startswith("- [") and nxt.startswith("- ["):
+                continue
+        out.append(l)
+    if out != ls:
+        open(p, "w").write("\n".join(out))
+        print(f"  · 已压掉条目间空行: {p}")
+PYNORM
+  if ! git diff --quiet -- categories/; then
+    git add -A
+    git commit -q -m "chore: drop blank lines between entries" 2>/dev/null \
+      && info "已压掉条目之间的空行并提交"
+  fi
+
   # 合并前闸门：在分支上跑与 CI 相同的检查。不通过就不合并，留给作者修 ——
   # 否则 main 会变红，再由人工回头修（2026-09-23 的跨分类重复 + 标签错配就是这样发生的）。
   local check_out audit_out
