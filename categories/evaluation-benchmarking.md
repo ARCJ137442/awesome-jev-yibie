@@ -11,7 +11,6 @@ Use this category for programs where Jev judges model or system outputs — eval
 ## Entries
 
 - [Jev Web Analyzer](https://github.com/replynodes/jev-web-analyzer) - Product evaluation: analyzes a public SaaS landing page as clean Markdown and asks Jev ten bounded `Choice` questions about first-visit understanding, returning inspectable findings for the first change to make.
-
 - [Jev Playground](https://github.com/hegargarcia/jev-playground) - Model evaluation: benchmarks Jev against Luna, Haiku, and Gemini at choosing validated legal moves in explicit-state games, scoring decision quality and consistency across a sequence of moves.
 - [Jev vs Mistral and Gemini for event validation](https://nearhere.events/blog/typesafe-jev-mistral-gemini-event-validation) - Event discovery: head-to-head test of Jev against Mistral Small and Gemini Flash-Lite at validating local event listings.
 - [jev-research-eval](https://github.com/jgridifier/jev-research-eval) - Research automation: reproducible eval harness plus field note for Jev Ultrafast research-browser tasks, with QC'd cases, a suite runner, and a report generator.
@@ -25,7 +24,6 @@ Use this category for programs where Jev judges model or system outputs — eval
 - [minutes](https://github.com/silverstein/minutes) - Meeting notes: local-first transcription app whose live voice path runs its evaluations through Jev.
 - [jev-orderby-bench](https://github.com/yodablocks/jev-orderby-bench) - Model evaluation: measures whether a SQL ORDER BY over a Jev probability is defensible (pairwise inversion, Score ordinality against a human grade, calibration, wording invariants, sort-key ties) under a pre-registered gate that jev-1.13.0 passes on 20 Newsgroups topics and fails four of six conditions on Amazon ESCI product relevance, and shows a DuckDB extension's default 40-row batching fails the ranking gate that one row per request passes.
 - [jev-ood-calibration](https://github.com/scienthoon/jev-ood-calibration) - Model evaluation: independent calibration test of Jev on 900 rule-generated support tickets it cannot have seen plus three public benchmarks, publishing every raw response, ECE against a simulated noise floor, temperature refit, and the per-type sign of miscalibration (Choice and Score overconfident, Boolean underconfident).
-
 - [ASSAY-001](https://github.com/jourdanlabs/assay-001) - Independent pre-registered check of Jev calibration and type safety on Banking77 / CLINC150. Split verdict, full logs. Write-up: [donttrustme.ai](https://donttrustme.ai/assay-001.html)
 - [BTK audit studies](https://boringtoolskit.com/blog/seo-audit-cost-2026/) - Content & growth: Jev striking-distance triage ranks SEO fixes and drives study pages; 1,204 pages judged per run, 4,816 judgments in under 3 minutes, $0.0048 per 12-query batch.
 - [Can Jev Be a Better Agent Evaluator?](https://www.langchain.com/blog/jev-agent-evals-langsmith) - Agent evaluation: LangChain compares Jev against LLM judges on accuracy, repeatability, latency and cost, concluding Jev is the cheaper and more consistent judge for online evals.
