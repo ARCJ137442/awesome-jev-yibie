@@ -65,7 +65,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 28 entries
 - [Scoring & Ranking](categories/scoring-ranking.md) — 26 entries
-- [Agent Decisions](categories/agent-decisions.md) — 40 entries
+- [Agent Decisions](categories/agent-decisions.md) — 41 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 26 entries
 - [Calibration & Research](categories/calibration-research.md) — 26 entries
@@ -275,6 +275,7 @@ Source file: [`categories/agent-decisions.md`](categories/agent-decisions.md)
 - [DeepSearcher stopping-policy experiment](https://github.com/zilliztech/deep-searcher/blob/master/evaluation/jev_stopping/README.md) - Agentic search: a standalone evaluation uses Jev Noul judgments on accumulated evidence to decide whether to stop or continue within a search-round budget, comparing stopping behavior, evidence recall, and decision cost.
 
 - [OmniJev](https://github.com/shapsider/OmniJev) - Embodied robotics: a Jev-style finite-choice interface that feeds dual-camera images and text to a self-hosted multimodal model and takes the next preset skill for a MuJoCo arm as one typed choice, where released episodes finish transfer, stack and barrier tasks in 13 decisions and 39 output tokens each, 208/208 non-audio probe requests answer correctly, unobservable inputs come back "insufficient evidence" instead of a guess, and four public benchmark pilots hold accuracy equal to a direct short answer while cutting decision latency 6.8–13.6× and total tokens 51–86% (audio input is wired in the client but rejected by the current backend).
+- [neo4jev](https://github.com/jexp/neo4jev) - Graph navigation: navigates a Neo4j knowledge graph hop-by-hop using Jev Choice over candidate outgoing relationships and Noul to detect goal completion, using beam search over answer log-probabilities.
 
 ### Data Labeling & Curation
 
