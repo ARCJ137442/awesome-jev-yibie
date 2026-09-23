@@ -68,7 +68,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Agent Decisions](categories/agent-decisions.md) — 40 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 24 entries
-- [Calibration & Research](categories/calibration-research.md) — 23 entries
+- [Calibration & Research](categories/calibration-research.md) — 24 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 58 entries
 - [Game & Simulation](categories/game-simulation.md) — 18 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
@@ -331,6 +331,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [jevinci](https://github.com/achimala/jevinci) - Creative experiment: paints images by having Jev predict every pixel's colour in parallel, with predicted confidence deciding how wide each stroke is drawn.
 - [jev-local](https://github.com/us/jev-local) - Local reproduction: Jev-compatible `POST /v1/systemone` server answering typed `Choice`/`Score`/`Noul` questions with confidence from open weights, verified as an official-SDK drop-in with temperature-fit calibration (set3 n=1316, 0.83 overall).
 - [LitJev](https://github.com/zhengxuyu/litjev) - Local reproduction: a reproduction of Jev that turns any Qwen model into a fast decision model, serving the same `/v1/systemone` schema (Choice, Score, Noul) with no training and no generated answer text.
+- [ruling](https://github.com/bradAGI/ruling) - Local reproduction: Jev-compatible `POST /v1/systemone` server that reads typed `Choice`/`Score`/`Noul` answers from the logits of any MLX checkpoint or OpenAI-compatible endpoint with no training, works as a drop-in for the official SDK, and replays Jev's published answers on 256 public judgments (231 vs Jev's 238, McNemar p = 0.21).
 - [CUA-S1-FORMS](https://huggingface.co/cua-ai/cua-s1-forms) - Specialist decision model: a 706,048-parameter, 2.8 MB jev-like option scorer that rates FILL / CHECK / CLICK / SKIP for each form field in one parallel pass, reporting 99.7% on its own form-filling eval against Jev's 83.6% - a specialist on home turf rather than a general win.
 - [jevlike](https://github.com/vinnylarouge/jevlike) - Training library: build a small model that chooses among a changing list of text options and returns one probability per option in a single pass - the base CUA-S1-FORMS was built on.
 - [jevbetter](https://github.com/olanotolu/jevbetter) - Improved scorer: a stronger one-pass scorer over a variable list of text options, using a hashed n-gram encoder, rival-aware attention, and gated heads.
