@@ -12,7 +12,7 @@ Use this category for programs where Jev sorts incoming state into categories or
 
 - [Diffusion Jev](https://github.com/Hangzhi/diffusion-jev-sglang) - Visual classification: independent Jev-style DiffusionGemma/SGLang server that selects doodle and flower labels from image pixels with typed Choice questions and displays candidate scores in a drawing playground, with public evaluation artifacts and uncalibrated probabilities.
 - [Notra](https://github.com/usenotra/notra) - Marketing analytics: production GEO platform whose `NOTRA_JEV_CLASSIFIERS` flag routes brand-visibility classifiers off an LLM and onto Jev `Boolean` decisions at a 0.5 threshold, targeting 300 ms p50.
-- [jev-router](https://github.com/gargpratyush/jev-router) `{agent: claude-code}` - Developer tooling: routes Claude Code tasks to the cheapest capable model by asking Jev to choose among candidates.
+- [jev-router](https://github.com/gargpratyush/jev-router) `{agent: multi}` - Developer tooling: routes Claude Code tasks to the cheapest capable model by asking Jev to choose among candidates.
 - [jev-router (prismhq)](https://github.com/prismhq/jev-router) - LLM infrastructure: open-source LiteLLM-based router where a Jev decision picks which model serves each request.
 - [pi-jev-router](https://github.com/mejiasd3v/pi-jev-router) `{agent: pi}` - Coding agents: adds automatic per-request model routing to the Pi coding agent through Jev decisions on Vercel AI Gateway.
 - [jcm-router](https://github.com/adarshmishra07/jcm-router) - Coding agents: local proxy that picks the Claude model and reasoning effort per message with a Jev decision while leaving the cached main chat untouched.
