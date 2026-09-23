@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 26 entries
 - [Calibration & Research](categories/calibration-research.md) — 26 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 58 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 59 entries
 - [Game & Simulation](categories/game-simulation.md) — 18 entries
 - [Finance & Trading](categories/finance-trading.md) — 5 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -413,6 +413,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [discern](https://github.com/doeixd/discern) - TypeScript ecosystem: Effect library where a Jev `Choice`, `Noul` or `Score` answer becomes a typed branch under caller-supplied thresholds, anything below them takes an `Uncertain` case the compiler forces you to handle, and procedure routing skips the model call entirely when deterministic predicates leave one candidate.
 - [jeff](https://github.com/logan-markewich/jeff) - Self-hosted runtimes: self-hosted drop-in replacement for TypeSafe Jev powered by GliFormer, exposing native Choice, Score, and Noul decision endpoints without cloud API dependencies.
 - [CloJev](https://github.com/antlobach/clojev) - Clojure ecosystem: unofficial portable Clojure SDK for System One, so Clojure applications can put typed questions to Jev without a Java interop layer.
+- [hunch](https://github.com/steven-shoemaker/hunch) - Python and TypeScript ecosystem: libraries that turn Jev Choice, Score, and Noul questions into functions over lists and DataFrames (classify, score, check, where, extract, pick, rank, verify), with request deduplication, caching, and optional escalation of unsure rows to an LLM that must pick from the same labels; TypeScript port at [hunch-js](https://github.com/steven-shoemaker/hunch-js).
 
 ### Game & Simulation
 
