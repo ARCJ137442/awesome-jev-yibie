@@ -53,7 +53,7 @@
           "definition": "Sits between a client and a model endpoint, serving requests. A library that merely picks a model is not a proxy."
         },
         "plugin": {
-          "definition": "An add-on to a coding agent. Distinguished from a browser add-on by its host."
+          "definition": "An add-on to a coding agent. Not a browser add-on, which is `extension`."
         },
         "library": {
           "definition": "Imported into another program."
@@ -63,6 +63,9 @@
         },
         "self-hosted": {
           "definition": "Runs as a service you operate yourself."
+        },
+        "extension": {
+          "definition": "An add-on to a browser. Not an add-on to a coding agent, which is `plugin`, and not an editor extension whose only role is to host an agent."
         }
       }
     }
