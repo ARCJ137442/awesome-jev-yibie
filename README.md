@@ -74,7 +74,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Finance & Trading](categories/finance-trading.md) — 5 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 7 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 71 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 72 entries
 
 ### Open categories still being seeded
 
@@ -552,6 +552,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [Why I couldn't build Jev at OpenAI](https://www.youtube.com/watch?v=cFx9Z3ZXca0) - Video: Diogo Almeida's talk on why this had to be a separate company, the closest thing to a design rationale for System One models.
 - [TypeSafe's Jev Can't See. I Made It Guess What I Drew Anyway](https://mikulskibartosz.name/typesafe-jev-guess-what-i-drew) - Blog: a drawing-guessing experiment that probes what a model with no image input can still recover from a text description of a sketch.
 - [Spike: Jev as a judgement layer to cut model cost](https://github.com/open-orcha/orcha/issues/253) - Issue: a multi-agent orchestration platform plans to move judgment out of its model-of-thought and onto Jev, framed as cutting cost while holding quality.
+- [Awesome Jev Robustness](https://github.com/Yifan-Lan/awesome-jev-robustness) - Curated list: 109 independent tests of Jev's calibration, consistency, prompt injection, abstention and failure modes, grouped by what they measured, each with model version and sample size.
 
 ## Submission format
 
