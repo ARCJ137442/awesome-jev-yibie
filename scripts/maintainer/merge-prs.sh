@@ -119,6 +119,16 @@ rebase_push_merge() {
   fi
   info "rebase 完成（${round} 轮冲突）"
 
+  # 让分支自身满足 CI。PR 只改分类文件时 README 会落后于分类文件，直接合并会在 main 上
+  # 留下一次失败的漂移检查（catalog-checks.yml），虽然 sync_readme 几秒后能补上，
+  # 但每个这类 PR 都会在 main 上留一个红叉。在分支上先补建，合并就能落地即绿。
+  python3 scripts/build-readme.py >/dev/null 2>&1 || true
+  if [ -n "$(git status --porcelain)" ]; then
+    git add -A
+    git commit -q -m "chore: regenerate README so this branch satisfies catalog-checks" 2>/dev/null \
+      && info "已补建 README 提交（让分支自身通过 CI）"
+  fi
+
   remote="fork-$(echo "$fork" | tr '/' '-')"
   url="git@github.com:$fork.git"
   git remote get-url "$remote" >/dev/null 2>&1 || git remote add "$remote" "$url"
