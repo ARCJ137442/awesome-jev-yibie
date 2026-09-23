@@ -69,7 +69,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 26 entries
 - [Calibration & Research](categories/calibration-research.md) — 27 entries
-- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 63 entries
+- [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 64 entries
 - [Game & Simulation](categories/game-simulation.md) — 18 entries
 - [Finance & Trading](categories/finance-trading.md) — 5 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
@@ -427,6 +427,7 @@ Source file: [`categories/infra-sdks-integrations.md`](categories/infra-sdks-int
 - [spring-ai-typesafe](https://github.com/spring-ai-community/spring-ai-typesafe) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) - Java ecosystem: Java SDK for TypeSafe AI's Jev API and Spring AI integration, providing typed decisions for evaluation as a judge, guardrails, and RAG post-processing.
 - [JevFlow](https://github.com/Mawfyy/jevflow) ![type: library](https://img.shields.io/badge/type-library-4B5563?style=flat-square) - TypeScript ecosystem: composes Jev `Noul`, `Score`, and `Choice` decisions into deterministic threshold workflows that batch into a single `systemOne` call and return an ordered, explainable action set instead of side effects, with matched rules recording the actual value behind each action and a mock provider so policy tests run without an API key.
 - [stuntd](https://github.com/bladedevoff/stuntd) ![agent: Claude Code](https://img.shields.io/badge/agent-Claude%20Code-C1512C?style=flat-square) ![type: proxy](https://img.shields.io/badge/type-proxy-4B5563?style=flat-square) - Local runtime / learning proxy: Jev-compatible local server on Laya that also proxies a Jev upstream, records every `Choice`, `Score` and `Noul` decision, trains a head per decision site, and answers live with calibrated confidence, falling back to the upstream below its threshold and demoting itself on drift; measured 22 ms per decision and 90% of support-triage questions answered locally at a 0.99 agreement target.
+- [Jev AI Tools](https://jevai.tools/) ![type: hosted](https://img.shields.io/badge/type-hosted-4B5563?style=flat-square) - Developer education: hosts six bounded recipes plus a custom builder for AI SDK `Choice`, `Score`, and `Boolean` evaluations; recipes display answer probabilities separately from provider confidence and use deterministic local thresholds to pause uncertain routes for review, while every configuration exports as TypeScript.
 
 ### Game & Simulation
 
