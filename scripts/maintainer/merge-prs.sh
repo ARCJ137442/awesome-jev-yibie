@@ -74,14 +74,29 @@ sync_readme() {
 }
 
 # 解当前一轮冲突：README 重新生成，分类文件保留 main 侧并补上本 PR 的条目行
+# 取 PR 在【指定文件】里新增的条目行。早期版本取全 diff 的第一条再加到每个冲突文件上，
+# 结果是多分类 PR 会把同一条复制到多个分类（跨分类重复），甚至把 README 的渲染行
+# （带 shields.io badge）写进分类文件。必须按 hunk 归属取。
+added_line_for() {
+  local n="$1" target="$2"
+  gh pr diff "$n" 2>/dev/null | awk -v tgt="$target" '
+    /^diff --git / { inblk = ($0 ~ tgt); next }
+    inblk && /^\+- \[/ { sub(/^\+/, ""); print; exit }
+  '
+}
+
 resolve_round() {
   local n="$1" added conflicted
-  added=$(gh pr diff "$n" 2>/dev/null | grep -E '^\+- \[[^]]+\]\(https?://' | head -1 | sed 's/^+//')
   conflicted=$(git diff --name-only --diff-filter=U)
   [ -z "$conflicted" ] && return 1
   for f in $conflicted; do
     [ "$f" = "README.md" ] && continue
     git checkout --ours -- "$f" 2>/dev/null
+    added=$(added_line_for "$n" "$f")
+    if printf '%s' "$added" | grep -q "img.shields.io"; then
+      info "  ⚠ $f 取到的是 README 渲染行，已跳过（分类文件必须用源码标签形式）"
+      added=""
+    fi
     if [ -n "$added" ] && ! grep -qF -- "$added" "$f" 2>/dev/null; then
       printf '%s\n' "$added" >>"$f"
     fi
@@ -127,6 +142,22 @@ rebase_push_merge() {
     git add -A
     git commit -q -m "chore: regenerate README so this branch satisfies catalog-checks" 2>/dev/null \
       && info "已补建 README 提交（让分支自身通过 CI）"
+  fi
+
+  # 合并前闸门：在分支上跑与 CI 相同的检查。不通过就不合并，留给作者修 ——
+  # 否则 main 会变红，再由人工回头修（2026-09-23 的跨分类重复 + 标签错配就是这样发生的）。
+  local check_out audit_out
+  check_out=$(python3 scripts/build-readme.py 2>&1)
+  if printf '%s' "$check_out" | grep -q "duplicate sources"; then
+    info "✗ 该 PR 造成跨分类重复，已拦下（不合并）："
+    printf '%s\n' "$check_out" | grep -A3 "duplicate sources" | head -5 | sed 's/^/    /'
+    return 1
+  fi
+  audit_out=$(python3 scripts/audit-tags.py categories 2>&1)
+  if printf '%s' "$audit_out" | grep -qiE "does not mention|unsupported"; then
+    info "✗ 标签与条目文本不一致，已拦下（不合并）："
+    printf '%s\n' "$audit_out" | grep -iE "does not mention|unsupported" | head -3 | sed 's/^/    /'
+    return 1
   fi
 
   remote="fork-$(echo "$fork" | tr '/' '-')"
