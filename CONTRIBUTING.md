@@ -203,6 +203,8 @@ Rules:
 
 Unknown or misspelled tags are reported by `scripts/build-readme.py` and dropped from the render, so a typo fails loudly rather than silently.
 
+Maintainers can ask Jev for a second opinion with `scripts/jev-ray.py` (issue #154): it reads each linked repository, asks typed questions whose options are the values above, and reports tags it would add and hand tags it disagrees with. It never overrides a hand tag, and `patch` only adds tags that `scripts/audit-tags.py` will accept. `python3 scripts/jev-ray.py evaluate` measures it against the entries already tagged by hand.
+
 ## Where to place entries
 
 Add entries to exactly one of these category files:

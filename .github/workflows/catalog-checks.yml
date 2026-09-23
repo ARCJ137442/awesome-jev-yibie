@@ -14,14 +14,23 @@ on:
       - "README.md"
       - "CONTRIBUTING.md"
       - "scripts/audit-tags.py"
+      - "scripts/jev-ray.py"
+      - "scripts/tests/**"
   push:
     branches: [main]
 
 jobs:
   check:
     runs-on: ubuntu-latest
+    env:
+      # Secrets cannot appear in a step `if`, so expose only whether one is set.
+      # Pull requests from forks never receive secrets, and the scan step skips.
+      HAS_JEV_KEY: ${{ secrets.TYPESAFE_API_KEY != '' }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          # jev-ray compares the branch with its base to find submitted entries.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -57,3 +66,17 @@ jobs:
 
       - name: Audit tags against entry text
         run: python3 scripts/audit-tags.py categories
+
+      - name: Test jev-ray (offline)
+        run: python3 -m unittest discover -s scripts/tests
+
+      # Asks Jev about the repositories of entries this pull request adds or edits
+      # and reports, as annotations on the diff, tags it would add and hand tags
+      # it disagrees with. It never fails the job and never edits a file: the
+      # hand tag wins, and the disagreement is for the reviewer to read (#154).
+      - name: Scan submitted entries with jev-ray
+        if: github.event_name == 'pull_request' && env.HAS_JEV_KEY == 'true'
+        env:
+          TYPESAFE_API_KEY: ${{ secrets.TYPESAFE_API_KEY }}
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/jev-ray.py check --changed-since "origin/${{ github.base_ref }}" --no-cache

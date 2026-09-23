@@ -8,3 +8,4 @@ __pycache__/
 *.pyc
 scripts/update-awesome-jev.env
 AUTOMATION.local.md
+.jev-ray/
