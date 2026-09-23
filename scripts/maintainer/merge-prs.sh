@@ -26,6 +26,13 @@ set -uo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 cd "$REPO_ROOT" || exit 1
 
+# 本脚本在同步 main 时会 `git reset --hard`，未提交的改动会被静默抹掉。
+if [ -n "$(git status --porcelain)" ]; then
+  echo "✗ 工作区有未提交改动 —— 本脚本同步 main 时会 git reset --hard，会丢失它们。"
+  echo "  请先提交或 git stash，再跑本脚本。"
+  exit 1
+fi
+
 PRS=("$@")
 if [ ${#PRS[@]} -eq 0 ]; then
   mapfile -t PRS < <(gh pr list --state open --limit 100 --json number -q '.[].number' | sort -n)
@@ -124,10 +131,23 @@ rebase_push_merge() {
     info "✗ 推送失败（可能无权限或 fork 已删）"; return 1
   fi
 
-  if wait_mergeable "$n" && gh pr merge "$n" --merge \
-      --subject "Merge pull request #$n from $fork" >/dev/null 2>&1; then
-    info "✓ rebase 后合并"
-    return 0
+  if wait_mergeable "$n"; then
+    local merge_err
+    merge_err=$(gh pr merge "$n" --merge \
+      --subject "Merge pull request #$n from $fork" 2>&1) && {
+      info "✓ rebase 后合并"
+      return 0
+    }
+    # 把真实错误露出来。权限类错误（fork PR 改 .github/workflows/ 需要 token 的
+    # workflow scope）重试多少轮都不会自愈，必须改走本地 merge + SSH push。
+    info "✗ 合并失败：$(echo "$merge_err" | head -2 | tr '\n' ' ')"
+    case "$merge_err" in
+      *workflow*scope*|*workflows/*)
+        info "  → token 无 workflow scope。改走本地合并："
+        info "     git fetch -f origin pull/$n/head:pr$n && git merge --no-ff pr$n && git push origin main"
+        return 2
+        ;;
+    esac
   fi
   info "✗ 合并失败（多为 main 又前进了）"
   return 1

@@ -126,6 +126,14 @@ Maintainers may accept a project with a caveat when the code is real but depth i
 - If the repository is mostly prompt documents, is it submitted and described as a skill rather than as a tool?
 - Do the numbers in the entry trace back to the linked page?
 
+### 7. Use Jev's names for Jev's question types
+
+An entry that names a Jev question type uses the vendor's three names — `Choice`, `Score`, `Noul`.
+
+`Noul` in particular is not "Boolean". It returns the probability that a statement is true, from 0 to 1, and your code supplies the threshold. A `Noul` also needs no separate confidence score: with two outcomes the probability already describes the whole distribution, so there is nothing left for a second number to add. `Choice` and `Score` do carry one.
+
+A project that renames the shape in its own API keeps its own name when the entry describes that API. The Vercel AI SDK, for example, exposes the `Noul` shape as `Boolean`, so an entry about an AI SDK wrapper may legitimately say `Boolean`. Name the layer you are describing.
+
 ## Entry format
 
 Use this exact format:
