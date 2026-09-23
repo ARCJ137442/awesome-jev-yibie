@@ -74,7 +74,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Finance & Trading](categories/finance-trading.md) — 5 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 7 entries
-- [Related Practices / Discussions](categories/related-practices-discussions.md) — 72 entries
+- [Related Practices / Discussions](categories/related-practices-discussions.md) — 73 entries
 
 ### Open categories still being seeded
 
@@ -553,6 +553,7 @@ Source file: [`categories/related-practices-discussions.md`](categories/related-
 - [TypeSafe's Jev Can't See. I Made It Guess What I Drew Anyway](https://mikulskibartosz.name/typesafe-jev-guess-what-i-drew) - Blog: a drawing-guessing experiment that probes what a model with no image input can still recover from a text description of a sketch.
 - [Spike: Jev as a judgement layer to cut model cost](https://github.com/open-orcha/orcha/issues/253) - Issue: a multi-agent orchestration platform plans to move judgment out of its model-of-thought and onto Jev, framed as cutting cost while holding quality.
 - [Awesome Jev Robustness](https://github.com/Yifan-Lan/awesome-jev-robustness) - Curated list: 109 independent tests of Jev's calibration, consistency, prompt injection, abstention and failure modes, grouped by what they measured, each with model version and sample size.
+- [jevbooks: 16 Jev design patterns](https://jevbooks.com/en/patterns) - Site: a bilingual gallery of 500+ open-source Jev projects in which Jev itself gates and tags every listing from its README, plus sixteen design patterns read out of ten codebases (Thermostat, Blind review, Flight recorder), each page a problem, a solution, and the recognition question the pipeline sends.
 
 ## Submission format
 
