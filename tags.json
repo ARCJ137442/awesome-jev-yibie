@@ -1,0 +1,70 @@
+{
+  "$comment": "Single source for the entry tag vocabulary (issue #138). Read by scripts/build-readme.py, which also regenerates the vocabulary table in CONTRIBUTING.md between its tags markers. Add a value here, nowhere else.",
+  "axes": {
+    "agent": {
+      "$comment": "`opencode` was here until 2026-09-22. It entered the vocabulary from a misread: a scan took \"OpenCode Zen's free tier\" in the jev-agent-skill description for the OpenCode coding agent, but that is the LLM gateway the project routes through. That entry has always been tagged claude-code, and no entry ever used an opencode tag. Add it back when a real OpenCode project appears (see issue #154).",
+      "description": "The coding agent an entry targets. Colours are anchored on the vendor's brand colour where there is one, then darkened until white badge text clears WCAG AA; the raw brand colours do not (Anthropic clay #D97757 carries white text at 2.9:1).",
+      "values": {
+        "multi": {
+          "label": "Multi",
+          "color": "1F6FEB",
+          "definition": "Explicitly supports several coding agents, or is built to be agent-agnostic. Not merely a library that any agent could call."
+        },
+        "claude-code": {
+          "label": "Claude Code",
+          "color": "C1512C",
+          "anchor": "Anthropic clay #D97757",
+          "definition": "Targets Anthropic's Claude Code. Not the Claude models in general, which many entries call without targeting the agent."
+        },
+        "pi": {
+          "label": "Pi",
+          "color": "8250DF",
+          "definition": "Targets the Pi coding agent. A name beginning with pi- is not on its own evidence, and neither is the word pi in prose."
+        },
+        "codex": {
+          "label": "Codex",
+          "color": "0D8668",
+          "anchor": "OpenAI green #10A37F",
+          "definition": "Targets OpenAI's Codex. Not a codex in the ordinary sense of a rulebook or reference document."
+        },
+        "cursor": {
+          "label": "Cursor",
+          "color": "BF3989",
+          "definition": "Targets the Cursor editor. Not the database or text cursor of the same name."
+        },
+        "cline": {
+          "label": "Cline",
+          "color": "996C00",
+          "definition": "Targets the Cline coding agent."
+        }
+      }
+    },
+    "type": {
+      "description": "How the project is consumed. The whole axis shares one neutral grey: only the agent axis carries hue, so 'which agent' stays scannable and a two-badge entry does not read as two equal claims.",
+      "color": "4B5563",
+      "values": {
+        "api": {
+          "definition": "Exposes an API other programs call over the network. A library with a public interface is a library."
+        },
+        "cli": {
+          "definition": "Run from the command line."
+        },
+        "proxy": {
+          "definition": "Sits between a client and a model endpoint, serving requests. A library that merely picks a model is not a proxy."
+        },
+        "plugin": {
+          "definition": "An add-on to a coding agent. Distinguished from a browser add-on by its host."
+        },
+        "library": {
+          "definition": "Imported into another program."
+        },
+        "hosted": {
+          "definition": "Runs as a service someone else operates."
+        },
+        "self-hosted": {
+          "definition": "Runs as a service you operate yourself."
+        }
+      }
+    }
+  }
+}

@@ -174,12 +174,16 @@ An entry may carry an optional tag block between the link and the separator. The
 
 Most entries carry none, and that is the normal case — roughly one entry in ten names a coding agent at all. The block sits before the separator rather than at the end of the line so that the `- [Name](URL) - Description` grammar stays intact and the tags stay readable in the source file, where descriptions wrap.
 
-Vocabulary:
+Vocabulary, generated from [`tags.json`](tags.json) — add a value there, and run
+`python3 scripts/build-readme.py` to refresh this table:
 
+<!-- tags:start -->
+<!-- Generated from tags.json by scripts/build-readme.py. Edit tags.json, not this table. -->
 | Key | Values |
 | --- | --- |
 | `agent` | `multi`, `claude-code`, `pi`, `codex`, `cursor`, `cline` |
 | `type` | `api`, `cli`, `proxy`, `plugin`, `library`, `hosted`, `self-hosted` |
+<!-- tags:end -->
 
 Rules:
 

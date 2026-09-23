@@ -22,11 +22,14 @@ Read these files before making changes:
 
 - `README.md`
 - `CONTRIBUTING.md`
+- `tags.json`
 - every file under `categories/`
 
 `README.md` is the homepage aggregate, not the primary editing surface.
 Update category files first, then refresh `README.md` from the current category files.
 Always use `scripts/build-readme.py` instead of hand-editing the aggregate.
+`tags.json` holds the entry tag vocabulary; the table in `CONTRIBUTING.md` is
+generated from it, so add a tag value there rather than to either document.
 
 ## Hard inclusion rules
 
