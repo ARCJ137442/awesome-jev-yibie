@@ -197,12 +197,11 @@ class Category:
 
 
 def github_anchor(title: str) -> str:
+    # Mirror GitHub's heading slugger: drop punctuation, then turn each space
+    # into a hyphen without collapsing runs, so "A & B" becomes "a--b".
     anchor = title.strip().lower()
-    anchor = re.sub(r"[^a-z0-9\- /]", "", anchor)
-    anchor = anchor.replace("/", "-")
-    anchor = re.sub(r"\s+", "-", anchor)
-    anchor = re.sub(r"-+", "-", anchor)
-    return anchor.strip("-")
+    anchor = re.sub(r"[^\w\- ]", "", anchor)
+    return anchor.replace(" ", "-")
 
 
 def pluralize(count: int) -> str:
