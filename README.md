@@ -64,7 +64,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Classification & Routing](categories/classification-routing.md) — 37 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
 - [Verification & Guardrails](categories/verification-guardrails.md) — 31 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 28 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 29 entries
 - [Agent Decisions](categories/agent-decisions.md) — 43 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 26 entries
@@ -234,6 +234,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [jeff](https://github.com/saembit/jeff-cli) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) - Developer tooling: Go CLI whose rank command asks one Jev `Score` per item per weighted dimension of a YAML spec in a single request and sums weight times score in code to order the items, with noul, choice and score commands that turn a threshold into exit code 10 for shell scripts and CI.
 - [Paper Radar](https://github.com/Eliot5566/JEV-Paper-Radar) - Research: scores every new arXiv and bioRxiv paper against plain-English interests with one Noul each and publishes the top picks as a daily page and RSS feed.
 - [jev-rental](https://github.com/klauswg/jev-suite/tree/main/jev-rental) - Consumer rental: sorts every claim in a rental listing into verify-on-site / demand-evidence / high-risk-pitch buckets to build a pre-viewing checklist with code-templated questions; 50-sample calibration reports 0.910 gated accuracy and 0/10 injection flips.
+- [Refix](https://refix.ai) - Growth: asks Jev a `Score` over each experiment result to decide whether it clears the promotion bar, and a `Choice` over candidate plays to decide what to run next in SEO, content, and ads.
 
 ### Agent Decisions
 
