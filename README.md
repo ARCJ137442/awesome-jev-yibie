@@ -70,7 +70,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 26 entries
 - [Calibration & Research](categories/calibration-research.md) — 27 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 66 entries
-- [Game & Simulation](categories/game-simulation.md) — 18 entries
+- [Game & Simulation](categories/game-simulation.md) — 19 entries
 - [Finance & Trading](categories/finance-trading.md) — 5 entries
 - [Compliance & Legal](categories/compliance-legal.md) — 1 entry
 - [Content Moderation](categories/content-moderation.md) — 7 entries
@@ -459,6 +459,7 @@ Source file: [`categories/game-simulation.md`](categories/game-simulation.md)
 - [Life Chess × Jev](https://github.com/ARCJ137442/jev-life) - Experimental game design: a turn-based Conway board where each side's move is one Jev `Boolean` per legal cell in a single request, with no heuristic fallback and a user-set confidence threshold flagging unsure turns; the game is new, so there is no established play to copy, and its rules are not self-evident — they render from editable templates with auto-filled placeholders, so a designer can rewrite a rule and re-ask.
 - [kNES](https://github.com/ArturSkowronski/kNES) - Gaming: a Kotlin NES emulator whose agent plays Super Mario Bros. and Final Fantasy through SemIf, the open implementation of the Jev interface, on a local Qwen3.5-4B reading the screen itself; the goals that apply this turn become the declared options of one typed `Choice`, so a button the game does not offer is impossible rather than unlikely, and 900 logged decisions at ~400 ms each on an M5 Pro never once answered off the menu.
 - [Laya vs Jev arena](https://github.com/PromptEngineer48/laya-vs-jev-arena) - Model comparison: races an open local model against Jev through Snake and a Mortal-Kombat-style arena, the same game code driving both.
+- [JEV-Star](https://github.com/sc2musa/Jev_Star) - Gaming: uses Jev `Choice` decisions for StarCraft II macro control and micromanagement on 35 SMAC-Hard maps, validates selections against available actions, and follows optional GPT-6 plans to separate frequent action selection from longer-term strategy.
 
 ### Finance & Trading
 
