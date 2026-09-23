@@ -68,7 +68,7 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 - [Agent Decisions](categories/agent-decisions.md) — 40 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 6 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 24 entries
-- [Calibration & Research](categories/calibration-research.md) — 24 entries
+- [Calibration & Research](categories/calibration-research.md) — 25 entries
 - [Infra / SDKs / Integrations](categories/infra-sdks-integrations.md) — 58 entries
 - [Game & Simulation](categories/game-simulation.md) — 18 entries
 - [Finance & Trading](categories/finance-trading.md) — 4 entries
@@ -344,6 +344,7 @@ Source file: [`categories/calibration-research.md`](categories/calibration-resea
 - [poorjev](https://github.com/rupeshpoojary9/poorjev) - Local reproduction: implements Jev's typed `Choice`/`Score`/`Noul` interface on commodity zero-shot NLI models and makes the confidence honest with temperature scaling and conformal abstention, shipping a reproducible calibration eval (ECE 0.170 to 0.071, cross-validated) that runs offline with no API key.
 - [openJev-verdict-2.0](https://github.com/Heman10x-NGU/openJev-verdict-2.0) - Open decision engine: a calibrated 151M non-autoregressive model that reports beating both TypeSafe Jev and Laya on typed-decision benchmarks, shipped with its own test suite.
 - [OpenDecision](https://github.com/deepanwadhwa/OpenDecision) - Open alternative: a local semantic decision engine that describes itself as the open-source equivalent of Jev, answering `Choice`, `Noul`, and `Score` questions from structured state and documents without a hosted call.
+- [TinyJev](https://github.com/ankit-aglawe/tinyjev) - Open alternative: a 596M pointer-head model that answers `Choice`, `Score`, and `Noul` in a single forward pass and returns calibrated confidence meant to be thresholded, so cases it is unsure about escalate to a human instead of being guessed; MLX-first on Apple Silicon, with a System One endpoint and weights on Hugging Face and ModelScope.
 
 ### Infra / SDKs / Integrations
 
