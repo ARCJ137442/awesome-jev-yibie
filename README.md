@@ -61,10 +61,10 @@ Found something wrong? Open an issue or a pull request — **removal is as valid
 
 ## Current coverage
 
-- [Classification & Routing](categories/classification-routing.md) — 36 entries
+- [Classification & Routing](categories/classification-routing.md) — 37 entries
 - [Adaptive & Realtime UI](categories/adaptive-realtime-ui.md) — 8 entries
-- [Verification & Guardrails](categories/verification-guardrails.md) — 28 entries
-- [Scoring & Ranking](categories/scoring-ranking.md) — 27 entries
+- [Verification & Guardrails](categories/verification-guardrails.md) — 30 entries
+- [Scoring & Ranking](categories/scoring-ranking.md) — 28 entries
 - [Agent Decisions](categories/agent-decisions.md) — 43 entries
 - [Data Labeling & Curation](categories/data-labeling-curation.md) — 7 entries
 - [Evaluation & Benchmarking](categories/evaluation-benchmarking.md) — 26 entries
@@ -151,6 +151,7 @@ Source file: [`categories/classification-routing.md`](categories/classification-
 - [Jevidence](https://github.com/peakevergreen/jevidence) - Developer education: Python sandbox asks Jev `Choice` and `Noul` questions about issue category and reproduction steps in opt-in live mode, then applies confidence and reproduction gates to propose a queue or review fallback without assigning the issue, with synthetic offline fixtures and policy tests.
 - [JevBystander](https://github.com/Nisaka520/JevBystander) - Messaging: Android accessibility app that reads the visible WeChat chat window and answers one batched request of typed `Choice`, `Score` and `Boolean` questions to sort the peer's message into intent (10 options), an emotion distribution (9 options), urgency (0-3 `Score`) and a suggested reply posture (11 options), then shows exactly three toasts and takes no other action - no generated reply, no input injection, no screenshot or OCR, with a local alias-to-relation table passed as state so the same sentence is judged differently for a partner than for a colleague.
 - [langchain-loadout](https://github.com/deyna256/langchain-loadout) - Agent infrastructure: per-turn skill routing for LangChain deepagents, where Jev ranks the SKILL.md catalog against the request and the recent conversation and verifies the top candidates, so only the picked skill's instructions reach the prompt; the judge is a protocol that a self-hosted model or static rules can implement instead.
+- [jev-rental](https://github.com/klauswg/jev-suite/tree/main/jev-rental) - Consumer rental: sorts every claim in a rental listing into verify-on-site / demand-evidence / high-risk-pitch buckets to build a pre-viewing checklist with code-templated questions; 50-sample calibration reports 0.910 gated accuracy and 0/10 injection flips.
 
 ### Adaptive & Realtime UI
 
@@ -197,6 +198,8 @@ Source file: [`categories/verification-guardrails.md`](categories/verification-g
 - [GeekLink Jev Subtitle Translator](https://github.com/GeekLinkDev/jev-subtitle-translator) - Subtitle translation: asks Jev a `Noul` review question for each translated subtitle line to flag omissions, changed meaning, names, numbers, negation, or other defects for human review before export.
 - [TryJevAI](https://tryjevai.com/) - Scheduling: public Jev playground uses a typed `Choice` with an explicit `Unresolved` option to distinguish a mentioned arrival time from an agreed meeting time, showing the returned probabilities and prompting for missing agreement before treating a time as settled.
 - [Agent Chaperone](https://github.com/agent-chaperone/agent-chaperone) - Agent safety: MCP proxy plus hooks that screen a tool call before it runs and a tool result before the agent reads it, with 45 test files behind it.
+- [jev-proof](https://github.com/klauswg/jev-suite/tree/main/jev-proof) - Creator sponsorship: verifies each sponsored ad segment in video subtitles against acceptance rules with one Jev `Noul`+`Choice` call per fact while deterministic code keeps the confidence gate; 90-sample calibration reports 0.922 gated accuracy and 0/15 injection flips.
+- [jev-fidelity](https://github.com/klauswg/jev-suite/tree/main/jev-fidelity) - Editorial QA: asks Jev per fact unit whether an edit preserved the original (preserved / equivalent / drift / lost) behind a 0.70 confidence gate in code, degrading to human review rather than pass; 55-sample calibration on real Wikipedia revision diffs reports 91/92 gated judgments correct and 0/20 injection flips.
 
 ### Scoring & Ranking
 
@@ -229,6 +232,7 @@ Source file: [`categories/scoring-ranking.md`](categories/scoring-ranking.md)
 - [grokbot-jev-jobs](https://github.com/mcgalleg/grokbot-jev-jobs) - Job search: a daily Vercel cron that scores public job postings against one resume with Jev through the Vercel AI Gateway, so only the plausible matches surface.
 - [jeff](https://github.com/saembit/jeff-cli) ![type: cli](https://img.shields.io/badge/type-cli-4B5563?style=flat-square) - Developer tooling: Go CLI whose rank command asks one Jev `Score` per item per weighted dimension of a YAML spec in a single request and sums weight times score in code to order the items, with noul, choice and score commands that turn a threshold into exit code 10 for shell scripts and CI.
 - [Paper Radar](https://github.com/Eliot5566/JEV-Paper-Radar) - Research: scores every new arXiv and bioRxiv paper against plain-English interests with one Noul each and publishes the top picks as a daily page and RSS feed.
+- [jev-rental](https://github.com/klauswg/jev-suite/tree/main/jev-rental) - Consumer rental: sorts every claim in a rental listing into verify-on-site / demand-evidence / high-risk-pitch buckets to build a pre-viewing checklist with code-templated questions; 50-sample calibration reports 0.910 gated accuracy and 0/10 injection flips.
 
 ### Agent Decisions
 
