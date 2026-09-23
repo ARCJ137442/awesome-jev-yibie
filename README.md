@@ -84,20 +84,20 @@ Each entry lives in exactly one category. When a project could fit multiple cate
 
 ## Browse by category
 
-- [Classification & Routing](#classification-routing) ([source](categories/classification-routing.md))
-- [Adaptive & Realtime UI](#adaptive-realtime-ui) ([source](categories/adaptive-realtime-ui.md))
-- [Verification & Guardrails](#verification-guardrails) ([source](categories/verification-guardrails.md))
-- [Scoring & Ranking](#scoring-ranking) ([source](categories/scoring-ranking.md))
+- [Classification & Routing](#classification--routing) ([source](categories/classification-routing.md))
+- [Adaptive & Realtime UI](#adaptive--realtime-ui) ([source](categories/adaptive-realtime-ui.md))
+- [Verification & Guardrails](#verification--guardrails) ([source](categories/verification-guardrails.md))
+- [Scoring & Ranking](#scoring--ranking) ([source](categories/scoring-ranking.md))
 - [Agent Decisions](#agent-decisions) ([source](categories/agent-decisions.md))
-- [Data Labeling & Curation](#data-labeling-curation) ([source](categories/data-labeling-curation.md))
-- [Evaluation & Benchmarking](#evaluation-benchmarking) ([source](categories/evaluation-benchmarking.md))
-- [Calibration & Research](#calibration-research) ([source](categories/calibration-research.md))
-- [Infra / SDKs / Integrations](#infra-sdks-integrations) ([source](categories/infra-sdks-integrations.md))
-- [Game & Simulation](#game-simulation) ([source](categories/game-simulation.md))
-- [Finance & Trading](#finance-trading) ([source](categories/finance-trading.md))
-- [Compliance & Legal](#compliance-legal) ([source](categories/compliance-legal.md))
+- [Data Labeling & Curation](#data-labeling--curation) ([source](categories/data-labeling-curation.md))
+- [Evaluation & Benchmarking](#evaluation--benchmarking) ([source](categories/evaluation-benchmarking.md))
+- [Calibration & Research](#calibration--research) ([source](categories/calibration-research.md))
+- [Infra / SDKs / Integrations](#infra--sdks--integrations) ([source](categories/infra-sdks-integrations.md))
+- [Game & Simulation](#game--simulation) ([source](categories/game-simulation.md))
+- [Finance & Trading](#finance--trading) ([source](categories/finance-trading.md))
+- [Compliance & Legal](#compliance--legal) ([source](categories/compliance-legal.md))
 - [Content Moderation](#content-moderation) ([source](categories/content-moderation.md))
-- [Related Practices / Discussions](#related-practices-discussions) ([source](categories/related-practices-discussions.md))
+- [Related Practices / Discussions](#related-practices--discussions) ([source](categories/related-practices-discussions.md))
 
 ## Find by coding agent
 
